@@ -1,14 +1,14 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://pabonsec.github.io/">
-    <img alt="Gatsby" src="./src/images/icon.png" width="100" />
+    <img alt="Shahnawaz Hossan" src="./static/logos/book-reader.png" />
   </a>
 </p>
 <h1 align="center">
-  Getting Started With Gatsby
+  Shahnawaz Hossan's Site
 </h1>
 
-## Install and Run your first Gatsby site
+## Install Dependencies and Run your first Gatsby Site
 
 ```bash
 $ npm install -g gatsby-cli
@@ -17,6 +17,31 @@ $ cd my-site
 $ gatsby develop
 ```
 
-Your site will be running at [localhost:8000][gatsby-site]
+Your site will be running on [localhost:8000][running-url]
 
-[gatsby-site]: http://localhost:8000
+## Deploy your site with GitHub Pages
+
+```bash
+$ npm install gh-pages --save-dev
+```
+
+Add the following script to your `package.json` file
+
+```bash
+{
+    "scripts": {
+        ...
+        "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public",
+    }
+}
+
+```
+
+The run 
+
+```bash
+$ npm run deploy
+```
+
+[gatsby-tutorial]: https://www.gatsbyjs.org/tutorial/
+[running-url]: http://localhost:8000
