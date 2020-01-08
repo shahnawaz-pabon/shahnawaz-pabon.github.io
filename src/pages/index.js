@@ -1,3 +1,14 @@
- import React from "react"
+ import React from "react";
 
-export default () => <div>Hello world!</div>
+ import Layout from '../layout';
+
+ class Index extends React.Component {
+     render(){
+        return (
+            <Layout >
+            </Layout>
+        )
+     }
+ }
+
+export default Index;
