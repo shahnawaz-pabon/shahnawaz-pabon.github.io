@@ -8,6 +8,8 @@
   Shahnawaz Hossan's Site
 </h1>
 
+
+
 ## Install Dependencies and Run your first Gatsby Site
 
 ```bash
@@ -43,5 +45,14 @@ The run
 $ npm run deploy
 ```
 
+## Author
+* [Shahnawaz Hossan][author]
+
+## License
+[MIT][license] © [Shahnawaz Hossan][author]
+
+<!-- Definitions -->
+[author]: https://pabonsec.github.io
+[license]: LICENSE
 [gatsby-tutorial]: https://www.gatsbyjs.org/tutorial/
 [running-url]: http://localhost:8000
