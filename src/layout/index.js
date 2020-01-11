@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
-import { Link } from 'gatsby';
+import React from "react";
 
-export default class Layout extends Component {
+import Layout from '../layout';
 
-  componentDidMount() {
-
-  }
-
-  componentWillUnmount() {
-
-  }
-
-  render() {
-
-    return (
-        <nav>
-            <div>Hello From Pabon</div>
-        </nav>
-    )
-  }
+class Index extends React.Component {
+    render(){
+       return (
+           <Layout >
+           </Layout>
+       )
+    }
 }
+
+export default Index;
