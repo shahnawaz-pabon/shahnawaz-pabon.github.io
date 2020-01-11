@@ -1,14 +1,29 @@
-import React from "react";
+import React, { Component } from 'react'
+import Navbar from "../components/navbar/Navbar";
 
-import Layout from '../layout';
+import GlobalStyle from '../styles/Global';
 
-class Index extends React.Component {
-    render(){
-       return (
-           <Layout >
-           </Layout>
-       )
-    }
+class Layout extends Component {
+  state = {
+    navbarOpen: false
+  }
+
+  handleNavbar = () => {
+    this.setState({ navbarOpen: !this.state.navbarOpen });
+  }
+
+  render() {
+
+    return (
+      <>
+        <Navbar 
+          navbarState={this.state.navbarOpen} 
+          handleNavbar={this.handleNavbar}
+        />
+        <GlobalStyle />
+      </>
+    )
+  }
 }
 
-export default Index;
+export default Layout
