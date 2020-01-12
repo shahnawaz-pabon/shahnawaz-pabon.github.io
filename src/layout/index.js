@@ -1,29 +1,11 @@
-import React, { Component } from 'react'
-import Navbar from "../components/navbar/Navbar";
+import React from 'react';
+import { Container } from 'react-bootstrap';
 
-import GlobalStyle from '../styles/Global';
+const Layout = (props) => (
 
-class Layout extends Component {
-  state = {
-    navbarOpen: false
-  }
+    <Container>
+      {props.children}
+    </Container>
+)
 
-  handleNavbar = () => {
-    this.setState({ navbarOpen: !this.state.navbarOpen });
-  }
-
-  render() {
-
-    return (
-      <>
-        <Navbar 
-          navbarState={this.state.navbarOpen} 
-          handleNavbar={this.handleNavbar}
-        />
-        <GlobalStyle />
-      </>
-    )
-  }
-}
-
-export default Layout
+export default Layout;
