@@ -9,15 +9,15 @@ export default class Navigation extends Component {
     const { menuLinks } = this.props;
 
     return (
-      <nav className="nav" >
+      <nav className="navbar" >
         <div className="nav-container">
-          <div className="brand">
+          <div className="navbar-brand">
             <Link to="/">
-              <img src={book_reading} className="favicon" alt="" />
+              <img src={book_reading} className="favicon" alt="sdfsf" />
               <span className="text"></span>
             </Link>
           </div>
-          <div className="links">
+          <div className="nav-links">
             {menuLinks.map(link => (
               <Link key={link.name} to={link.link} activeClassName="active">
                 {link.name}
