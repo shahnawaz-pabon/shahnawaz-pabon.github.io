@@ -6,4 +6,5 @@
 
 module.exports = {
     /* My site's config */
+
 }

@@ -1,4 +1,4 @@
-.start-header {
+.nav {
 	opacity: 1;
 	transform: translateY(0);
 	padding: 10px 0;
@@ -6,9 +6,26 @@
 	-webkit-transition : all 0.3s ease-out;
 	transition : all 0.3s ease-out;
 }
-.start-header-scroll-on {
+.nav-scroll {
 	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
 	padding: 5px 0;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+
+.nav-container {
+    padding: 0 1.5rem;
+    height: 55px;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.3s ease;
+  }
+
+.start-header.scroll-on .navbar-brand img{
+	height: 28px;
 	-webkit-transition : all 0.3s ease-out;
 	transition : all 0.3s ease-out;
 }

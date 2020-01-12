@@ -1,46 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import { Nav, Navbar } from 'react-bootstrap';
-import styled from 'styled-components';
+import book_reading from '../assets/images/book-reader.png';
 
-const Styles = styled.div`
-  .navbar {
-    background-color: #222;
+export default class Navigation extends Component {
+
+  render() {
+
+    const { menuLinks } = this.props;
+
+    return (
+      <nav className="nav" >
+        <div className="nav-container">
+          <div className="brand">
+            <Link to="/">
+              <img src={book_reading} className="favicon" alt="" />
+              <span className="text"></span>
+            </Link>
+          </div>
+          <div className="links">
+            {menuLinks.map(link => (
+              <Link key={link.name} to={link.link} activeClassName="active">
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </nav>
+    )
   }
-  a, .navbar-brand, .navbar-nav .nav-link {
-    color: #bbb;
-    &:hover {
-      color: white;
-    }
-  }
-`;
-
-const NavigationBar = () => (
-  <Styles>
-    <Navbar expand="lg">
-      <Navbar.Brand href="/">Code Life</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Item>
-
-              <Link to="/">Home</Link>
-
-          </Nav.Item>
-          <Nav.Item>
-
-              <Link to="/about">About</Link>
-
-          </Nav.Item>
-          <Nav.Item>
-
-              <Link to="/contact">Contact</Link>
-
-          </Nav.Item>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  </Styles >
-)
-
-export default NavigationBar;
+}

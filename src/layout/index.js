@@ -1,11 +1,16 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import React, { Component } from 'react';
+import NavigationBar from '../components/NavigationBar';
+import config from '../data/config';
+import '../styles/navbar.css';
 
-const Layout = (props) => (
+export default class Layout extends Component {
 
-    <Container>
-      {props.children}
-    </Container>
-)
+  render() {
 
-export default Layout;
+    return (
+      <>
+        <NavigationBar menuLinks={config.menuLinks} />
+      </>
+    )
+  }
+}
