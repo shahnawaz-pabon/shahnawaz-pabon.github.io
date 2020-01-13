@@ -9,7 +9,7 @@ export default class Navigation extends Component {
     const { menuLinks } = this.props;
 
     return (
-      <nav className="navbar" >
+      <nav className="navbar bg-light" >
         <div className="nav-container">
           <div className="navbar-brand">
             <Link to="/">

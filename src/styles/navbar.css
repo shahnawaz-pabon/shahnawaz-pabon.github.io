@@ -12,6 +12,8 @@
 	transition : all 0.3s ease-out;
 }
 
+
+
 .navbar-brand img{
 	height: 52px;
 	width: auto;
@@ -93,4 +95,9 @@
     align-items: center;
     justify-content: space-between;
     transition: height 0.3s ease;
+}
+
+.bg-light {
+	background-color: #fff !important;
+    transition: all 200ms linear;
 }
