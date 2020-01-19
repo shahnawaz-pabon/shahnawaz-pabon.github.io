@@ -65,6 +65,7 @@
 }
 
 .nav-links a:after{
+	display: block;
 	position: absolute;
 	bottom: -2px;
 	/* left: 0; */
