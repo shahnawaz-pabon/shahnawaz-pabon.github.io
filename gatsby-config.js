@@ -9,6 +9,13 @@ module.exports = {
 
     plugins: [
         {
+            resolve: "gatsby-source-filesystem",
+            options: {
+              name: "post",
+              path: `${__dirname}/content/`
+            }
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
               name: `src`,

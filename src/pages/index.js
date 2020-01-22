@@ -24,18 +24,19 @@ export default Index;
 export const pageQuery = graphql`
 query {
   allMarkdownRemark {
-    totalCount
     edges {
       node {
-        id
-        frontmatter {
-          title
-          date(formatString: "DD MMMM, YYYY")
-        }
+        timeToRead
+        excerpt
         fields {
           slug
         }
-        excerpt
+        frontmatter {
+          cover
+          date
+          tags
+          title
+        }
       }
     }
   }

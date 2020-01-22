@@ -22,7 +22,7 @@ class PostListing extends React.Component {
     return (
       <div className="posts">
         {postList.map(post => (
-        <div>{post.title}</div>
+        <div key={post.title}>{post.title}</div>
         ))}
       </div>
     );
