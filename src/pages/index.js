@@ -10,9 +10,9 @@
         return (
             <Layout >
                 <div className="container">
-                    <section>
-                        <PostListing postEdges={postEdges} />
-                    </section>
+                  <section>
+                      <PostListing postEdges={postEdges} />
+                  </section>
                 </div>
             </Layout>
         )

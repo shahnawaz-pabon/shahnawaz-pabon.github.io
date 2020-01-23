@@ -1,4 +1,5 @@
 import React from "react";
+import './postlist.css';
 
 class PostListing extends React.Component {
 
