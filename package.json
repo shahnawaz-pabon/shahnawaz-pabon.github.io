@@ -5,8 +5,11 @@
   "author": "Shahnawaz Hossan <s.pabon93@gmail.com>",
   "dependencies": {
     "gatsby": "^2.18.12",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-sharp": "^2.3.13",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",

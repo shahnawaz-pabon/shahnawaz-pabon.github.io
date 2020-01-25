@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 import './postlist.css';
+import Img from 'gatsby-image';
 
 class PostListing extends React.Component {
 
@@ -10,7 +11,7 @@ class PostListing extends React.Component {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
-        cover: postEdge.node.frontmatter.cover,
+        featuredImage: postEdge.node.frontmatter.featuredImage,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
@@ -28,7 +29,15 @@ class PostListing extends React.Component {
 
           return(
             <Link to={post.path} key={post.title}>
-              <h2>{post.title}</h2>
+
+              <div>
+                <Img fixed={post.featuredImage}/>
+              </div>
+
+              <div>
+                <h2>{post.title}</h2>
+              </div>
+              
             </Link>
           )
 

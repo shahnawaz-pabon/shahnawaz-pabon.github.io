@@ -32,7 +32,7 @@ query {
           slug
         }
         frontmatter {
-          cover
+          featuredImage
           date
           tags
           title
