@@ -1,6 +1,6 @@
 ---
 title: 'Install Jekyll on Ubuntu'
-featuredImage: default.png
+featuredImage: '../featuredImages/default.png'
 date: 13-11-2019
 tags:
     - jekyll

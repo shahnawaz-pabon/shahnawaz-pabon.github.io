@@ -37,8 +37,8 @@ query {
           title
           featuredImage{
             childImageSharp {
-              fluid{
-                ...GatsbyImageSharpFluid
+              fixed(width: 60, height: 60) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
