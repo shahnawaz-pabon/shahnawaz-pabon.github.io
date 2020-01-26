@@ -31,7 +31,7 @@ class PostListing extends React.Component {
             <Link to={post.path} key={post.title}>
 
               <div>
-                <Img fixed={post.featuredImage}/>
+                <Img fluid={post.featuredImage.childImageSharp.fluid}/>
               </div>
 
               <div>

@@ -32,10 +32,16 @@ query {
           slug
         }
         frontmatter {
-          featuredImage
           date
           tags
           title
+          featuredImage{
+            childImageSharp {
+              fluid{
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
