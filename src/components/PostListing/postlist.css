@@ -1,6 +1,10 @@
 .posts {
     margin: 150px auto;
-    align-items: center;
     max-width: 800px;
-    text-align: center;
+}
+
+.posts a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
