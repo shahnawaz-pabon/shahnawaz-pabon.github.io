@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import book_reading from '../assets/images/book-reader.png';
+import book_reading from '../../../static/logos/book-reader.png';
 import './navbar.css';
 
 export default class Navigation extends Component {

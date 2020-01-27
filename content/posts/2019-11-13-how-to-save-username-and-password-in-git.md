@@ -4,7 +4,7 @@ featuredImage: '../featuredImages/git.png'
 date: '2019-11-13'
 tags:
     - git
-    - git-config]
+    - git-config
 ---
 
 <!-- <div align="center">
