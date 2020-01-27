@@ -26,13 +26,8 @@ query {
   allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
     edges {
       node {
-        timeToRead
-        excerpt
-        fields {
-          slug
-        }
         frontmatter {
-          date
+          date(formatString: "DD MMMM, YYYY")
           tags
           title
           featuredImage{
@@ -42,6 +37,10 @@ query {
               }
             }
           }
+        }
+        excerpt
+        fields {
+          slug
         }
       }
     }

@@ -11,10 +11,10 @@ export default class Layout extends Component {
     const { children } = this.props;
 
     return (
-      <>
+      <div>
         <NavigationBar menuLinks={config.menuLinks} />
         <div id="main-content">{children}</div>
-      </>
+      </div>
     )
   }
 }
