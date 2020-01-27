@@ -1,10 +1,10 @@
 ---
-layout: post
-title:  "Save username and password in GIT"
-date:   2019-11-13 23:28:27 +0600
-featured-image: 'git.png'
-categories: Git
-tags: [git, git-config]
+title: 'Save username and password in GIT'
+featuredImage: '../featuredImages/git.png'
+date: '2019-11-13'
+tags:
+    - git
+    - git-config]
 ---
 
 <!-- <div align="center">

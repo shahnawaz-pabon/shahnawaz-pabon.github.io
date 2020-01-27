@@ -1,10 +1,10 @@
 ---
-layout: post
-title:  "Getting Started with Snap"
-date:   2019-11-27 22:44:27 +0600
-featured-image: 'terminal.png'
-categories: Ubuntu
-tags: [snap, ubuntu]
+title: 'Getting Started with Snap'
+date: '2019-11-27'
+featured-image: '../featuredImages/terminal.png'
+tags:
+    - snap
+    - ubuntu
 ---
 
 ## Table of Contents

@@ -1,10 +1,10 @@
 ---
-layout: post
-title:  "Perceiving about Linux Distros"
-date:   2019-12-04 22:28:27 +0600
-featured-image: 'linux.png'
-categories: Linux
-tags: [linux, linux-distros]
+title: 'Perceiving about Linux Distros'
+date: '2019-12-04'
+featured-image: '../featuredImages/linux.png'
+tags: 
+    - linux
+    - linux-distros
 ---
 
 ## Table of Contents

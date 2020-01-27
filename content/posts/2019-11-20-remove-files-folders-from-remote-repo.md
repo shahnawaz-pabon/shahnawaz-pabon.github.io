@@ -1,10 +1,9 @@
 ---
-layout: post
-title:  "Remove files/folders from remote repository"
-date:   2019-11-20 23:09:27 +0600
-featured-image: 'git.png'
-categories: Git
-tags: [git]
+title: 'Remove files/folders from remote repository'
+date: '2019-11-20'
+featuredImage: '../featuredImages/git.png'
+tags:
+    - git
 ---
 
 If you want to remove a folder from your `git` repository then simply run these commands into your terminal.

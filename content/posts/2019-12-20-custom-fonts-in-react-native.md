@@ -1,10 +1,9 @@
 ---
-layout: post
-title:  "Add Custom Fonts in React Native Android"
-date:   2019-12-20 21:45:27 +0600
-featured-image: 'react-native.png'
-categories: React-Native
-tags: [react-native]
+title:  'Add Custom Fonts in React Native Android'
+date: '2019-12-20'
+featured-image: '../featuredImages/react-native.png'
+tags: 
+    - react-native
 ---
 
 ### Version of react-native > 0.60
