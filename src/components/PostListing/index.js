@@ -13,7 +13,7 @@ class PostListing extends React.Component {
         tags: postEdge.node.frontmatter.tags,
         featuredImage: postEdge.node.frontmatter.featuredImage,
         title: postEdge.node.frontmatter.title,
-        date: postEdge.node.fields.date,
+        date: postEdge.node.frontmatter.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
       });
@@ -30,12 +30,11 @@ class PostListing extends React.Component {
           return(
             <Link to={post.path} key={post.title}>
 
-              <div>
-                <Img fixed={post.featuredImage.childImageSharp.fixed}/>
-              </div>
+              <Img fixed={post.featuredImage.childImageSharp.fixed}/>
 
               <div>
                 <h2>{post.title}</h2>
+                <small className="text-muted">{post.date}</small>
               </div>
               
             </Link>

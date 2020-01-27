@@ -5,6 +5,17 @@
 
 .posts a {
     display: flex;
-    justify-content: center;
     text-decoration: none;
+    border-radius: 5px;
+    color: #828d90;
+}
+
+.posts a h2{
+    margin: 8px 0 0;
+}
+
+.posts a:hover {
+    background-color: #dee2e6;
+    cursor: pointer;
+    color: #2c3e50;
 }
