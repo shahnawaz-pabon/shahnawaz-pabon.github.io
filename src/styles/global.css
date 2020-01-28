@@ -14,3 +14,8 @@ body{
   overflow-x: hidden;
   transition: all 200ms linear;
 }
+
+.container {
+  margin: 150px auto;
+  max-width: 800px;
+}

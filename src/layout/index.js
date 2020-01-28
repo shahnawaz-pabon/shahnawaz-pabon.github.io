@@ -12,7 +12,7 @@ export default class Layout extends Component {
     return (
       <div>
         <NavigationBar menuLinks={config.menuLinks} />
-        <div id="main-content">{children}</div>
+        <div id="content-wrapper">{children}</div>
       </div>
     )
   }
