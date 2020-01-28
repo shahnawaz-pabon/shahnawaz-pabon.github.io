@@ -1,7 +1,7 @@
 ---
 title: 'Getting Started with Snap'
 date: '2019-11-27'
-featured-image: '../featuredImages/terminal.png'
+featuredImage: '../featuredImages/terminal.png'
 tags:
     - snap
     - ubuntu
