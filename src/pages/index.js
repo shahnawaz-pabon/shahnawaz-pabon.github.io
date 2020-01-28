@@ -32,7 +32,7 @@ query {
           title
           featuredImage{
             childImageSharp {
-              fixed(width: 60, height: 60) {
+              fixed(width: 40, height: 40) {
                 ...GatsbyImageSharpFixed
               }
             }

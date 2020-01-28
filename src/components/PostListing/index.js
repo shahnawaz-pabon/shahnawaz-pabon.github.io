@@ -36,7 +36,7 @@ class PostListing extends React.Component {
 
               {featuredImage ? <Img fixed={featuredImage} /> : <div />}
 
-              <div>
+              <div className="post-title">
                 <h2>{post.title}</h2>
                 <small className="text-muted">{post.date}</small>
               </div>
