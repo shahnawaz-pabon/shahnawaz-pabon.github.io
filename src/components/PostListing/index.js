@@ -26,10 +26,15 @@ class PostListing extends React.Component {
 
         {postList.map(post => {
 
+          let featuredImage
+          if (post.featuredImage) {
+            featuredImage = post.featuredImage.childImageSharp.fixed
+          }
+
           return(
             <Link to={post.path} key={post.title}>
 
-              <Img fixed={post.featuredImage.childImageSharp.fixed}/>
+              {featuredImage ? <Img fixed={featuredImage} /> : <div />}
 
               <div>
                 <h2>{post.title}</h2>
