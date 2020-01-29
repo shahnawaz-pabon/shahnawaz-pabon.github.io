@@ -1,4 +1,5 @@
 ---
+template: post
 title: 'Perceiving about Linux Distros'
 featuredImage: '../featuredImages/linux.png'
 date: '2019-12-04'

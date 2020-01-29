@@ -26,7 +26,8 @@ class PostListing extends React.Component {
 
         {postList.map(post => {
 
-          let featuredImage
+          let featuredImage;
+          
           if (post.featuredImage) {
             featuredImage = post.featuredImage.childImageSharp.fixed
           }

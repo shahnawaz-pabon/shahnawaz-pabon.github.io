@@ -1,13 +1,27 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Img from 'gatsby-image';
 import Layout from "../layout";
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
+  let featuredImage;
+          
+  if (post.frontmatter.featuredImage) {
+    featuredImage = post.frontmatter.featuredImage.childImageSharp.fixed;
+  }
+
   return (
     <Layout>
       <div className="container">
-        <h1>{post.frontmatter.title}</h1>
+        <div className="post-header">
+          
+          {featuredImage ? <Img fixed={featuredImage} /> : <div />}
+
+          <h1>{post.frontmatter.title}</h1>
+
+        </div>
+        
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -20,6 +34,7 @@ export const query = graphql`
       html
       timeToRead
       frontmatter {
+        template
         title
         featuredImage{
           childImageSharp {

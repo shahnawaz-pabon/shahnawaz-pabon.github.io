@@ -1,4 +1,5 @@
 ---
+template: post
 title: 'Getting Started with Snap'
 featuredImage: '../featuredImages/terminal.png'
 date: '2019-11-27'

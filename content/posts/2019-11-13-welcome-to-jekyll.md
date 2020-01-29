@@ -1,4 +1,5 @@
 ---
+template: post
 title: 'Install Jekyll on Ubuntu'
 featuredImage: '../featuredImages/default.png'
 date: '2019-11-13'

@@ -27,6 +27,7 @@ query {
     edges {
       node {
         frontmatter {
+          template
           title
           featuredImage{
             childImageSharp {
