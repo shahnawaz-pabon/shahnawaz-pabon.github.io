@@ -18,7 +18,12 @@ export default ({ data }) => {
           
           {featuredImage ? <Img fixed={featuredImage} /> : <div />}
 
-          <h1>{post.frontmatter.title}</h1>
+          <div className="post-title-part">
+            <h1>{post.frontmatter.title}</h1>
+            <div className="post-date">
+              <small className="text-muted">{post.frontmatter.date} || {post.timeToRead} min read</small>
+            </div>
+          </div>
 
         </div>
         
