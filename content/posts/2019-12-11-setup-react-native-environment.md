@@ -1,7 +1,9 @@
 ---
 title: 'Setup react-native environment on Ubuntu for Android'
-date: '2019-12-11'
 featuredImage: '../featuredImages/react-native.png'
+date: '2019-12-11'
+category:
+    - React-Native
 tags: 
     - react-native
 ---

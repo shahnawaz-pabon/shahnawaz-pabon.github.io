@@ -1,7 +1,9 @@
 ---
 title: 'Perceiving about Linux Distros'
-date: '2019-12-04'
 featuredImage: '../featuredImages/linux.png'
+date: '2019-12-04'
+category:
+    - Linux
 tags: 
     - linux
     - linux-distros

@@ -2,14 +2,12 @@
 title: 'Save username and password in GIT'
 featuredImage: '../featuredImages/git.png'
 date: '2019-11-13'
+category: 
+    - Git
 tags:
     - git
     - git-config
 ---
-
-<!-- <div align="center">
-    <img src="https://img.icons8.com/color/100/000000/git.png">
-</div> -->
 
 ### Run
 

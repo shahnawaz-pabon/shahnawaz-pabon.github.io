@@ -1,10 +1,12 @@
 ---
 title: 'Getting Started with Snap'
-date: '2019-11-27'
 featuredImage: '../featuredImages/terminal.png'
+date: '2019-11-27'
+category:
+  - Ubuntu
 tags:
-    - snap
-    - ubuntu
+  - snap
+  - ubuntu
 ---
 
 ## Table of Contents

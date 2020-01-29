@@ -27,8 +27,6 @@ query {
     edges {
       node {
         frontmatter {
-          date(formatString: "DD MMMM, YYYY")
-          tags
           title
           featuredImage{
             childImageSharp {
@@ -37,6 +35,9 @@ query {
               }
             }
           }
+          date(formatString: "DD MMMM, YYYY")
+          category
+          tags
         }
         excerpt
         fields {

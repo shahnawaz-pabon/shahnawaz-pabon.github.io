@@ -1,7 +1,9 @@
 ---
 title: 'Remove files/folders from remote repository'
-date: '2019-11-20'
 featuredImage: '../featuredImages/git.png'
+date: '2019-11-20'
+category:
+    - Git
 tags:
     - git
 ---
