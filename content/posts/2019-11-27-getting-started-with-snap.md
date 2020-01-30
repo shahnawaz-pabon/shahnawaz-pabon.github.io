@@ -16,10 +16,8 @@ tags:
 &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-box"></i> &nbsp; [Install and Run your first Snap](#install-and-run-your-first-snap) <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-angle-double-right"></i> &nbsp; [More Features](#more-features)
 
-<br/>
-
 <h3 id="getting-started"><i class="fas fa-hand-paper"></i> Getting Started</h3>
-<br/>
+
 1. Snap (or `Snappy` package manager) is one of the best software deployment and package management system which is built by `Canonical`.
 2. A `snap` is a bundle of an app and works across many different Linux distributions as well.
 3. App packages that are installed through `snap`, called `Snaps`. So `Snaps` are containerized software packages.
@@ -33,10 +31,9 @@ The system is actually designed for **IoT, Cloud and Desktop Computing** that ar
 * Cross-Platform
 * Dependency-free
 
----
 <br/>
 <h3 id="setting-up"><i class="fas fa-cog"></i> Setting Up</h3>
-<br/>
+
 #### <i class="fas fa-pen-alt"></i> Installing `snapd` on Ubuntu
 
 ```bash
@@ -54,10 +51,9 @@ ubuntu  18.04
 kernel  5.0.0-36-generic
 ```
 
----
 <br/>
 <h3 id="install-and-run-your-first-snap"><i class="fas fa-box"></i> Install and Run your first Snap</h3>
-<br/>
+
 #### <i class="fas fa-pen-alt"></i> Finding a `snap`
 
 ```bash
@@ -73,7 +69,7 @@ spt                  v0.4.0        popey           -        Spotify TUI
 
 `snap find <search keywords>` queries the store and list the results with their details. `✓` indecates that publisher has been verified.
 
-<br/>
+
 #### <i class="fas fa-pen-alt"></i> Learning about a `snap`
 
 ```bash
@@ -96,7 +92,7 @@ channels:
 
 You will know details about a package by running this command.
 
-<br/>
+
 #### <i class="fas fa-pen-alt"></i> Install and execution
 
 ```bash
@@ -111,7 +107,7 @@ $ hello
 Hello, world!
 ```
 
-<br/>
+
 #### <i class="fas fa-pen-alt"></i> Keep tracking installed `snaps`
 
 ```bash
@@ -124,7 +120,7 @@ gnome-3-28-1804       3.28.0-16-g27c9498.27c9498  110   stable/…  canonical✓
 
 Installed snaps on your system will be listed by this command.
 
-<br/>
+
 #### <i class="fas fa-pen-alt"></i> Refreshing an installed `snap`
 
 ```bash
@@ -141,11 +137,11 @@ hello (beta) 2.10.1 from Canonical✓ refreshed
 
 You can change the channel from which your snap will be tracked and refreshed with this single command.
 
----
 <br/>
 <h3 id="more-features"><i class="fas fa-angle-double-right"></i> More Features </h3>
-<br/>
+
 #### <i class="fas fa-pen-alt"></i> Reverting an installed `snap`
+
 ```bash
 $ sudo snap revert hello
 hello reverted to 2.10
@@ -160,7 +156,7 @@ hello  2.10.1   29   beta      canonical✓  disabled
 
 Above command will list all `revisions` of hello.
 
-> Revision is the sequence number which is assigned by the store when it was uploaded
+*`Revision` is the sequence number which is assigned by the store when it was uploaded*
 
 ```bash
 $ snap list --all
@@ -168,7 +164,7 @@ $ snap list --all
 
 This will list all `revisions` available for every installed snaps.
 
-<br/>
+
 #### <i class="fas fa-pen-alt"></i> Enabling and Disabling a `snap`
 
 ```bash
@@ -178,7 +174,8 @@ hello disabled
 $ sudo snap enable hello
 hello enabled
 ```
-<br/>
+
+
 #### <i class="fas fa-pen-alt"></i> Removing a `snap`
 
 ```bash
