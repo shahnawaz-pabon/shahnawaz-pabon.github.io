@@ -3,6 +3,8 @@ import NavigationBar from '../components/NavigationBar';
 import config from '../data/config';
 import '../styles/global.css';
 
+import styled, { ThemeProvider } from 'styled-components';
+
 export default class Layout extends Component {
 
   render() {

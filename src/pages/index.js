@@ -2,7 +2,6 @@
  import { graphql } from "gatsby";
  import Layout from '../layout';
  import PostListing from '../components/PostListing';
- import styled, { ThemeProvider } from 'styled-components';
 
  class Index extends React.Component {
      render(){
