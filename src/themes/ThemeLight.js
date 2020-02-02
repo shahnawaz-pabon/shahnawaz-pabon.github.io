@@ -1,6 +1,10 @@
-export const ThemeLight = {
+export default {
+  name: 'light',
+  icon: require('../assets/images/light.png'),
   colors: {
-    primary: '#ffff',
-    secondary: '#262533',
+    background: '#ffffff',
+    cardBackground: '#ffffff',
+    headingColor: '#82BBCF',
+    textColor: '#000000',
   },
-};
+}

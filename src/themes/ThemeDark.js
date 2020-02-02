@@ -1,6 +1,10 @@
-export const ThemeDark = {
+export default {
+  name: 'dark',
+  icon: require('../assets/images/dark.png'),
   colors: {
-    primary: '#3b3b4f',
-    secondary: '#ffff',
+    background: '#29263E',
+    cardBackground: '#403C5B',
+    headingColor: '#82BBCF',
+    textColor: '#ffffff',
   },
-};
+}
