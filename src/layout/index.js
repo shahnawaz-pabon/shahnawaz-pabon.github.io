@@ -34,14 +34,14 @@ const Layout = ({ children }) => {
   const [isDark, setIsDark] = useState(localIsDark);
 
   return (
-    <ThemeProvider theme={isDark ? ThemeDark : ThemeLight}>
-      <Container>
-        <NavigationBar menuLinks={config.menuLinks} />
-        <div id="content-wrapper">{children}</div>
+    <div className={isDark ? "dark" : ""}>
+      <ThemeProvider theme={isDark ? ThemeDark : ThemeLight}>
+        <NavigationBar menuLinks={config.menuLinks} isDark={isDark} />
+          <div id="content-wrapper">{children}</div>
+          <Icon isDark={isDark} setIsDark={setIsDark}/>
+      </ThemeProvider>
+    </div>
 
-        <Icon isDark={isDark} setIsDark={setIsDark}/>
-      </Container>
-    </ThemeProvider>
   )
   
 }

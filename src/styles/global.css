@@ -31,3 +31,8 @@ body{
 .post-date {
   display: flex;
 }
+
+.dark {
+  background: #29263e;
+  color: #fff;
+}

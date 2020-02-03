@@ -8,7 +8,7 @@
         const postEdges = this.props.data.allMarkdownRemark.edges;
 
         return (
-            <Layout >
+            <Layout>
                 <div className="container">
                   <section>
                       <PostListing postEdges={postEdges} />
