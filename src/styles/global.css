@@ -23,4 +23,5 @@ body{
 .dark {
   background: #29263e;
   color: #fff;
+  transition: all 0.2s ease-out;
 }

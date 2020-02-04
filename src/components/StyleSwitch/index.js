@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 
-// import './StyleSwitch.css';
+import './StyleSwitch.css';
 
 import styled, { ThemeContext } from 'styled-components';
 
-const HeavenlyBody = styled.img`
+const Icon = styled.img`
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -16,7 +16,7 @@ const HeavenlyBody = styled.img`
   }
 `;
 
-const Icon = ({ isDark, setIsDark }) => {
+const StyleSwitch = ({ isDark, setIsDark }) => {
   const themeContext = useContext(ThemeContext);
 
   function handleClick() {
@@ -24,7 +24,7 @@ const Icon = ({ isDark, setIsDark }) => {
     setIsDark(!isDark);
   }
 
-  return <HeavenlyBody src={themeContext.icon} onClick={handleClick} />;
+  return <Icon src={themeContext.icon} onClick={handleClick} />;
 };
 
-export default Icon;
+export default StyleSwitch;

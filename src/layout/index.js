@@ -10,7 +10,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import ThemeLight from '../themes/ThemeLight';
 import ThemeDark from '../themes/ThemeDark';
 
-import Icon from '../components/StyleSwitch';
+import StyleSwitch from '../components/StyleSwitch';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -45,8 +45,10 @@ const Layout = ({ children }) => {
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         <NavigationBar menuLinks={config.menuLinks} isDark={isDark} />
-          <div id="content-wrapper">{children}</div>
-          <Icon isDark={isDark} setIsDark={setIsDark}/>
+        <div id="content-wrapper">{children}</div>
+        <div className="toggle-bulb-icon">
+          <StyleSwitch isDark={isDark} setIsDark={setIsDark}/>
+        </div>
       </ThemeProvider>
     
 
