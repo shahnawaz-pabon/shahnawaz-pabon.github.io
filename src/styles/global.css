@@ -20,18 +20,6 @@ body{
   max-width: 800px;
 }
 
-.post-header {
-  display: flex;
-}
-
-.post-title-part {
-  margin: auto 0px auto 20px;
-}
-
-.post-date {
-  display: flex;
-}
-
 .dark {
   background: #29263e;
   color: #fff;

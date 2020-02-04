@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import Layout from "../layout";
 import { Link } from 'gatsby';
+import './post.css';
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -22,9 +23,11 @@ export default ({ data }) => {
           {featuredImage ? <Img fixed={featuredImage} /> : <div />}
 
           <div className="post-title-part">
-            <h2>{post.frontmatter.title}</h2>
+            <h2 className="post-title">{post.frontmatter.title}</h2>
             <div className="post-date">
               <small className="text-muted">{post.frontmatter.date} | {post.timeToRead} min read</small>
+            </div>
+            <div className="post-tags">
               {
                 tags.map(tag =>(
                   <Link key={tag} to="/" className="tags">{tag}</Link>
