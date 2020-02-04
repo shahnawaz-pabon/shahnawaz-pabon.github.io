@@ -19,11 +19,13 @@ export default class Navigation extends Component {
             </Link>
           </div>
           <div className="nav-links">
-            {menuLinks.map(link => (
-              <Link key={link.name} to={link.link} >
-                {link.name}
-              </Link>
-            ))}
+            {
+              menuLinks.map(link => (
+                <Link key={link.name} to={link.link} >
+                  {link.name}
+                </Link>
+              ))
+            }
           </div>
         </div>
       </nav>

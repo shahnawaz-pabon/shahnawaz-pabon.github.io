@@ -2,10 +2,13 @@ import React from "react";
 import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import Layout from "../layout";
+import { Link } from 'gatsby';
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   let featuredImage;
+
+  let tags = post.frontmatter.tags;
           
   if (post.frontmatter.featuredImage) {
     featuredImage = post.frontmatter.featuredImage.childImageSharp.fixed;
@@ -21,8 +24,12 @@ export default ({ data }) => {
           <div className="post-title-part">
             <h2>{post.frontmatter.title}</h2>
             <div className="post-date">
-              <div>{post.frontmatter.category} , </div>
               <small className="text-muted">{post.frontmatter.date} | {post.timeToRead} min read</small>
+              {
+                tags.map(tag =>(
+                  <Link key={tag} to="/" className="tags">{tag}</Link>
+                ))
+              }
             </div>
           </div>
 
