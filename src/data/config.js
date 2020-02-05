@@ -3,8 +3,8 @@ const config = {
   siteDescription: 'Software Engineer',
   menuLinks: [
     {
-      name: 'Articles',
-      link: '/articles/',
+      name: 'Posts',
+      link: '/posts/',
     },
     {
       name: 'About',
