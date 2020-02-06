@@ -13,16 +13,16 @@
   .bulb svg {
     transition: all 0.3s linear;
     margin: 8px 0 0 8px;
-    fill: yellow;
+    fill: #FFC300;
   }
   .bulb svg path {
-    stroke: #262533;
+    stroke: #2c3e50;
     stroke-width: 2;
     stroke-linecap: round;
     transition: all 0.2s linear;
   }
   .bulb svg path.light {
-    stroke: #262533;
+    stroke: #2c3e50;
     stroke-dasharray: 5px;
     stroke-dashoffset: 0;
   }
@@ -31,9 +31,10 @@
   }
   .bulb.off svg {
     transform: translateY(-2px);
+    fill: #2c3e50;
   }
   .bulb.off path {
-    stroke: #262533;
+    stroke: #2c3e50;
   }
   .bulb.off path.light {
     stroke-dashoffset: 5px;
