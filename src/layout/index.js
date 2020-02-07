@@ -4,11 +4,6 @@ import config from '../data/config';
 import '../styles/global.css';
 import { Helmet } from 'react-helmet';
 
-import { ThemeProvider } from 'styled-components';
-
-import ThemeLight from '../themes/ThemeLight';
-import ThemeDark from '../themes/ThemeDark';
-
 import StyleSwitch from '../components/StyleSwitch';
 
 const Layout = ({ children }) => {
@@ -21,14 +16,14 @@ const Layout = ({ children }) => {
     } else {
       localIsDark = true;
     }
-    console.log(localIsDark ? 'dark mode' : 'light mode');
+    // console.log(localIsDark ? 'dark mode' : 'light mode');
   }
 
   const [isDark, setIsDark] = useState(localIsDark);
 
   return (
     
-      <ThemeProvider theme={isDark ? ThemeDark : ThemeLight}>
+      <>
         <Helmet
             bodyAttributes={{
               class: `${isDark ? 'dark': ''}`,
@@ -41,7 +36,7 @@ const Layout = ({ children }) => {
         <div className="toggle-bulb-icon">
           <StyleSwitch isDark={isDark} setIsDark={setIsDark}/>
         </div>
-      </ThemeProvider>
+      </>
     
 
   )
