@@ -1,5 +1,7 @@
  import React from "react";
  import { graphql } from "gatsby";
+ import Helmet from 'react-helmet';
+ import config from '../data/config';
  import Layout from '../layout';
  import PostListing from '../components/PostListing';
 
@@ -9,6 +11,7 @@
 
         return (
             <Layout>
+              <Helmet title={`${config.siteTitle} – Software Engineer`} />
               <div className="container">
                 <section>
                     <PostListing postEdges={postEdges} />

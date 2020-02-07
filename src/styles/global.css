@@ -6,7 +6,7 @@ body{
   line-height: 24px;
   font-weight: 400;
   color: #212112;
-  background-image: url('../assets/images/background.svg');
+  background-image: url('../../static/assets/images/background.svg');
   background-position: center;
   background-repeat: repeat;
   background-size: 7%;
