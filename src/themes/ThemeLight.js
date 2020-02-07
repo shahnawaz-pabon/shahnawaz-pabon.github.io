@@ -1,6 +1,5 @@
 export default {
   name: 'light',
-  icon: require('../assets/images/light.png'),
   colors: {
     background: '#ffffff',
     cardBackground: '#ffffff',
