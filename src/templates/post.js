@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import Layout from "../layout";
 import { Link } from 'gatsby';
-import './post.css';
+import '../styles/post.css';
 
 export default ({ data }) => {
   const post = data.markdownRemark;

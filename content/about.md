@@ -1,3 +1,7 @@
+---
+template: about
+title: 'About Me'
+---
 <h3><i class="fas fa-user-tie"></i> Introduction</h3>
 
 Myself **`Shahnawaz Hossan`**. I am a passionate `Software Engineer(Full Stack)`. Currently I am working as a `Full-Stack Software Engineer` for a `Software Company`. With my dedication and hard work I want to reach the pinnacle in the development, computing and research field. That's why I always wanted to be a part of a challenging career I love.
