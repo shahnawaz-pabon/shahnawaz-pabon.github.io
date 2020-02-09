@@ -26,11 +26,14 @@ export default Index;
 
 export const pageQuery = graphql`
 query {
-  allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { template: { eq: "post" } } }
+    ) {
     edges {
       node {
         frontmatter {
-          template(filter: { template: { eq: "post"}})
+          template
           title
           featuredImage{
             childImageSharp {

@@ -53,7 +53,8 @@ exports.createPages = async ({ graphql, actions }) => {
       })
 
     }
-    else if(node.frontmatter.template === 'about'){
+    
+    if(node.frontmatter.template === 'about'){
       createPage({
         path: node.fields.slug,
         component: path.resolve(`./src/templates/about.js`),
