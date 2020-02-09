@@ -30,7 +30,7 @@ query {
     edges {
       node {
         frontmatter {
-          template
+          template(filter: { template: { eq: "post"}})
           title
           featuredImage{
             childImageSharp {
