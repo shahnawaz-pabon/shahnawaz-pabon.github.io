@@ -19,6 +19,12 @@ class About extends React.Component {
   }
 
   render(){
+
+    const aboutPageMarkdown = this.props.data.markdownRemark;
+
+    console.log("aboutPageMarkdown");
+    console.log(aboutPageMarkdown);
+
     return (
       <Layout>
         <div className="container">
@@ -31,3 +37,22 @@ class About extends React.Component {
 }
 
 export default About;
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(
+        fields: { slug: { eq: $slug } },
+        frontmatter: {template: {eq: "about"}}
+      ) {
+      html
+      frontmatter{
+        template
+        title
+      }
+      excerpt
+      fields {
+        slug
+      }
+    }
+  }
+`

@@ -25,7 +25,7 @@ export default ({ data }) => {
           <div className="post-title-part">
             <h2 className="post-header-title">{post.frontmatter.title}</h2>
             <div className="post-date">
-              <small className="text-muted">{post.frontmatter.date} | {post.timeToRead} min read</small>
+              <small className="text-muted">{ post.frontmatter.date } | { post.timeToRead } min read</small>
             </div>
             <div className="post-tags">
               {
