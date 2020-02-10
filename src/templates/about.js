@@ -9,7 +9,7 @@ class About extends React.Component {
   componentDidMount(){
 
     lottie.loadAnimation({
-      container: document.getElementById('lottie'), // the dom element that will contain the animation
+      container: document.getElementById('about-lottie'), // the dom element that will contain the animation
       renderer: 'svg',
       loop: true,
       autoplay: true,
@@ -21,15 +21,13 @@ class About extends React.Component {
   render(){
 
     const aboutPageMarkdown = this.props.data.markdownRemark;
-
-    console.log("aboutPageMarkdown");
-    console.log(aboutPageMarkdown);
-
+    
     return (
       <Layout>
         <div className="container">
-          <h1 className="about-header">About Page</h1>
-          <div id='lottie'></div>
+          {/* <h1 className="about-header">About Me</h1> */}
+          <div id='about-lottie'></div>
+          <div dangerouslySetInnerHTML={{ __html: aboutPageMarkdown.html }} />
         </div>
       </Layout>
     )
