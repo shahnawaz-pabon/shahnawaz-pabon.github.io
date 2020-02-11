@@ -43,15 +43,28 @@ const Layout = ({ children }) => {
         <meta name="description" content={config.siteDescription} />
         <link rel="icon"  type="image/png" href={favicon} />
       </Helmet>
+
+      {/* NavigationBar */}
       <NavigationBar menuLinks={config.menuLinks} isDark={isDark} />
+      {/* NavigationBar Ends*/}
+      
+
+      {/* Contents */}
       <div id="content-wrapper">{children}</div>
+      {/* Contents */}
+
+      {/* Toggle Dark Mode Button */}
       <div className="toggle-bulb-icon">
         <StyleSwitch isDark={isDark} setIsDark={setIsDark}/>
       </div>
+      {/* Toggle Dark Mode Button Ends*/}
+
+
+      {/* Fab Buttons for my profiles */}
       <div>
         <Fab
           mainButtonStyles={{
-            backgroundColor: '#00b5ad',
+            backgroundColor: '#1abc9c',
             width: 48,
             height: 48,
             bottom: 90,
@@ -59,42 +72,85 @@ const Layout = ({ children }) => {
             position: 'fixed'
           }}
           actionButtonStyles={{
-
+            right: -300
           }}
           position={{
             bottom: 120,
-            right: -10,
+            right: -10
           }}
           icon={<FontAwesomeIcon icon={faPlus} color="#ddd" />}
           event="hover"
           key={-1}
           alwaysShowTitle={false}
-          onClick={() => alert('Here is the action of FAB.')}
-          text="TextForFAB"
+          // onClick={() => alert('Here is the action of FAB.')}
         >
-          {/* // The Action components are the "buttons" that appear when the Fab is open. You can use the out-of-the-box Action 
-          // component or you can use a custom component of any type and style it any way that you'd like. The "text" prop
-          // is the popup label that appears when the Action component is hovered. */}
+
           <Action
-            text=""
+            text="My Facebook"
             onClick={()=>{
-              console.log("Email Clicked...");
+              console.log("Facebook Clicked...");
             }}
-            
+            style={{
+              backgroundColor: '#2980b9'
+            }}
           >
-            <FontAwesomeIcon icon={faLinkedinIn} size='2x' />
+            <FontAwesomeIcon icon={faFacebookF} size='lg' />
           </Action>
 
           <Action
-              text=""
+            text="My Programming Blog in Bengali"
+            onClick={()=>{
+              console.log("Blog Clicked...");
+            }}
+            style={{
+              backgroundColor: '#e95950',
+              color: '#fff'
+            }}
+          >
+            <FontAwesomeIcon icon={faBloggerB} size='lg' />
+          </Action>
+
+          <Action
+            text="Me on LinkedIn"
+            onClick={()=>{
+              console.log("LinkedIn Clicked...");
+            }}
+            style={{
+              backgroundColor: '#007bb6',
+              color: '#fff'
+            }}
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} size='lg' />
+          </Action>
+
+          <Action
+              text="Me On StackOverflow"
               onClick={()=>{
-                console.log("Help Clicked...");
+                console.log("StackOverflow Clicked...");
+              }}
+              style={{
+                backgroundColor: '#fff',
+                color: '#e95950'
               }}
             >
-            <FontAwesomeIcon icon={faFacebookF} size='2x' />
+            <FontAwesomeIcon icon={faStackOverflow} size='lg' />
+          </Action>
+
+          <Action
+            text="Me on GitHub"
+            onClick={()=>{
+              console.log("GitHub Clicked...");
+            }}
+            style={{
+              backgroundColor: '#fff',
+              color: '#2c3e50'
+            }}
+          >
+            <FontAwesomeIcon icon={faGithubAlt} size='lg' />
           </Action>
         </Fab>
       </div>
+      {/* End of Fab Buttons for my profiles */}
     </>
     
   )
