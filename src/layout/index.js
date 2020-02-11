@@ -8,9 +8,10 @@ import favicon from '../../static/assets/favicon.png';
 import StyleSwitch from '../components/StyleSwitch';
 
 
-import { library, icon } from '@fortawesome/fontawesome-svg-core'
+// import { library, icon } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus,  } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faGitAlt  } from '@fortawesome/free-brands-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
 
@@ -29,7 +30,7 @@ const Layout = ({ children }) => {
 
   const [isDark, setIsDark] = useState(localIsDark);
 
-  library.add(faPlus);
+  // library.add(faPlus);
 
   return (
     
@@ -64,7 +65,7 @@ const Layout = ({ children }) => {
             bottom: 120,
             right: -10,
           }}
-          icon={<FontAwesomeIcon icon={["fas", "plus"]} color="#ddd" />}
+          icon={<FontAwesomeIcon icon={faPlus} color="#ddd" />}
           event="hover"
           key={-1}
           alwaysShowTitle={false}
@@ -87,7 +88,7 @@ const Layout = ({ children }) => {
                 console.log("Help Clicked...");
               }}
             >
-            {/* <i class="fas fa-info-circle"></i> */}
+            <FontAwesomeIcon icon={faFacebook} size='2x' />
           </Action>
         </Fab>
       </div>
