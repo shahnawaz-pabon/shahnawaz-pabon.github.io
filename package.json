@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "author": "Shahnawaz Hossan <s.pabon93@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-layout": "^1.1.21",
@@ -21,6 +25,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-spring": "^8.0.27",
+    "react-tiny-fab": "^3.4.0",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {

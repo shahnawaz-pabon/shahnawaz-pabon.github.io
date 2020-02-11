@@ -7,6 +7,13 @@ import favicon from '../../static/assets/favicon.png';
 
 import StyleSwitch from '../components/StyleSwitch';
 
+
+import { library, icon } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus,  } from '@fortawesome/free-solid-svg-icons';
+import { Fab, Action } from 'react-tiny-fab';
+import 'react-tiny-fab/dist/styles.css';
+
 const Layout = ({ children }) => {
 
   let localIsDark;
@@ -21,6 +28,8 @@ const Layout = ({ children }) => {
   }
 
   const [isDark, setIsDark] = useState(localIsDark);
+
+  library.add(faPlus);
 
   return (
     
@@ -37,6 +46,50 @@ const Layout = ({ children }) => {
       <div id="content-wrapper">{children}</div>
       <div className="toggle-bulb-icon">
         <StyleSwitch isDark={isDark} setIsDark={setIsDark}/>
+      </div>
+      <div>
+        <Fab
+          mainButtonStyles={{
+            backgroundColor: '#00b5ad',
+            width: 48,
+            height: 48,
+            bottom: 90,
+            right: 20,
+            position: 'fixed'
+          }}
+          actionButtonStyles={{
+
+          }}
+          position={{
+            bottom: 120,
+            right: -10,
+          }}
+          icon={<FontAwesomeIcon icon={["fas", "plus"]} color="#ddd" />}
+          event="hover"
+          key={-1}
+          alwaysShowTitle={false}
+          onClick={() => alert('Here is the action of FAB.')}
+          text="TextForFAB"
+        >
+          {/* // The Action components are the "buttons" that appear when the Fab is open. You can use the out-of-the-box Action 
+          // component or you can use a custom component of any type and style it any way that you'd like. The "text" prop
+          // is the popup label that appears when the Action component is hovered. */}
+          <Action
+            text="Email"
+            onClick={()=>{
+              console.log("Email Clicked...");
+            }}
+            
+          />
+          <Action
+              text="Help"
+              onClick={()=>{
+                console.log("Help Clicked...");
+              }}
+            >
+            {/* <i class="fas fa-info-circle"></i> */}
+          </Action>
+        </Fab>
       </div>
     </>
     
