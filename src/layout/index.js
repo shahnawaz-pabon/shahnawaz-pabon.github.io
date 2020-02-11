@@ -10,7 +10,7 @@ import StyleSwitch from '../components/StyleSwitch';
 
 // import { library, icon } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGitAlt  } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faBloggerB, faGithubAlt, faStackOverflow, faLinkedinIn  } from '@fortawesome/free-brands-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
@@ -76,19 +76,22 @@ const Layout = ({ children }) => {
           // component or you can use a custom component of any type and style it any way that you'd like. The "text" prop
           // is the popup label that appears when the Action component is hovered. */}
           <Action
-            text="Email"
+            text=""
             onClick={()=>{
               console.log("Email Clicked...");
             }}
             
-          />
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} size='2x' />
+          </Action>
+
           <Action
-              text="Help"
+              text=""
               onClick={()=>{
                 console.log("Help Clicked...");
               }}
             >
-            <FontAwesomeIcon icon={faFacebook} size='2x' />
+            <FontAwesomeIcon icon={faFacebookF} size='2x' />
           </Action>
         </Fab>
       </div>
