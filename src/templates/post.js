@@ -4,6 +4,8 @@ import Img from 'gatsby-image';
 import Layout from "../layout";
 import { Link } from 'gatsby';
 import '../styles/post.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -30,7 +32,10 @@ export default ({ data }) => {
             <div className="post-tags">
               {
                 tags.map(tag =>(
-                  <Link key={tag} to="/" className="tags">{tag}</Link>
+                  <Link key={tag} to="/" className="tags">
+                    <FontAwesomeIcon icon={faTag} color="#2c3e50" className="tag-icon"/>
+                    <span className="tag">{tag}</span>
+                  </Link>
                 ))
               }
             </div>

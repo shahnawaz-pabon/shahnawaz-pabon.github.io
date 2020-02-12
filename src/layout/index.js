@@ -11,7 +11,7 @@ import StyleSwitch from '../components/StyleSwitch';
 // import { library, icon } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faBloggerB, faGithubAlt, faStackOverflow, faLinkedinIn  } from '@fortawesome/free-brands-svg-icons';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTag } from '@fortawesome/free-solid-svg-icons';
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
 
