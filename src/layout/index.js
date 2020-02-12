@@ -82,13 +82,12 @@ const Layout = ({ children }) => {
           event="hover"
           key={-1}
           alwaysShowTitle={false}
-          // onClick={() => alert('Here is the action of FAB.')}
         >
 
           <Action
             text="My Facebook"
             onClick={()=>{
-              console.log("Facebook Clicked...");
+              window.open('https://www.facebook.com/shahnawazpabon', '_blank');
             }}
             style={{
               backgroundColor: '#2980b9'
@@ -100,7 +99,7 @@ const Layout = ({ children }) => {
           <Action
             text="My Programming Blog in Bengali"
             onClick={()=>{
-              console.log("Blog Clicked...");
+              window.open('http://pabonsec.blogspot.com/', '_blank');
             }}
             style={{
               backgroundColor: '#e95950',
@@ -113,7 +112,7 @@ const Layout = ({ children }) => {
           <Action
             text="Me on LinkedIn"
             onClick={()=>{
-              console.log("LinkedIn Clicked...");
+              window.open('https://www.linkedin.com/in/backtoschool/', '_blank');
             }}
             style={{
               backgroundColor: '#007bb6',
@@ -126,7 +125,7 @@ const Layout = ({ children }) => {
           <Action
               text="Me On StackOverflow"
               onClick={()=>{
-                console.log("StackOverflow Clicked...");
+                window.open('https://stackoverflow.com/users/6174271/pabon-sec?tab=profile', '_blank');
               }}
               style={{
                 backgroundColor: '#fff',
@@ -139,7 +138,7 @@ const Layout = ({ children }) => {
           <Action
             text="Me on GitHub"
             onClick={()=>{
-              console.log("GitHub Clicked...");
+              window.open('https://github.com/PabonSEC', '_blank');
             }}
             style={{
               backgroundColor: '#fff',
