@@ -3,7 +3,6 @@ import NavigationBar from '../components/NavigationBar';
 import config from '../data/config';
 import '../styles/global.css';
 import { Helmet } from 'react-helmet';
-import favicon from '../../static/assets/favicon.png';
 
 import StyleSwitch from '../components/StyleSwitch';
 
@@ -41,7 +40,6 @@ const Layout = ({ children }) => {
           }}
       >
         <meta name="description" content={config.siteDescription} />
-        <link rel="icon"  type="image/png" href={favicon} />
       </Helmet>
 
       {/* NavigationBar */}
