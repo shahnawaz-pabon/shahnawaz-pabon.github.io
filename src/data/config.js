@@ -1,6 +1,6 @@
 const config = {
   siteTitle: "Shahnawaz Hossan",
-  siteDescription: '',
+  siteDescription: 'A programming knowledge sharing platform',
   menuLinks: [
     {
       name: 'Posts',

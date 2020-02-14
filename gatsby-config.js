@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const config = require('./src/data/config');
 
 module.exports = {
     /* My site's config */
@@ -63,6 +64,14 @@ module.exports = {
       },
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: config.siteTitle,
+          short_name: config.siteTitle,
+          start_url: `/`,
+        },
+      },
     ]
 
 }
