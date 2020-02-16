@@ -5,6 +5,7 @@ import '../styles/global.css';
 import { Helmet } from 'react-helmet';
 
 import StyleSwitch from '../components/StyleSwitch';
+import Footer from '../components/Footer';
 
 
 // import { library, icon } from '@fortawesome/fontawesome-svg-core'
@@ -51,6 +52,8 @@ const Layout = ({ children }) => {
       {/* Contents */}
       <div id="content-wrapper">{children}</div>
       {/* Contents */}
+
+      <Footer/>
 
       {/* Toggle Dark Mode Button */}
       <div className="toggle-bulb-icon">
