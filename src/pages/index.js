@@ -10,14 +10,14 @@
         const postEdges = this.props.data.allMarkdownRemark.edges;
 
         return (
-            <Layout>
-              <Helmet title={`${config.siteTitle} – Software Engineer`} />
-              <div className="container">
-                <section>
-                    <PostListing postEdges={postEdges} />
-                </section>
-              </div>
-            </Layout>
+          <Layout>
+            <Helmet title={`${config.siteTitle} – Software Engineer`} />
+            <div className="container">
+              <section>
+                <PostListing postEdges={postEdges} />
+              </section>
+            </div>
+          </Layout>
         )
      }
  }
