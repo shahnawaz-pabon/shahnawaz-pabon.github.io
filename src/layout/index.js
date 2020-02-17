@@ -53,8 +53,6 @@ const Layout = ({ children }) => {
       <div id="content-wrapper">{children}</div>
       {/* Contents */}
 
-      <Footer/>
-
       {/* Toggle Dark Mode Button */}
       <div className="toggle-bulb-icon">
         <StyleSwitch isDark={isDark} setIsDark={setIsDark}/>
@@ -152,6 +150,8 @@ const Layout = ({ children }) => {
         </Fab>
       </div>
       {/* End of Fab Buttons for my profiles */}
+
+      <Footer/>
     </>
     
   )
