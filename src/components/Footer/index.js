@@ -7,9 +7,9 @@ export default class Footer extends Component {
 
     return (
 
-        <footer class="footer">
-          © Shahnawaz Hossan 2019 | All Rights Reserved
-        </footer>
+      <footer className="footer">
+        © Shahnawaz Hossan 2019 | All Rights Reserved
+      </footer>
     )
   }
 }
