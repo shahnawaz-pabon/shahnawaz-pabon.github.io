@@ -7,6 +7,7 @@ const config = require('./src/data/config');
 
 module.exports = {
   /* My site's config */
+  pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
