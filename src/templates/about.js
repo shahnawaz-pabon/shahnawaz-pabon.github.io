@@ -3,6 +3,8 @@ import Layout from '../layout';
 import '../styles/about.css';
 import lottie from 'lottie-web';
 import animationData from '../../static/assets/lottie/about.json';
+import Helmet from 'react-helmet';
+import config from '../data/config';
 
 class About extends React.Component {
 
@@ -24,6 +26,7 @@ class About extends React.Component {
     
     return (
       <Layout>
+        <Helmet title={`About | ${config.siteTitle} – Software Engineer`} />
         <div className="container">
           {/* <h1 className="about-header">About Me</h1> */}
           <div id='about-lottie'></div>
