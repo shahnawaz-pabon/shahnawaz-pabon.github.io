@@ -4,6 +4,7 @@
  import config from '../data/config';
  import Layout from '../layout';
  import PostListing from '../components/PostListing';
+ import Slider from '../components/Slider';
 
  class Index extends React.Component {
      render(){
@@ -12,6 +13,7 @@
         return (
           <Layout>
             <Helmet title={`${config.siteTitle} – Software Engineer`} />
+            <Slider />
             <div className="container">
               <section>
                 <PostListing postEdges={postEdges} />
