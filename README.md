@@ -25,7 +25,7 @@
 This is my personal site. I would like to make it useful as a resource of various type of problems I face during my programming time and share those solutions with everyone. The site is a portfolio of mine as well.
 
 ## How I started
-I started making my own site using [Jekyll][jekyll]. [This is my site][jekyll-site] built with Jekyll. When I saw [Tania Rascia's site][tania-rascia] first time, I found it so fast and loading time is extremely well. Then I decided to get started with Gatsby. Then [I made a site][gatsby-hello] following [this tutorial][gatsby-tutorial] before getting started.
+First I started making my own site using [Jekyll][jekyll]. [This is my site][jekyll-site] built with Jekyll. When I saw [Tania Rascia's site][tania-rascia] first time, I found it so fast and performance is extremely well. Then I decided to get started with Gatsby. After that [I made a site][gatsby-hello] following [this tutorial][gatsby-tutorial] before getting started.
 
 ## Used Technologies
 - [GatsbyJS][gatsbyjs]
