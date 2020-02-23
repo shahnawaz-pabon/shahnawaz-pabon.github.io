@@ -15,6 +15,7 @@
 * [Description](#description)
 * [How I started](#how-i-started)
 * [Used Technologies](#used-technologies)
+* [Used Awesome Things](#used-awesome-things)
 * [Acknowledgements](#acknowledgements)
 * [Run your first Gatsby Site](#run-your-first-gatsby-site)
 * [Deploy your site with GitHub Pages](#deploy-your-site-with-gitHub-pages)
@@ -32,13 +33,17 @@ First I started making my own site using [Jekyll][jekyll]. [This is my site][jek
 - [ReactJS][reactjs]
 - [NodeJS][nodejs]
 - [GraphQL][graphql]
+
+## Used Awesome Things
 - [LottieWeb][lottie-web]
+- [React Awesome Slider][rafael]
+- [Typed.js][typed]
+- [React Tiny FAB][tiny-fab]
 
 ## Acknowledgements
 - [Tania Rascia][tania-rascia]
 - [Ruben Harutyunyan][ruben]
 - [Prayash Thapa][prayash]
-- [Rafael Caferati][rafael]
 
 ## Run your first Gatsby Site
 
@@ -88,6 +93,8 @@ $ npm run deploy
 [graphql]: https://graphql.org/
 [jekyll]: https://jekyllrb.com/
 [lottie-web]: https://github.com/airbnb/lottie-web
+[typed]: https://github.com/mattboldt/typed.js/
+[tiny-fab]: https://github.com/dericgw/react-tiny-fab
 [tania-rascia]: https://www.taniarascia.com/
 [ruben]: https://github.com/vagr9k/gatsby-advanced-starter/
 [prayash]: https://github.com/prayash/awesome-gatsby

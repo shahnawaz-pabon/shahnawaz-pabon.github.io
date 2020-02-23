@@ -8,9 +8,23 @@ import slide1 from "../../../static/assets/images/slide1.jpg";
 import slide2 from "../../../static/assets/images/slide2.jpg";
 import slide3 from "../../../static/assets/images/slide3.jpg";
 
+import Typed from 'typed.js';
+
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 export default class Slider extends Component {
+
+  componentDidMount(){
+    var typed = new Typed('#typed', {
+      strings: ['Software Engineer', 'at', 'Byte Trek Ltd.'],
+      typeSpeed: 60,
+      backSpeed: 60,
+      loop: true,
+      startDelay: 500,
+      cursorChar: '_',
+      smartBackspace: true // Default value
+    });
+  }
 
   render() {
 
@@ -22,9 +36,21 @@ export default class Slider extends Component {
       interval={5000}
       customContent={
         <div style={{
-          position: "absolute"
+          position: "absolute",
+          color: '#fff',
+          textAlign: 'center',
+          top: '50%',
+          left: '50%',
+          transform: 'translateX(-50%) translateY(-50%)',
+          fontSize: '40px',
+          fontFamily: 'Ubuntu',
+          fontWeight: 'bold',
+          letterSpacing: '6px'
         }}>
-          Hello World !!!
+          <p>SHAHNAWAZ HOSSAN</p>
+          <p style={{
+            fontSize: '25px'
+          }}><span id="typed"></span></p>
         </div>
       }
     >
