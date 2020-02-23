@@ -13,3 +13,17 @@
 .awssld__bullets .awssld__bullets--active {
     background: #2980b9;
 }
+
+/* Override arrow buttons - before */
+.awssld__controls__arrow-left:before, 
+.awssld__controls__arrow-right:before {
+    background: #000;
+    width: 10px;
+}
+
+/* Override arrow buttons - after */
+.awssld__controls__arrow-left:after, 
+.awssld__controls__arrow-right:after {
+    background: #000;
+    width: 10px;
+}
