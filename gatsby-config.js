@@ -76,6 +76,8 @@ module.exports = {
         short_name: config.siteTitle,
         start_url: `/`,
         icon: `static/logos/book-reader.png`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: `standalone`,
       },
     },

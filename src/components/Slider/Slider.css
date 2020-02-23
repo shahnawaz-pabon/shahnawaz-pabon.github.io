@@ -1,0 +1,15 @@
+/* Override slider's wrapper */
+.awssld__wrapper {
+    top: 55px;
+    max-height: 450px;
+}
+
+/* Override bullets' button */
+.awssld__bullets button {
+    background: rgb(26, 188, 156);
+}
+
+/* Override bullet's active button */
+.awssld__bullets .awssld__bullets--active {
+    background: #2980b9;
+}
