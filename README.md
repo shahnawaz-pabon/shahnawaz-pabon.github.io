@@ -38,6 +38,7 @@ First I started making my own site using [Jekyll][jekyll]. [This is my site][jek
 - [Tania Rascia][tania-rascia]
 - [Ruben Harutyunyan][ruben]
 - [Prayash Thapa][prayash]
+- [Rafael Caferati][rafael]
 
 ## Run your first Gatsby Site
 
@@ -90,6 +91,7 @@ $ npm run deploy
 [tania-rascia]: https://www.taniarascia.com/
 [ruben]: https://github.com/vagr9k/gatsby-advanced-starter/
 [prayash]: https://github.com/prayash/awesome-gatsby
+[rafael]: https://github.com/rcaferati/react-awesome-slider
 [gatsby-tutorial]: https://www.gatsbyjs.org/tutorial/
 [jekyll-site]: https://pabonsec.github.io/jekyll-site/
 [gatsby-hello]: https://pabonsec.github.io/gatsby-hello-world/

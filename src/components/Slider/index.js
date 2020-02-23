@@ -20,6 +20,13 @@ export default class Slider extends Component {
       play={true}
       cancelOnInteraction={false} // should stop playing on user interaction
       interval={5000}
+      customContent={
+        <div style={{
+          position: "absolute"
+        }}>
+          Hello World !!!
+        </div>
+      }
     >
       <div className="slide-img" data-src={slide1} />
       <div className="slide-img" data-src={slide2} />
