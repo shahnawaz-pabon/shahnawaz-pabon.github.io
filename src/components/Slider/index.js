@@ -16,7 +16,8 @@ export default class Slider extends Component {
 
   componentDidMount(){
     var typed = new Typed('#typed', {
-      strings: ['Software Engineer', 'at', 'Byte Trek Ltd.'],
+      strings: ['Software Engineer,', 'Quick Learner,', 'Passionate about', 'solving problems,',
+      'Love to play', 'with programming.'],
       typeSpeed: 60,
       backSpeed: 60,
       loop: true,
