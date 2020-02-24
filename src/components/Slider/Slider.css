@@ -1,3 +1,8 @@
+/* Override slider's loader bar color */
+.awssld {
+    --loader-bar-color: none;
+}
+
 /* Override slider's wrapper */
 .awssld__wrapper {
     top: 55px;
