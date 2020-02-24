@@ -5,6 +5,10 @@
 }
 
 /* Override bullets' button */
+.awssld__bullets {
+    z-index: 5;
+}
+
 .awssld__bullets button {
     background: rgb(26, 188, 156);
 }

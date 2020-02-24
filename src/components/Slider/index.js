@@ -29,35 +29,50 @@ export default class Slider extends Component {
   render() {
 
     return (
-     <AutoplaySlider
-      animation="foldOutAnimation"
-      play={true}
-      cancelOnInteraction={false} // should stop playing on user interaction
-      interval={5000}
-      customContent={
-        <div style={{
-          position: "absolute",
-          color: '#fff',
-          textAlign: 'center',
-          top: '50%',
-          left: '50%',
-          transform: 'translateX(-50%) translateY(-50%)',
-          fontSize: '40px',
-          fontFamily: 'Ubuntu',
-          fontWeight: 'bold',
-          letterSpacing: '6px'
-        }}>
-          <p>SHAHNAWAZ HOSSAN</p>
-          <p style={{
-            fontSize: '25px'
-          }}><span id="typed"></span></p>
-        </div>
-      }
-    >
-      <div className="slide-img" data-src={slide1} />
-      <div className="slide-img" data-src={slide2} />
-      <div className="slide-img" data-src={slide3} />
-    </AutoplaySlider>
+      <>
+        
+        <AutoplaySlider
+          animation="foldOutAnimation"
+          play={true}
+          cancelOnInteraction={false} // should stop playing on user interaction
+          interval={5000}
+          customContent={
+            <>
+              <div style={{
+                position: "absolute",
+                color: '#fff',
+                textAlign: 'center',
+                top: '50%',
+                left: '50%',
+                transform: 'translateX(-50%) translateY(-50%)',
+                fontSize: '40px',
+                fontFamily: 'Ubuntu',
+                fontWeight: 'bold',
+                letterSpacing: '6px',
+                zIndex: 5
+              }}>
+                <p>SHAHNAWAZ HOSSAN</p>
+                <p style={{
+                  fontSize: '25px'
+                }}><span id="typed"></span></p>
+              </div>
+              <div style={{
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
+                zIndex: 3,
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                top: 0
+              }}></div>
+            </>
+            
+          }
+        >
+          <div className="slide-img" data-src={slide1} />
+          <div className="slide-img" data-src={slide2} />
+          <div className="slide-img" data-src={slide3} />
+        </AutoplaySlider>
+      </>
     )
   }
 }
