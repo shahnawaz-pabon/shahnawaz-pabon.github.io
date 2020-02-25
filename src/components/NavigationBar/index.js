@@ -14,7 +14,7 @@ export default class Navigation extends Component {
         <div className="nav-container">
           <div className="navbar-brand">
             <Link to="/">
-              <img src={book_reading} className="favicon" alt="sdfsf" />
+              <img src={book_reading} className="favicon" alt="Book Reader" />
               <span className="text"></span>
             </Link>
           </div>

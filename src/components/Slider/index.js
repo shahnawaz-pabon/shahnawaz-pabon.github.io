@@ -69,9 +69,9 @@ export default class Slider extends Component {
             
           }
         >
-          <div className="slide-img" data-src={slide1} />
-          <div className="slide-img" data-src={slide2} />
-          <div className="slide-img" data-src={slide3} />
+          <div className="slide-img" data-src={slide1} alt="First Slide"/>
+          <div className="slide-img" data-src={slide2} alt="Second Slide" />
+          <div className="slide-img" data-src={slide3} alt="Third Slide" />
         </AutoplaySlider>
       </>
     )
