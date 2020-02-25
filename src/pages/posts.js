@@ -28,6 +28,14 @@ query{
     group(limit: 500, field: frontmatter___category) {
       totalCount
       fieldValue
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
+      }
     }
   }
 }
