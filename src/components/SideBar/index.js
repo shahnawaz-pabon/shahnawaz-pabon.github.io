@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Sidebar from "react-sidebar";
+// import  styles from './styles';
 
 export default class SideBar extends Component {
     constructor(props) {
@@ -8,18 +9,29 @@ export default class SideBar extends Component {
 
     render() {
 
-        return (
-        <Sidebar
-            sidebar={
-                <b>Sidebar content</b>
-            }
-            open={true}
-            docked={true}
-            pullRight={true}
-        >
-            <b>Main content</b>
+        const postCategories = this.props.postCategories;
 
-        </Sidebar>
+        console.log("postCategories");
+        console.log(postCategories);
+
+        return (
+            <Sidebar
+                styles={{
+                    sidebar: {
+                        top: 75,
+                        width: 250
+                    },
+                }}
+                sidebar={
+                    <b>Sidebar content</b>
+                }
+                open={true}
+                docked={true}
+                pullRight={true}
+            >
+                <></>
+
+            </Sidebar>
         )
     }
 }

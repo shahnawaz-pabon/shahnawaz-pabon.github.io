@@ -7,11 +7,11 @@ import SideBar from '../components/SideBar';
 class Posts extends React.Component {
   render() {
     const postCategories = this.props.data.allMarkdownRemark.group;
-    console.log(postCategories);
+    // console.log(postCategories);
     return (
       <Layout>
         <Helmet title={`Posts | ${config.siteTitle} – Software Engineer`} />
-        <SideBar />
+        <SideBar postCategories={postCategories}/>
       </Layout>
     )
   }
