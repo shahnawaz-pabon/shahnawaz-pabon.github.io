@@ -5,14 +5,30 @@ import config from '../data/config';
 import SideBar from '../components/SideBar';
 
 class Posts extends React.Component {
-  render(){
+  render() {
+    const postCategories = this.props.data.allMarkdownRemark.group;
+    console.log(postCategories);
     return (
       <Layout>
         <Helmet title={`Posts | ${config.siteTitle} – Software Engineer`} />
-        <SideBar/>
+        <SideBar />
       </Layout>
     )
   }
 }
 
 export default Posts;
+
+export const postsQuery = graphql`
+query{
+  allMarkdownRemark(
+    sort: { order: DESC, fields: [frontmatter___date] },
+    filter: { frontmatter: { template: { eq: "post" } } }
+  ) {
+    group(limit: 500, field: frontmatter___category) {
+      totalCount
+      fieldValue
+    }
+  }
+}
+`;
