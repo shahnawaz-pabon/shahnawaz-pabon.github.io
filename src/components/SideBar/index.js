@@ -23,7 +23,20 @@ export default class SideBar extends Component {
                     },
                 }}
                 sidebar={
-                    <b>Sidebar content</b>
+                    <div>
+                        {
+                            postCategories.map(category => {
+
+                                return (
+                                    <b key={category.fieldValue}>
+                                        {category.fieldValue} - {category.totalCount}
+                                        <br />
+                                    </b>
+                                )
+
+                            })
+                        }
+                    </div>
                 }
                 open={true}
                 docked={true}
