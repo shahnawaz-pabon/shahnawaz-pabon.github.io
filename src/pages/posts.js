@@ -11,7 +11,9 @@ class Posts extends React.Component {
     return (
       <Layout>
         <Helmet title={`Posts | ${config.siteTitle} – Software Engineer`} />
-        <SideBar postCategories={postCategories}/>
+        <div className="container">
+          <SideBar postCategories={postCategories}/>
+        </div>
       </Layout>
     )
   }

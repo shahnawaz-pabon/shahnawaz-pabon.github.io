@@ -15,6 +15,7 @@ export default class SideBar extends Component {
         console.log(postCategories);
 
         return (
+
             <Sidebar
                 styles={{
                     sidebar: {
