@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from "react-sidebar";
-// import  styles from './styles';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default class SideBar extends Component {
     constructor(props) {
@@ -20,17 +21,32 @@ export default class SideBar extends Component {
                 styles={{
                     sidebar: {
                         top: 75,
-                        width: 250
+                        width: 250,
                     },
                 }}
                 sidebar={
                     <div>
+                        <p style={{
+                            fontSize: '1.5em',
+                            fontWeight: 'bold',
+                            textAlign: 'center'
+                        }}
+                        >Categories</p>
                         {
                             postCategories.map(category => {
 
                                 return (
-                                    <b key={category.fieldValue}>
-                                        {category.fieldValue} - {category.totalCount}
+
+                                    <b key={category.fieldValue} style={{
+                                        margin: 10
+                                    }}>
+                                        <FontAwesomeIcon icon={faFeatherAlt} />
+                                        <span style={{
+                                            marginLeft: 5
+                                        }}>
+                                            {category.fieldValue} ({category.totalCount})
+                                        </span>
+
                                         <br />
                                     </b>
                                 )
