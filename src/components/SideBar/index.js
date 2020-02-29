@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import Sidebar from "react-sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
+import './SideBar.css';
 
 export default class SideBar extends Component {
     constructor(props) {
         super(props);
+    }
+
+    handleClick(){
+        console.log("Clicked");
     }
 
     render() {
@@ -32,27 +37,28 @@ export default class SideBar extends Component {
                             textAlign: 'center'
                         }}
                         >Categories</p>
-                        {
-                            postCategories.map(category => {
+                        <div className="category-list">
+                            {
+                                postCategories.map(category => {
 
-                                return (
+                                    return (
 
-                                    <b key={category.fieldValue} style={{
-                                        margin: 10
-                                    }}>
-                                        <FontAwesomeIcon icon={faFeatherAlt} />
-                                        <span style={{
-                                            marginLeft: 5
-                                        }}>
-                                            {category.fieldValue} ({category.totalCount})
+                                        <b key={category.fieldValue} onClick={this.handleClick}>
+                                            <FontAwesomeIcon icon={faFeatherAlt} />
+                                            <span style={{
+                                                marginLeft: 5
+                                            }}>
+                                                {category.fieldValue} ({category.totalCount})
                                         </span>
 
-                                        <br />
-                                    </b>
-                                )
+                                            <br />
+                                        </b>
+                                    )
 
-                            })
-                        }
+                                })
+                            }
+
+                        </div>
                     </div>
                 }
                 open={true}
