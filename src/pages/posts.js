@@ -7,12 +7,17 @@ import PostListing from '../components/PostListing';
 
 class Posts extends React.Component {
   render() {
-    const postCategories = this.props.data.allMarkdownRemark.group;
-    // console.log(postCategories);
+    const postCategories = this.props.data.categories.group;
+    const postEdges = this.props.data.articles.edges;
+    console.log("postEdges");
+    console.log(postEdges);
     return (
       <Layout>
         <Helmet title={`Posts | ${config.siteTitle} – Software Engineer`} />
         <div className="container">
+          <section>
+            <PostListing postEdges={postEdges} />
+          </section>
           <SideBar postCategories={postCategories} />
         </div>
       </Layout>
