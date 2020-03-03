@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Sidebar from "react-sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
 import './SideBar.css';
@@ -9,7 +8,7 @@ export default class SideBar extends Component {
         super(props);
     }
 
-    handleClick(){
+    handleClick() {
         console.log("Clicked");
     }
 
@@ -21,53 +20,36 @@ export default class SideBar extends Component {
         console.log(postCategories);
 
         return (
-
-            <Sidebar
-                styles={{
-                    sidebar: {
-                        top: 75,
-                        width: 250,
-                    },
+            <div className="sidebar">
+                <p style={{
+                    fontSize: '1.5em',
+                    fontWeight: 'bold',
+                    textAlign: 'center'
                 }}
-                sidebar={
-                    <div>
-                        <p style={{
-                            fontSize: '1.5em',
-                            fontWeight: 'bold',
-                            textAlign: 'center'
-                        }}
-                        >Categories</p>
-                        <div className="category-list">
-                            {
-                                postCategories.map(category => {
+                >Categories</p>
+                <div className="category-list">
+                    {
+                        postCategories.map(category => {
 
-                                    return (
+                            return (
 
-                                        <b key={category.fieldValue} onClick={this.handleClick}>
-                                            <FontAwesomeIcon icon={faFeatherAlt} />
-                                            <span style={{
-                                                marginLeft: 5
-                                            }}>
-                                                {category.fieldValue} ({category.totalCount})
-                                        </span>
+                                <b key={category.fieldValue} onClick={this.handleClick}>
+                                    <FontAwesomeIcon icon={faFeatherAlt} />
+                                    <span style={{
+                                        marginLeft: 5
+                                    }}>
+                                        {category.fieldValue} ({category.totalCount})
+                                    </span>
 
-                                            <br />
-                                        </b>
-                                    )
+                                    <br />
+                                </b>
+                            )
 
-                                })
-                            }
+                        })
+                    }
 
-                        </div>
-                    </div>
-                }
-                open={true}
-                docked={true}
-                pullRight={true}
-            >
-                <></>
-
-            </Sidebar>
+                </div>
+            </div>
         )
     }
 }

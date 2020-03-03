@@ -7,3 +7,17 @@
     background-color: #dee2e6;
     color: #2c3e50;
 }
+
+.sidebar {
+    z-index: 2;
+    position: absolute;
+    top: 75px;
+    bottom: 0px;
+    transition: -webkit-transform 0.3s ease-out 0s;
+    will-change: transform;
+    overflow-y: auto;
+    width: 250px;
+    right: 0px;
+    transform: translateX(0%);
+    box-shadow: rgba(0, 0, 0, 0.15) -2px 2px 4px;
+}
