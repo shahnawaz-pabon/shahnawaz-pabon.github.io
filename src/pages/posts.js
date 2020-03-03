@@ -18,7 +18,7 @@ class Posts extends React.Component {
           <section>
             <PostListing postEdges={postEdges} />
           </section>
-          <SideBar postCategories={postCategories} />
+          <SideBar postEdges={postEdges} postCategories={postCategories} />
         </div>
       </Layout>
     )

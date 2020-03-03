@@ -8,16 +8,25 @@ export default class SideBar extends Component {
         super(props);
     }
 
-    handleClick() {
-        console.log("Clicked");
+    handleClick(categoryName) {
+        console.log("Category Clicked");
+        console.log(categoryName);
+
+        let filteredCategory = this.props.postEdges.filter(edge =>
+            edge.node.frontmatter.category[0].toLowerCase().includes(categoryName.toLowerCase())
+        );
+
+        console.log("filteredCategory");
+        console.log(filteredCategory);
     }
 
     render() {
 
+        const postEdges = this.props.postEdges;
         const postCategories = this.props.postCategories;
 
-        console.log("postCategories");
-        console.log(postCategories);
+        console.log("postEdges");
+        console.log(postEdges);
 
         return (
             <div className="sidebar">
@@ -26,14 +35,16 @@ export default class SideBar extends Component {
                     fontWeight: 'bold',
                     textAlign: 'center'
                 }}>Categories</p>
-                
+
                 <div className="category-list">
                     {
                         postCategories.map(category => {
 
                             return (
 
-                                <p key={category.fieldValue} onClick={this.handleClick}>
+                                <p key={category.fieldValue} onClick={() => {
+                                    this.handleClick(category.fieldValue);
+                                }}>
                                     <FontAwesomeIcon icon={faHandPointRight} />
                                     <span style={{
                                         marginLeft: 5
