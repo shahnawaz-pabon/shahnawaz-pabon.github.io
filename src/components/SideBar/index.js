@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
+import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
 import './SideBar.css';
 
 export default class SideBar extends Component {
@@ -25,16 +25,16 @@ export default class SideBar extends Component {
                     fontSize: '1.5em',
                     fontWeight: 'bold',
                     textAlign: 'center'
-                }}
-                >Categories</p>
+                }}>Categories</p>
+                
                 <div className="category-list">
                     {
                         postCategories.map(category => {
 
                             return (
 
-                                <b key={category.fieldValue} onClick={this.handleClick}>
-                                    <FontAwesomeIcon icon={faFeatherAlt} />
+                                <p key={category.fieldValue} onClick={this.handleClick}>
+                                    <FontAwesomeIcon icon={faHandPointRight} />
                                     <span style={{
                                         marginLeft: 5
                                     }}>
@@ -42,7 +42,7 @@ export default class SideBar extends Component {
                                     </span>
 
                                     <br />
-                                </b>
+                                </p>
                             )
 
                         })

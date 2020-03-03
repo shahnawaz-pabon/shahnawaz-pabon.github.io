@@ -1,11 +1,15 @@
-.category-list b {
-    margin: 10px;
+.category-list p {
+    margin: 15px 15px -15px;
+    font-weight: bold;
+    color: #828d90;
 }
 
-.category-list b:hover {
+.category-list p:hover {
     cursor: pointer;
     background-color: #dee2e6;
     color: #2c3e50;
+    border-radius: 5px;
+    padding: 0px 5px;
 }
 
 .sidebar {
