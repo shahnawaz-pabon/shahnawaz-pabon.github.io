@@ -8,35 +8,45 @@ import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
 import '../styles/sidebar.css';
 
 class Posts extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      filteredEdges: this.props.data.articles.edges
+      filteredEdges: this.props.data.articles.edges,
+      currentCategory: ''
     }
   }
 
   categoryFilter(categoryName) {
-    console.log("Category Clicked");
-    console.log(categoryName);
+    // console.log("Category Clicked");
+    // console.log(categoryName);
 
     let filteredCategory = this.props.data.articles.edges.filter(edge =>
       edge.node.frontmatter.category[0].toLowerCase().includes(categoryName.toLowerCase())
     );
 
     this.setState({
-      filteredEdges: filteredCategory
+      filteredEdges: filteredCategory,
+      currentCategory: categoryName
     });
   }
 
   render() {
     const postCategories = this.props.data.categories.group;
     const postEdges = this.props.data.articles.edges;
-    console.log("postEdges");
-    console.log(postEdges);
+    // console.log("postEdges");
+    // console.log(postEdges);
     return (
       <Layout>
         <Helmet title={`Posts | ${config.siteTitle} – Software Engineer`} />
         <div className="container">
+
+          {
+            this.state.currentCategory && <h3 style={{
+              textAlign: 'center'
+            }}>Filtered Posts under <b style={{ color: 'rgb(26, 188, 156)' }}>
+                {this.state.currentCategory}</b> category
+            </h3>
+          }
           <section>
             <PostListing postEdges={this.state.filteredEdges} />
           </section>
