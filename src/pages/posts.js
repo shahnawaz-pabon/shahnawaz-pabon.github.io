@@ -10,9 +10,12 @@ import '../styles/sidebar.css';
 class Posts extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      filteredEdges: this.props.data.articles.edges
+    }
   }
 
-  handleClick(categoryName) {
+  categoryFilter(categoryName) {
     console.log("Category Clicked");
     console.log(categoryName);
 
@@ -20,8 +23,9 @@ class Posts extends React.Component {
       edge.node.frontmatter.category[0].toLowerCase().includes(categoryName.toLowerCase())
     );
 
-    console.log("filteredCategory");
-    console.log(filteredCategory);
+    this.setState({
+      filteredEdges: filteredCategory
+    });
   }
 
   render() {
@@ -34,7 +38,7 @@ class Posts extends React.Component {
         <Helmet title={`Posts | ${config.siteTitle} – Software Engineer`} />
         <div className="container">
           <section>
-            <PostListing postEdges={postEdges} />
+            <PostListing postEdges={this.state.filteredEdges} />
           </section>
 
           {/* Sidebar */}
@@ -52,7 +56,7 @@ class Posts extends React.Component {
                   return (
 
                     <p key={category.fieldValue} onClick={() => {
-                      this.handleClick(category.fieldValue);
+                      this.categoryFilter(category.fieldValue);
                     }}>
                       <FontAwesomeIcon icon={faHandPointRight} />
                       <span style={{
