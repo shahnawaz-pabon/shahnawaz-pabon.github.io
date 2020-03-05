@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 
 // import { library, icon } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faBloggerB, faGithubAlt, faStackOverflow, faLinkedinIn  } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faBloggerB, faGithubAlt, faStackOverflow, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faPlus, faTag } from '@fortawesome/free-solid-svg-icons';
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
@@ -33,12 +33,12 @@ const Layout = ({ children }) => {
   // library.add(faPlus);
 
   return (
-    
+
     <>
       <Helmet
-          bodyAttributes={{
-            class: `${isDark ? 'dark': ''}`,
-          }}
+        bodyAttributes={{
+          class: `${isDark ? 'dark' : ''}`,
+        }}
       >
         <meta name="description" content={config.siteDescription} />
         <html lang="en" />
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
       {/* NavigationBar */}
       <NavigationBar menuLinks={config.menuLinks} isDark={isDark} />
       {/* NavigationBar Ends*/}
-      
+
 
       {/* Contents */}
       <div id="content-wrapper">{children}</div>
@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
 
       {/* Toggle Dark Mode Button */}
       <div className="toggle-bulb-icon">
-        <StyleSwitch isDark={isDark} setIsDark={setIsDark}/>
+        <StyleSwitch isDark={isDark} setIsDark={setIsDark} />
       </div>
       {/* Toggle Dark Mode Button Ends*/}
 
@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
 
           <Action
             text="My Facebook"
-            onClick={()=>{
+            onClick={() => {
               window.open('https://www.facebook.com/shahnawazpabon', '_blank');
             }}
             style={{
@@ -98,7 +98,7 @@ const Layout = ({ children }) => {
 
           <Action
             text="My Programming Blog in Bengali"
-            onClick={()=>{
+            onClick={() => {
               window.open('http://pabonsec.blogspot.com/', '_blank');
             }}
             style={{
@@ -111,7 +111,7 @@ const Layout = ({ children }) => {
 
           <Action
             text="Me on LinkedIn"
-            onClick={()=>{
+            onClick={() => {
               window.open('https://www.linkedin.com/in/backtoschool/', '_blank');
             }}
             style={{
@@ -123,21 +123,21 @@ const Layout = ({ children }) => {
           </Action>
 
           <Action
-              text="Me On StackOverflow"
-              onClick={()=>{
-                window.open('https://stackoverflow.com/users/6174271/pabon-sec?tab=profile', '_blank');
-              }}
-              style={{
-                backgroundColor: '#fff',
-                color: '#e95950'
-              }}
-            >
+            text="Me On StackOverflow"
+            onClick={() => {
+              window.open('https://stackoverflow.com/users/6174271/pabon-sec?tab=profile', '_blank');
+            }}
+            style={{
+              backgroundColor: '#fff',
+              color: '#e95950'
+            }}
+          >
             <FontAwesomeIcon icon={faStackOverflow} size='lg' />
           </Action>
 
           <Action
             text="Me on GitHub"
-            onClick={()=>{
+            onClick={() => {
               window.open('https://github.com/PabonSEC', '_blank');
             }}
             style={{
@@ -151,11 +151,11 @@ const Layout = ({ children }) => {
       </div>
       {/* End of Fab Buttons for my profiles */}
 
-      <Footer/>
+      <Footer />
     </>
-    
+
   )
-  
+
 }
 
 export default Layout

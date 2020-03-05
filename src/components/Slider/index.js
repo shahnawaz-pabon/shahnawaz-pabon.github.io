@@ -31,7 +31,6 @@ export default class Slider extends Component {
 
     return (
       <>
-        
         <AutoplaySlider
           animation="foldOutAnimation"
           play={true}
@@ -39,23 +38,9 @@ export default class Slider extends Component {
           interval={5000}
           customContent={
             <>
-              <div style={{
-                position: "absolute",
-                color: '#fff',
-                textAlign: 'center',
-                top: '50%',
-                left: '50%',
-                transform: 'translateX(-50%) translateY(-50%)',
-                fontSize: '40px',
-                fontFamily: 'Ubuntu',
-                fontWeight: 'bold',
-                letterSpacing: '6px',
-                zIndex: 5
-              }}>
-                <p>SHAHNAWAZ HOSSAN</p>
-                <p style={{
-                  fontSize: '25px'
-                }}><span id="typed"></span></p>
+              <div className="slider-container">
+                <p className="slider-title">SHAHNAWAZ HOSSAN</p>
+                <p className="slider-typed"><span id="typed"></span></p>
               </div>
               <div style={{
                 width: '100%',
