@@ -30,6 +30,10 @@ class Posts extends React.Component {
     });
   }
 
+  allPosts(){
+    console.log("All Clicked..");
+  }
+
   render() {
     const postCategories = this.props.data.categories.group;
     const postEdges = this.props.data.articles.edges;
@@ -60,6 +64,18 @@ class Posts extends React.Component {
             }}>Categories</p>
 
             <div className="category-list">
+              <p onClick={() => {
+                this.allPosts();
+              }}>
+                <FontAwesomeIcon icon={faHandPointRight} />
+                <span style={{
+                  marginLeft: 5
+                }}>
+                  All ({this.props.data.articles.totalCount})
+                </span>
+
+                <br />
+              </p>
               {
                 postCategories.map(category => {
 
@@ -99,6 +115,7 @@ query{
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { template: { eq: "post" } } }
     ) {
+    totalCount
     edges {
       node {
         frontmatter {
