@@ -31,7 +31,10 @@ class Posts extends React.Component {
   }
 
   allPosts(){
-    console.log("All Clicked..");
+    this.setState({
+      filteredEdges: this.props.data.articles.edges,
+      currentCategory: ''
+    });
   }
 
   render() {
