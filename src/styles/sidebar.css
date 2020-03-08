@@ -26,3 +26,16 @@
     transform: translateX(0%);
     box-shadow: rgba(0, 0, 0, 0.15) -2px 2px 4px;
 }
+
+.sidebar-circle {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(26, 188, 156);
+    position: absolute;
+    right: 230px;
+    border-radius: 50%;
+    top: 50%;
+}

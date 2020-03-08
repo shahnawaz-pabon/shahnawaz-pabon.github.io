@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import config from '../data/config';
 import PostListing from '../components/PostListing';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
+import { faHandPointRight, faBars } from "@fortawesome/free-solid-svg-icons";
 import '../styles/sidebar.css';
 
 class Posts extends React.Component {
@@ -30,7 +30,7 @@ class Posts extends React.Component {
     });
   }
 
-  allPosts(){
+  allPosts() {
     this.setState({
       filteredEdges: this.props.data.articles.edges,
       currentCategory: ''
@@ -59,6 +59,9 @@ class Posts extends React.Component {
           </section>
 
           {/* Sidebar */}
+          <div className="sidebar-circle">
+            <FontAwesomeIcon icon={faBars} />
+          </div>
           <div className="sidebar">
             <p style={{
               fontSize: '1.5em',

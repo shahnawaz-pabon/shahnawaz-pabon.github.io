@@ -1,28 +1,28 @@
- import React from "react";
- import { graphql } from "gatsby";
- import Helmet from 'react-helmet';
- import config from '../data/config';
- import Layout from '../layout';
- import PostListing from '../components/PostListing';
- import Slider from '../components/Slider';
+import React from "react";
+import { graphql } from "gatsby";
+import Helmet from 'react-helmet';
+import config from '../data/config';
+import Layout from '../layout';
+import PostListing from '../components/PostListing';
+import Slider from '../components/Slider';
 
- class Index extends React.Component {
-     render(){
-        const postEdges = this.props.data.allMarkdownRemark.edges;
+class Index extends React.Component {
+  render() {
+    const postEdges = this.props.data.allMarkdownRemark.edges;
 
-        return (
-          <Layout>
-            <Helmet title={`${config.siteTitle} – Software Engineer`} />
-            <Slider />
-            <div className="container">
-              <section>
-                <PostListing postEdges={postEdges} />
-              </section>
-            </div>
-          </Layout>
-        )
-     }
- }
+    return (
+      <Layout>
+        <Helmet title={`${config.siteTitle} – Software Engineer`} />
+        <Slider />
+        <div className="container">
+          <section>
+            <PostListing postEdges={postEdges} />
+          </section>
+        </div>
+      </Layout>
+    )
+  }
+}
 
 export default Index;
 
