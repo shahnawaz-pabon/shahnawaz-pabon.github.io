@@ -4,6 +4,7 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 import 'react-awesome-slider/dist/custom-animations/fold-out-animation.css';
 import './Slider.css';
+import '../../styles/breakpoints.css';
 import slide1 from "../../../static/assets/images/slide1.jpg";
 import slide2 from "../../../static/assets/images/slide2.jpg";
 import slide3 from "../../../static/assets/images/slide3.jpg";

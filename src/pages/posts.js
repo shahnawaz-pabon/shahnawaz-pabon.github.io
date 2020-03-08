@@ -6,6 +6,7 @@ import PostListing from '../components/PostListing';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointRight, faBars } from "@fortawesome/free-solid-svg-icons";
 import '../styles/sidebar.css';
+import classNames from 'classnames';
 
 class Posts extends React.Component {
   constructor(props) {
@@ -37,6 +38,10 @@ class Posts extends React.Component {
     });
   }
 
+  toggleSidebar(){
+    console.log("Sidebar Clicked");
+  }
+
   render() {
     const postCategories = this.props.data.categories.group;
     const postEdges = this.props.data.articles.edges;
@@ -59,7 +64,9 @@ class Posts extends React.Component {
           </section>
 
           {/* Sidebar */}
-          <div className="sidebar-circle">
+          <div className="sidebar-circle" onClick={() => {
+            this.toggleSidebar();
+          }}>
             <FontAwesomeIcon icon={faBars} />
           </div>
           <div className="sidebar">
