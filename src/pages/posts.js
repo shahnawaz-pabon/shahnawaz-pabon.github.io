@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import config from '../data/config';
 import PostListing from '../components/PostListing';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHandPointRight, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faHandPointRight, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import '../styles/sidebar.css';
 import classNames from 'classnames';
 
@@ -13,7 +13,9 @@ class Posts extends React.Component {
     super(props);
     this.state = {
       filteredEdges: this.props.data.articles.edges,
-      currentCategory: ''
+      currentCategory: '',
+      sidebarShown: true,
+      toggleIcon: true
     }
   }
 
@@ -40,6 +42,9 @@ class Posts extends React.Component {
 
   toggleSidebar(){
     console.log("Sidebar Clicked");
+    this.setState({
+      toggleIcon: !this.state.toggleIcon
+    })
   }
 
   render() {
@@ -67,7 +72,8 @@ class Posts extends React.Component {
           <div className="sidebar-circle" onClick={() => {
             this.toggleSidebar();
           }}>
-            <FontAwesomeIcon icon={faBars} />
+            { this.state.toggleIcon && <FontAwesomeIcon icon={faBars} />}
+            { !this.state.toggleIcon && <FontAwesomeIcon icon={faTimes} />}
           </div>
           <div className="sidebar">
             <p style={{
