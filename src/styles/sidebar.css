@@ -27,7 +27,13 @@
     box-shadow: rgba(0, 0, 0, 0.15) -2px 2px 4px;
 }
 
+/* When sidebar is open */
+.sidebar-open {
+    display: block;
+}
+
 .sidebar-circle {
+    position: fixed;
     display: none;
     z-index: 5;
     height: 48px;
@@ -36,8 +42,12 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(26, 188, 156);
-    position: absolute;
+    /* position: absolute; */
     right: 20px;
     border-radius: 50%;
-    top: 50%;
+    top: 75px;
+}
+
+.sidebar-circle-position {
+    right: 227px;
 }

@@ -41,9 +41,10 @@ class Posts extends React.Component {
     });
   }
 
-  toggleSidebar(){
+  toggleSidebar() {
     console.log("Sidebar Clicked");
     this.setState({
+      sidebarShown: !this.state.sidebarShown,
       toggleIcon: !this.state.toggleIcon
     })
   }
@@ -70,13 +71,13 @@ class Posts extends React.Component {
           </section>
 
           {/* Sidebar */}
-          <div className="sidebar-circle" onClick={() => {
+          <div className={`sidebar-circle ${!this.state.sidebarShown ? 'sidebar-circle-position' : ''}`} onClick={() => {
             this.toggleSidebar();
           }}>
-            { this.state.toggleIcon && <FontAwesomeIcon icon={faBars} />}
-            { !this.state.toggleIcon && <FontAwesomeIcon icon={faTimes} />}
+            {this.state.toggleIcon && <FontAwesomeIcon icon={faBars} />}
+            {!this.state.toggleIcon && <FontAwesomeIcon icon={faTimes} />}
           </div>
-          <div className="sidebar">
+          <div className={`sidebar ${!this.state.sidebarShown ? 'sidebar-open' : ''}`}>
             <p style={{
               fontSize: '1.5em',
               fontWeight: 'bold',
@@ -109,7 +110,7 @@ class Posts extends React.Component {
                         marginLeft: 5
                       }}>
                         {category.fieldValue} ({category.totalCount})
-                                    </span>
+                      </span>
 
                       <br />
                     </p>
