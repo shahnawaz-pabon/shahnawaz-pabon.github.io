@@ -14,7 +14,6 @@
 }
 
 .sidebar {
-    display: none;
     z-index: 2;
     position: absolute;
     top: 75px;
@@ -29,15 +28,16 @@
 }
 
 .sidebar-circle {
+    display: none;
     z-index: 5;
     height: 48px;
     width: 48px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     background-color: rgb(26, 188, 156);
     position: absolute;
-    right: 228px;
+    right: 20px;
     border-radius: 50%;
     top: 50%;
 }

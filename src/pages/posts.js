@@ -6,6 +6,7 @@ import PostListing from '../components/PostListing';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointRight, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import '../styles/sidebar.css';
+import '../styles/breakpoints.css';
 import classNames from 'classnames';
 
 class Posts extends React.Component {
