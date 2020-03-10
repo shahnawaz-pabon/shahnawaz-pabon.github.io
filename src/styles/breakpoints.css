@@ -1,12 +1,14 @@
 /* Media Queries */
 /* Extra small to small devices (portrait phones, upto 767px) */
 @media (min-width: 320px) {
+    /* Slider */
     .slider-title {
         font-size: 25px;
     }
     .slider-typed {
         font-size: 12px;
     }
+    /* End of Slider */
 
     /* Sidebar's CSS */
     .sidebar {
@@ -18,31 +20,49 @@
     }
     /* End of Sidebar's CSS */
 
+    /* Postlisting */
+    .posts a h2{
+        font-size: 12px;
+    }
+    .text-muted {
+        font-size: 10px;
+    }
+    /* End of Postlisting */
+
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    /* Slider */
     .slider-title {
         font-size: 30px;
     }
     .slider-typed {
         font-size: 15px;
     }
+    /* End of Slider */
 
     /* Sidebar's CSS */
 
     /* End of Sidebar's CSS */
+
+    /* Postlisting */
+    .posts a h2{
+        font-size: 14px;
+    }
+    /* End of Postlisting */
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+    /* Slider */
     .slider-title {
         font-size: 35px;
     }
     .slider-typed {
         font-size: 20px;
     }
+    /* End of Slider */
 
     /* Sidebar's CSS */
     .sidebar {
@@ -57,14 +77,25 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    /* Slider */
     .slider-title {
         font-size: 40px;
     }
     .slider-typed {
         font-size: 25px;
     }
+    /* End of Slider */
 
     /* Sidebar's CSS */
     /* End of Sidebar's CSS */
+
+    /* Postlisting */
+    .posts a h2{
+        font-size: 19px;
+    }
+    .text-muted {
+        font-size: 12px;
+    }
+    /* End of Postlisting */
 }
 /* End of Media Queries */

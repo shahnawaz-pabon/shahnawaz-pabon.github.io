@@ -48,6 +48,10 @@
     top: 75px;
 }
 
+.sidebar-circle:hover {
+    cursor: pointer;
+}
+
 .sidebar-circle-position {
     right: 227px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'gatsby';
 import './postlist.css';
+import '../../styles/breakpoints.css';
 import Img from 'gatsby-image';
 
 class PostListing extends React.Component {
