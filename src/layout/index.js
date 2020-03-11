@@ -7,13 +7,12 @@ import { Helmet } from 'react-helmet';
 import StyleSwitch from '../components/StyleSwitch';
 import Footer from '../components/Footer';
 
-
-// import { library, icon } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faBloggerB, faGithubAlt, faStackOverflow, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faPlus, faTag } from '@fortawesome/free-solid-svg-icons';
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
+import { globalVars } from '../utilities/Global';
 
 const Layout = ({ children }) => {
 
@@ -22,8 +21,10 @@ const Layout = ({ children }) => {
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('isDark') === 'false') {
       localIsDark = false;
+      globalVars.isDark = false;
     } else {
       localIsDark = true;
+      globalVars.isDark = true;
     }
     // console.log(localIsDark ? 'dark mode' : 'light mode');
   }

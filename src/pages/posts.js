@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointRight, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import '../styles/sidebar.css';
 import '../styles/breakpoints.css';
-import classNames from 'classnames';
+import { globalVars } from '../utilities/Global';
 
 class Posts extends React.Component {
   constructor(props) {
@@ -77,7 +77,10 @@ class Posts extends React.Component {
             {this.state.toggleIcon && <FontAwesomeIcon icon={faBars} />}
             {!this.state.toggleIcon && <FontAwesomeIcon icon={faTimes} />}
           </div>
-          <div className={`sidebar ${!this.state.sidebarShown ? 'sidebar-open' : ''}`}>
+          <div className={`sidebar 
+            ${!this.state.sidebarShown ? 'sidebar-open' : ''}
+            ${globalVars.isDark ? 'isDarkBackground': 'isNotDarkBackground'}`
+          }>
             <p style={{
               fontSize: '1.5em',
               fontWeight: 'bold',

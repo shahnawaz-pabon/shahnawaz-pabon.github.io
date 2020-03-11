@@ -1,6 +1,13 @@
 /* Media Queries */
 /* Extra small to small devices (portrait phones, upto 767px) */
 @media (min-width: 320px) {
+
+    /* Container */
+    .container {
+        padding: 0 1.5rem;
+    }
+    /* End of Container */
+
     /* Slider */
     .slider-title {
         font-size: 25px;
@@ -33,6 +40,7 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
     /* Slider */
     .slider-title {
         font-size: 30px;
@@ -55,6 +63,12 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    /* Container */
+    .container {
+        padding: 0 2rem;
+    }
+    /* End of Container */
+
     /* Slider */
     .slider-title {
         font-size: 35px;
@@ -77,6 +91,7 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
     /* Slider */
     .slider-title {
         font-size: 40px;
