@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Shahnawaz Hossan <s.pabon93@gmail.com>",
   "dependencies": {
+    "@emotion/core": "^10.0.28",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",

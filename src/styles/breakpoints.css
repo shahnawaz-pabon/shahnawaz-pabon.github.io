@@ -5,6 +5,7 @@
     /* Container */
     .container {
         padding: 0 1.5rem;
+        max-width: 500px;
     }
     /* End of Container */
 
@@ -66,6 +67,7 @@
     /* Container */
     .container {
         padding: 0 2rem;
+        max-width: 650px;
     }
     /* End of Container */
 
@@ -91,6 +93,11 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    /* Container */
+    .container {
+        max-width: 800px;
+    }
+    /* End of Container */
 
     /* Slider */
     .slider-title {

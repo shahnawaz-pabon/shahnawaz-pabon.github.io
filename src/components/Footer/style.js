@@ -1,3 +1,4 @@
+export default`
 footer {
     position: absolute;
     letter-spacing: 3px;
@@ -9,3 +10,4 @@ footer {
     margin: 25px auto;
     font-size: 1.15rem;
 }
+`;
