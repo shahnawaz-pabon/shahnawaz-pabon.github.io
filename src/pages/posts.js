@@ -77,9 +77,8 @@ class Posts extends React.Component {
             {this.state.toggleIcon && <FontAwesomeIcon icon={faBars} />}
             {!this.state.toggleIcon && <FontAwesomeIcon icon={faTimes} />}
           </div>
-          <div className={`sidebar 
-            ${!this.state.sidebarShown ? 'sidebar-open' : ''}
-            ${globalVars.isDark ? 'isDarkBackground': 'isNotDarkBackground'}`
+          <div className={`sidebar ${!this.state.sidebarShown ? 'sidebar-open' : 'sidebar-closed'}
+            ${globalVars.isDark ? 'isDarkBackground' : 'isNotDarkBackground'}`
           }>
             <p style={{
               fontSize: '1.5em',

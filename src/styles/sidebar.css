@@ -18,13 +18,19 @@
     position: absolute;
     top: 75px;
     bottom: 0px;
-    transition: -webkit-transform 0.3s ease-out 0s;
     will-change: transform;
     overflow-y: auto;
     width: 250px;
     right: 0px;
     transform: translateX(0%);
     box-shadow: rgba(0, 0, 0, 0.15) -2px 2px 4px;
+
+}
+
+/* When sidebar is open */
+.sidebar-open {
+    right: 0px;
+    /* display: block; */
     transition: all 500ms ease-out;
 	-webkit-transition: all 500ms ease-out ;
 	-webkit-box-sizing: border-box;
@@ -32,9 +38,9 @@
 	box-sizing: border-box;
 }
 
-/* When sidebar is open */
-.sidebar-open {
-    display: block;
+.sidebar-closed {
+    right: -250px;
+    /* display: block; */
     transition: all 500ms ease-out;
 	-webkit-transition: all 500ms ease-out ;
 	-webkit-box-sizing: border-box;
@@ -66,6 +72,11 @@
     right: 20px;
     border-radius: 50%;
     top: 75px;
+    transition: all 500ms ease-out;
+	-webkit-transition: all 500ms ease-out ;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .sidebar-circle:hover {
@@ -74,4 +85,9 @@
 
 .sidebar-circle-position {
     right: 227px;
+    transition: all 500ms ease-out;
+	-webkit-transition: all 500ms ease-out ;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
