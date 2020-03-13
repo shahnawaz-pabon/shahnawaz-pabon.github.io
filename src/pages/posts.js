@@ -71,13 +71,13 @@ class Posts extends React.Component {
           </section>
 
           {/* Sidebar */}
-          <div className={`sidebar-circle ${!this.state.sidebarShown ? 'sidebar-circle-position' : ''}`} onClick={() => {
+          <div className={`sidebar-circle ${this.state.sidebarShown ? 'sidebar-circle-position' : ''}`} onClick={() => {
             this.toggleSidebar();
           }}>
-            {this.state.toggleIcon && <FontAwesomeIcon icon={faBars} />}
-            {!this.state.toggleIcon && <FontAwesomeIcon icon={faTimes} />}
+            {!this.state.toggleIcon && <FontAwesomeIcon icon={faBars} />}
+            {this.state.toggleIcon && <FontAwesomeIcon icon={faTimes} />}
           </div>
-          <div className={`sidebar ${!this.state.sidebarShown ? 'sidebar-open' : 'sidebar-closed'}
+          <div className={`sidebar ${!this.state.sidebarShown ? 'sidebar-toggle' : ''}
             ${globalVars.isDark ? 'isDarkBackground' : 'isNotDarkBackground'}`
           }>
             <p style={{
