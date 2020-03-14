@@ -16,6 +16,7 @@
 * [How I started](#how-i-started)
 * [Used Technologies](#used-technologies)
 * [Used Awesome Things](#used-awesome-things)
+* [Useful Resources](#useful-resources)
 * [Acknowledgements](#acknowledgements)
 * [Run your first Gatsby Site](#run-your-first-gatsby-site)
 * [Deploy your site with GitHub Pages](#deploy-your-site-with-gitHub-pages)
@@ -39,6 +40,13 @@ First I started making my own site using [Jekyll][jekyll]. [This is my site][jek
 - [React Awesome Slider][rafael]
 - [Typed.js][typed]
 - [React Tiny FAB][tiny-fab]
+
+## Useful Resources
+- [React Context](https://reactjs.org/docs/context.html)
+- **Toggle Dark Mode**
+    - [1](https://medium.com/better-programming/react-context-api-part-1-dark-theme-3f00666cbacb)
+    - [2](https://ecstatic-elion-0c620b.netlify.com/dark-theme/)
+- [Gatsby Remark Emojis](https://github.com/matchilling/gatsby-remark-emojis)
 
 ## Acknowledgements
 - [Tania Rascia][tania-rascia]
