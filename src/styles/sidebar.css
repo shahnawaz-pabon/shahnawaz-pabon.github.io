@@ -26,20 +26,14 @@
     box-shadow: rgba(0, 0, 0, 0.15) -2px 2px 4px;
     transition: all 500ms ease-out;
 	-webkit-transition: all 500ms ease-out ;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-
 }
 
 /* When sidebar is open */
 .sidebar-toggle {
-    right: -250px;
+    /* right: -250px; */
+    width: 0px;
     transition: all 500ms ease-out;
 	-webkit-transition: all 500ms ease-out ;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .isDarkBackground {
@@ -67,7 +61,7 @@
     border-radius: 50%;
     top: 75px;
     transition: all 500ms ease-out;
-	-webkit-transition: all 500ms ease-out ;
+	-webkit-transition: all 500ms ease-out;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;

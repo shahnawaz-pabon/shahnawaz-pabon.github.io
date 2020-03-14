@@ -20,7 +20,9 @@
 
     /* Sidebar's CSS */
     .sidebar {
-        right: -250px;
+        /* right: -250px; */
+        width: 0px;
+        /* display: none; */
     }
 
     .sidebar-circle {
@@ -82,7 +84,9 @@
 
     /* Sidebar's CSS */
     .sidebar {
-        right: 0px;
+        /* right: 0px; */
+        width: 250px !important;
+        /* display: block; */
     }
 
     .sidebar-circle {
