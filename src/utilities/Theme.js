@@ -1,6 +1,6 @@
 import styled from "@emotion/core";
 
-const themes = {
+export const themes = {
   light: {
     foreground: "inherit",
     background: "inherit",
