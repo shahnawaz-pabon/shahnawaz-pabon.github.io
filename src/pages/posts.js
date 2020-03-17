@@ -46,7 +46,7 @@ class Posts extends React.Component {
   }
 
   toggleSidebar() {
-    console.log("Sidebar Clicked");
+    // console.log("Sidebar Clicked");
     this.setState({
       sidebarShown: !this.state.sidebarShown,
       toggleIcon: !this.state.toggleIcon

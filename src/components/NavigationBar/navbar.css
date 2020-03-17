@@ -10,7 +10,7 @@
 	box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
 	-webkit-transition : all 0.3s ease-out;
     transition : all 0.3s ease-out;
-    background-color: #fff;
+    background: #fff;
 }
 
 .navbar-brand img{
@@ -91,19 +91,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: height 0.3s ease;
-}
-
-.bg-light {
-	background-color: #fff !important;
-    transition: all 0.1s ease-out;
 }
 
 /* Dark Mode */
 .bg-dark {
     background: #1f2029;
     color: #fff;
-    transition: all 0.1s ease-out;
 }
 
 .bg-dark .nav-links a {
