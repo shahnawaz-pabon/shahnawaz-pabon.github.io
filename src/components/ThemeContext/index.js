@@ -1,21 +1,29 @@
 import React, { useState } from "react"
 
 export const ThemeContext = React.createContext({
-  name: "light",
-  updateTheme: () => {},
+  isDark: false,
+  setIsDark: () => { },
 });
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState("dark")
-  
-    return (
-      <ThemeContext.Provider
-        value={{
-          name: theme,
-          updateTheme: setTheme,
-        }}
-      >
-        {children}
-      </ThemeContext.Provider>
-    )
+
+  // if(typeof window !== 'undefined'){
+    const [isDark, setIsDark] = useState(localStorage.getItem('isDark'));
+  // }
+
+  function toggleDark() {
+    localStorage.setItem('isDark', !isDark);
+    setIsDark(!isDark);
   }
+
+  return (
+    <ThemeContext.Provider
+      value={{
+        isDark,
+        setIsDark: toggleDark,
+      }}
+    >
+      {children}
+    </ThemeContext.Provider>
+  )
+}

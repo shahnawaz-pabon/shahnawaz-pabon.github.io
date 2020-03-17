@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import { ThemeContext } from "../components/ThemeContext";
 import NavigationBar from '../components/NavigationBar';
 import config from '../data/config';
@@ -7,8 +7,6 @@ import { Helmet } from 'react-helmet';
 
 import StyleSwitch from '../components/StyleSwitch';
 import Footer from '../components/Footer';
-import { themes } from '../utilities/Theme';
-import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faBloggerB, faGithubAlt, faStackOverflow, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -17,168 +15,137 @@ import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
 import { globalVars } from '../utilities/Global';
 
-const ThemedLayout = styled.div`
-  color: ${props => themes[props.theme.name].foreground};
-  background-color: ${props => themes[props.theme.name].background};
-  transition: all 0.4s ease;
-  min-height: 100vh;
+export default class Layout extends Component {
 
-  & a {
-    color: ${props => (props.theme.name === "dark" ? "#B38CD9" : "inherit")};
-  }
-`
+  static contextType = ThemeContext;
+  
+  render() {
 
-const Layout = ({ children }) => {
+    const { isDark, setIsDark } = this.context;
+    const { children } = this.props;
 
-  let localIsDark;
+    return (
+      <>
+        <Helmet
+          bodyAttributes={{
+            class: `${isDark ? 'dark' : ''}`,
+          }}
+        >
+          <meta name="description" content={config.siteDescription} />
+          <html lang="en" />
+        </Helmet>
 
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('isDark') === 'false') {
-      localIsDark = false;
-      globalVars.isDark = false;
-    } else {
-      localIsDark = true;
-      globalVars.isDark = true;
-    }
-    // console.log(localIsDark ? 'dark mode' : 'light mode');
-  }
+        {/* NavigationBar */}
+        <NavigationBar menuLinks={config.menuLinks} />
+        {/* NavigationBar Ends*/}
 
-  const [isDark, setIsDark] = useState(localIsDark);
 
-  // library.add(faPlus);
+        {/* Contents */}
+        <div id="content-wrapper">{children}</div>
+        {/* Contents */}
 
-  return (
+        {/* Toggle Dark Mode Button */}
+        <div className="toggle-bulb-icon">
+          <StyleSwitch isDark={isDark} setIsDark={setIsDark} />
+        </div>
+        {/* Toggle Dark Mode Button Ends*/}
 
-    <ThemeContext.Consumer>
 
-      {theme => (
-        <ThemedLayout theme={theme}>
-
-          <Helmet
-            bodyAttributes={{
-              class: `${isDark ? 'dark' : ''}`,
+        {/* Fab Buttons for my profiles */}
+        <div>
+          <Fab
+            mainButtonStyles={{
+              backgroundColor: '#1abc9c',
+              width: 48,
+              height: 48,
+              bottom: 90,
+              right: 20,
+              position: 'fixed'
             }}
+            actionButtonStyles={{
+              right: -300
+            }}
+            position={{
+              bottom: 120,
+              right: -10
+            }}
+            icon={<FontAwesomeIcon icon={faPlus} color="#ddd" />}
+            event="hover"
+            key={-1}
+            alwaysShowTitle={false}
           >
-            <meta name="description" content={config.siteDescription} />
-            <html lang="en" />
-          </Helmet>
 
-          {/* NavigationBar */}
-          <NavigationBar menuLinks={config.menuLinks} isDark={isDark} />
-          {/* NavigationBar Ends*/}
-
-
-          {/* Contents */}
-          <div id="content-wrapper">{children}</div>
-          {/* Contents */}
-
-          {/* Toggle Dark Mode Button */}
-          <div className="toggle-bulb-icon">
-            <StyleSwitch isDark={isDark} setIsDark={setIsDark} />
-          </div>
-          {/* Toggle Dark Mode Button Ends*/}
-
-
-          {/* Fab Buttons for my profiles */}
-          <div>
-            <Fab
-              mainButtonStyles={{
-                backgroundColor: '#1abc9c',
-                width: 48,
-                height: 48,
-                bottom: 90,
-                right: 20,
-                position: 'fixed'
+            <Action
+              text="My Facebook"
+              onClick={() => {
+                window.open('https://www.facebook.com/shahnawazpabon', '_blank');
               }}
-              actionButtonStyles={{
-                right: -300
+              style={{
+                backgroundColor: '#2980b9'
               }}
-              position={{
-                bottom: 120,
-                right: -10
-              }}
-              icon={<FontAwesomeIcon icon={faPlus} color="#ddd" />}
-              event="hover"
-              key={-1}
-              alwaysShowTitle={false}
             >
+              <FontAwesomeIcon icon={faFacebookF} size='lg' />
+            </Action>
 
-              <Action
-                text="My Facebook"
-                onClick={() => {
-                  window.open('https://www.facebook.com/shahnawazpabon', '_blank');
-                }}
-                style={{
-                  backgroundColor: '#2980b9'
-                }}
-              >
-                <FontAwesomeIcon icon={faFacebookF} size='lg' />
-              </Action>
+            <Action
+              text="My Programming Blog in Bengali"
+              onClick={() => {
+                window.open('http://pabonsec.blogspot.com/', '_blank');
+              }}
+              style={{
+                backgroundColor: '#e95950',
+                color: '#fff'
+              }}
+            >
+              <FontAwesomeIcon icon={faBloggerB} size='lg' />
+            </Action>
 
-              <Action
-                text="My Programming Blog in Bengali"
-                onClick={() => {
-                  window.open('http://pabonsec.blogspot.com/', '_blank');
-                }}
-                style={{
-                  backgroundColor: '#e95950',
-                  color: '#fff'
-                }}
-              >
-                <FontAwesomeIcon icon={faBloggerB} size='lg' />
-              </Action>
+            <Action
+              text="Me on LinkedIn"
+              onClick={() => {
+                window.open('https://www.linkedin.com/in/backtoschool/', '_blank');
+              }}
+              style={{
+                backgroundColor: '#007bb6',
+                color: '#fff'
+              }}
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} size='lg' />
+            </Action>
 
-              <Action
-                text="Me on LinkedIn"
-                onClick={() => {
-                  window.open('https://www.linkedin.com/in/backtoschool/', '_blank');
-                }}
-                style={{
-                  backgroundColor: '#007bb6',
-                  color: '#fff'
-                }}
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} size='lg' />
-              </Action>
+            <Action
+              text="Me On StackOverflow"
+              onClick={() => {
+                window.open('https://stackoverflow.com/users/6174271/pabon-sec?tab=profile', '_blank');
+              }}
+              style={{
+                backgroundColor: '#fff',
+                color: '#e95950'
+              }}
+            >
+              <FontAwesomeIcon icon={faStackOverflow} size='lg' />
+            </Action>
 
-              <Action
-                text="Me On StackOverflow"
-                onClick={() => {
-                  window.open('https://stackoverflow.com/users/6174271/pabon-sec?tab=profile', '_blank');
-                }}
-                style={{
-                  backgroundColor: '#fff',
-                  color: '#e95950'
-                }}
-              >
-                <FontAwesomeIcon icon={faStackOverflow} size='lg' />
-              </Action>
+            <Action
+              text="Me on GitHub"
+              onClick={() => {
+                window.open('https://github.com/PabonSEC', '_blank');
+              }}
+              style={{
+                backgroundColor: '#fff',
+                color: '#2c3e50'
+              }}
+            >
+              <FontAwesomeIcon icon={faGithubAlt} size='lg' />
+            </Action>
+          </Fab>
+        </div>
+        {/* End of Fab Buttons for my profiles */}
 
-              <Action
-                text="Me on GitHub"
-                onClick={() => {
-                  window.open('https://github.com/PabonSEC', '_blank');
-                }}
-                style={{
-                  backgroundColor: '#fff',
-                  color: '#2c3e50'
-                }}
-              >
-                <FontAwesomeIcon icon={faGithubAlt} size='lg' />
-              </Action>
-            </Fab>
-          </div>
-          {/* End of Fab Buttons for my profiles */}
+        <Footer />
 
-          <Footer />
+      </>
 
-        </ThemedLayout>
-      )}
-
-    </ThemeContext.Consumer>
-
-  )
-
+    )
+  }
 }
-
-export default Layout

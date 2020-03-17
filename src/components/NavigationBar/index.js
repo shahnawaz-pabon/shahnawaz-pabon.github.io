@@ -7,10 +7,10 @@ export default class Navigation extends Component {
 
   render() {
 
-    const { menuLinks, isDark } = this.props;
+    const { menuLinks } = this.props;
 
     return (
-      <nav className={isDark ? "navbar bg-dark" : "navbar bg-light"} >
+      <nav className='navbar'>
         <div className="nav-container">
           <div className="navbar-brand">
             <Link to="/">
