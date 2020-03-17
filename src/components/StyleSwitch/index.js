@@ -1,13 +1,11 @@
 import React from 'react';
 import './StyleSwitch.css';
-import { globalVars } from '../../utilities/Global';
 
 const StyleSwitch = ({ isDark, setIsDark }) => {
 
   function handleClick() {
     localStorage.setItem('isDark', !isDark);
     setIsDark(!isDark);
-    globalVars.isDark = !isDark;
   }
 
   return (

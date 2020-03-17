@@ -13,7 +13,6 @@ import { faFacebookF, faBloggerB, faGithubAlt, faStackOverflow, faLinkedinIn } f
 import { faPlus, faTag } from '@fortawesome/free-solid-svg-icons';
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
-import { globalVars } from '../utilities/Global';
 
 export default class Layout extends Component {
 

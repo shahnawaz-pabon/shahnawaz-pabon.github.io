@@ -7,9 +7,7 @@ export const ThemeContext = React.createContext({
 
 export const ThemeProvider = ({ children }) => {
 
-  // if(typeof window !== 'undefined'){
-    const [isDark, setIsDark] = useState(localStorage.getItem('isDark'));
-  // }
+  const [isDark, setIsDark] = useState(localStorage.getItem('isDark'));
 
   function toggleDark() {
     localStorage.setItem('isDark', !isDark);

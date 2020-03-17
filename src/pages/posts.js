@@ -7,9 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointRight, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import '../styles/sidebar.css';
 import '../styles/breakpoints.css';
-import { globalVars } from '../utilities/Global';
+
+import { ThemeContext } from '../components/ThemeContext';
 
 class Posts extends React.Component {
+  
+  static contextType = ThemeContext;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -52,6 +56,8 @@ class Posts extends React.Component {
   render() {
     const postCategories = this.props.data.categories.group;
     const postEdges = this.props.data.articles.edges;
+
+    const { isDark } = this.context;
     // console.log("postEdges");
     // console.log(postEdges);
     return (
@@ -78,7 +84,7 @@ class Posts extends React.Component {
             {this.state.toggleIcon && <FontAwesomeIcon icon={faTimes} />}
           </div>
           <div className={`sidebar ${!this.state.sidebarShown ? 'sidebar-toggle' : ''}
-            ${globalVars.isDark ? 'isDarkBackground' : 'isNotDarkBackground'}`
+            ${isDark ? 'isDarkBackground' : 'isNotDarkBackground'}`
           }>
             <p style={{
               fontSize: '1.5em',
