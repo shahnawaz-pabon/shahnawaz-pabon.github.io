@@ -13,7 +13,9 @@ export default class Navigation extends Component {
     const { isDark } = this.context;
 
     return (
-      <nav className={`navbar ${isDark? 'bg-dark': ''}`}>
+      <nav
+        style={isDark ? { backgroundColor: '#1f2029', color: '#fffff' } : { backgroundColor: '#fff', color: '#212112'}}
+        className='navbar'>
         <div className="nav-container">
           <div className="navbar-brand">
             <Link to="/">

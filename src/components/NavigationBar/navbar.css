@@ -10,7 +10,7 @@
 	box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
 	-webkit-transition : all 0.3s ease-out;
     transition : all 0.3s ease-out;
-    background: #fff;
+    /* background: #fff; */
 }
 
 .navbar-brand img{
@@ -49,7 +49,7 @@
     font-weight: 500;
     padding: .6rem;
     margin: 0;
-    color: rgba(0, 0, 0, 0.45);
+    color: #828d90;
     line-height: 1.2;
     text-align: center;
     text-decoration: none;
