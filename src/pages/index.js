@@ -52,6 +52,7 @@ query {
         fields {
           slug
         }
+        timeToRead
       }
     }
   }

@@ -165,6 +165,7 @@ query{
         fields {
           slug
         }
+        timeToRead
       }
     }
   }

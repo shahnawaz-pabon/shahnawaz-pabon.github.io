@@ -16,6 +16,7 @@ class PostListing extends React.Component {
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
         excerpt: postEdge.node.excerpt,
+        timeToRead: postEdge.node.timeToRead
       });
     });
     return postList;
@@ -28,26 +29,26 @@ class PostListing extends React.Component {
         {postList.map(post => {
 
           let featuredImage;
-          
+
           if (post.featuredImage) {
             featuredImage = post.featuredImage.childImageSharp.fixed
           }
 
-          return(
+          return (
             <Link to={post.path} key={post.title}>
 
               {featuredImage ? <Img fixed={featuredImage} /> : <div />}
 
               <div className="post-title">
                 <h2>{post.title}</h2>
-                <small className="text-muted">{post.date}</small>
+                <small className="text-muted">{post.date} . ☕️ {post.timeToRead} min read</small>
               </div>
-              
+
             </Link>
           )
 
         }
-        
+
         )}
       </div>
     );
