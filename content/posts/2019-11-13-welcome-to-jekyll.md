@@ -25,6 +25,12 @@ $ sudo apt-get install ruby-full build-essential zlib1g-dev
 
 Setup gems installation directory for your user account to avoid installing Ruby Gems as the root user. You will found this informed on [Jekyll's website][jekyll-site]. So add environment variables to `~/.bashrc` file to configure installation path.
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 $ echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
@@ -34,11 +40,23 @@ $ source ~/.bashrc
 
 Now install Jekyll by running this
 
-```
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
+```bash
 $ gem install jekyll bundler
 ```
 
 To create your own blog and test it, run the following
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ jekyll new myblog

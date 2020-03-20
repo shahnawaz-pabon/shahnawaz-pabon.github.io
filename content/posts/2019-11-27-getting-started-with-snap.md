@@ -36,11 +36,23 @@ The system is actually designed for **IoT, Cloud and Desktop Computing** that ar
 
 #### <i class="fas fa-pen-alt"></i> Installing `snapd` on Ubuntu
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ sudo apt install snapd
 ```
 
 It manages the snap environment on local the system and will include the snap tool for interacting with snaps as well. You can check whether snap is installed or not by running `snap version` on the command line:
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ snap version
@@ -55,6 +67,12 @@ kernel  5.0.0-36-generic
 <h3 id="install-and-run-your-first-snap"><i class="fas fa-box"></i> Install and Run your first Snap</h3>
 
 #### <i class="fas fa-pen-alt"></i> Finding a `snap`
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ snap find something
@@ -71,6 +89,12 @@ spt                  v0.4.0        popey           -        Spotify TUI
 
 
 #### <i class="fas fa-pen-alt"></i> Learning about a `snap`
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ snap info hello
@@ -95,12 +119,24 @@ You will know details about a package by running this command.
 
 #### <i class="fas fa-pen-alt"></i> Install and execution
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ sudo snap install hello
 hello 2.10 from Canonical✓ installed
 ```
 
 For running the command simply write `hello` in the command line.
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ hello
@@ -109,6 +145,12 @@ Hello, world!
 
 
 #### <i class="fas fa-pen-alt"></i> Keep tracking installed `snaps`
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ snap list
@@ -123,12 +165,24 @@ Installed snaps on your system will be listed by this command.
 
 #### <i class="fas fa-pen-alt"></i> Refreshing an installed `snap`
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ sudo snap refresh hello
 snap "hello" has no updates available
 ```
 
 Above command will check whether a newer version is available or not and it will be downloaded and installed automatically.
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ sudo snap refresh --channel=beta hello
@@ -142,10 +196,22 @@ You can change the channel from which your snap will be tracked and refreshed wi
 
 #### <i class="fas fa-pen-alt"></i> Reverting an installed `snap`
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ sudo snap revert hello
 hello reverted to 2.10
 ```
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ snap list --all hello
@@ -158,6 +224,12 @@ Above command will list all `revisions` of hello.
 
 *`Revision` is the sequence number which is assigned by the store when it was uploaded*
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ snap list --all
 ```
@@ -166,6 +238,12 @@ This will list all `revisions` available for every installed snaps.
 
 
 #### <i class="fas fa-pen-alt"></i> Enabling and Disabling a `snap`
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ sudo snap disable hello
@@ -177,6 +255,12 @@ hello enabled
 
 
 #### <i class="fas fa-pen-alt"></i> Removing a `snap`
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ sudo snap remove hello

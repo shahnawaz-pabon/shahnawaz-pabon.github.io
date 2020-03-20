@@ -13,6 +13,12 @@ tags:
 
 **Using Ubuntu**
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ sudo apt install curl
 $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
@@ -25,6 +31,12 @@ $ npm -v
 
 **Using Debian, as root**
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ curl -sL https://deb.nodesource.com/setup_10.x | bash -
 $ sudo apt-get install -y nodejs
@@ -32,6 +44,12 @@ $ sudo apt-get install -y nodejs
 
 <br/>
 <h3><i class="fas fa-angle-right"></i> Install react-native-cli</h3>
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ sudo npm install -g react-native-cli
@@ -43,6 +61,12 @@ react-native-cli: 2.0.1
 <h3><i class="fab fa-android"></i> Setup Android development environment</h3>
 
 **[Download android studio](https://developer.android.com/studio/index.html)**. In my case downloaded file's name was `android-studio-ide-191.6010548-linux.tar.gz` and I kept it into my home directory. Then follow these steps
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ cd ~
@@ -61,6 +85,12 @@ To do that just go to `Appearance & Behavior → System Settings → Android SDK
 
 Then you need to set up `ANDROID_HOME` environment variables in order to build react native apps with native code. Now edit your `.bashrc` file and add these lines into it.
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -71,12 +101,24 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 After adding those lines save it and run `source .bashrc` via terminal to keep running source to get the aliases working in any new login terminal instances.
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ source .bashrc
 ```
 
 <br/>
 <h3><i class="fab fa-java"></i> Install java on your Ubuntu system</h3>
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ sudo apt update
@@ -94,6 +136,12 @@ So you have successfully installed `java` on your `Ubuntu` system. My version wa
 <h3><i class="fas fa-spell-check"></i> Test your first react-native app</h3>
 
 First connect your android phone with a usb. Then run these commands
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
 
 ```bash
 $ react-native init testReactApp
