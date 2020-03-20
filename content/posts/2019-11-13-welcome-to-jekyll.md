@@ -12,6 +12,12 @@ tags:
 
 `Jekyll` is one of the popular static site generators. To work with `Jekyll`, you need to have all the required dependencies.
 
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+
 ```bash
 $ sudo apt-get update
 $ sudo apt-get install ruby-full build-essential zlib1g-dev

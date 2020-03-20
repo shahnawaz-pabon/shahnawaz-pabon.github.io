@@ -38,3 +38,39 @@
 .post-date {
     display: flex;
 }
+
+/* Fake Terminal */
+.fakeButtons {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+    top: 6px;
+    left: 6px;
+    background-color: #ff3b47;
+    border-color: #9d252b;
+    display: inline-block;
+  }
+  
+  .fakeMinimize {
+    left: 11px;
+    background-color: #ffc100;
+    border-color: #9d802c;
+  }
+  
+  .fakeZoom {
+    left: 16px;
+    background-color: #00d742;
+    border-color: #049931;
+  }
+  
+  .fakeMenu {
+    box-sizing: border-box;
+    height: 32px;
+    background-color: #bbb;
+    margin: 0 auto -8px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+/* Fake Terminal */
