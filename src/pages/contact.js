@@ -3,19 +3,35 @@ import Layout from '../layout';
 import '../styles/contact.css';
 import Helmet from 'react-helmet';
 import config from '../data/config';
-import wave from '../../static/assets/images/wave.png';
 import contact from '../../static/assets/images/contact.svg';
+import lottie from 'lottie-web';
+import animationTelegram from '../../static/assets/lottie/telegram.json';
 
-class About extends React.Component {
-  render(){
+class Contact extends React.Component {
+  componentDidMount() {
+
+    lottie.loadAnimation({
+      container: document.getElementById('contact-lottie'), // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: animationTelegram
+    })
+
+  }
+
+  render() {
     return (
       <Layout>
         <Helmet title={`Contact | ${config.siteTitle} – Software Engineer`} />
         <div className="container">
 
-          <div class="img">
+          <div id='contact-lottie'></div>
+
+          <div className="img">
             <img src={contact} />
           </div>
+
 
         </div>
       </Layout>
@@ -23,4 +39,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default Contact;

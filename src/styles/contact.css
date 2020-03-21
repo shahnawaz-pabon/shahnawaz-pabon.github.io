@@ -4,5 +4,12 @@
 }
 
 .img img{
-	width: 500px;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+}
+
+#contact-lottie{
+	width: 200px;
+	height: 200px;
 }
