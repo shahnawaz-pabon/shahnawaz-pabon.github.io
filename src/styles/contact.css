@@ -1,3 +1,8 @@
-.contact-header {
-    text-align: center;
+.img{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.img img{
+	width: 500px;
 }
