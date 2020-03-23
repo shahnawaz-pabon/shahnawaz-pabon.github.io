@@ -12,9 +12,9 @@ tags:
 
 ## Table of Contents
 &nbsp;&nbsp;&nbsp;&nbsp; #:hand: &nbsp; **[Getting Started](#getting-started)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; #:hammer: &nbsp; **[Setting Up](#setting-up)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-box"></i> &nbsp; **[Install and Run your first Snap](#install-and-run-your-first-snap)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-angle-double-right"></i> &nbsp; **[More Features](#more-features)**
+&nbsp;&nbsp;&nbsp;&nbsp; #:wrench: &nbsp; **[Setting Up](#setting-up)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:running: &nbsp; **[Install and Run your first Snap](#install-and-run-your-first-snap)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:speech_balloon: &nbsp; **[More Features](#more-features)**
 
 <h3 id="getting-started">#:hand: Getting Started</h3>
 
@@ -32,9 +32,9 @@ The system is actually designed for **IoT, Cloud and Desktop Computing** that ar
 * Dependency-free
 
 <br/>
-<h3 id="setting-up">#:hammer: Setting Up</h3>
+<h3 id="setting-up">#:wrench: Setting Up</h3>
 
-#### <i class="fas fa-pen-alt"></i> Installing `snapd` on Ubuntu
+#### #:pencil: Installing `snapd` on Ubuntu
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -64,9 +64,9 @@ kernel  5.0.0-36-generic
 ```
 
 <br/>
-<h3 id="install-and-run-your-first-snap"><i class="fas fa-box"></i> Install and Run your first Snap</h3>
+<h3 id="install-and-run-your-first-snap">#:running: Install and Run your first Snap</h3>
 
-#### <i class="fas fa-pen-alt"></i> Finding a `snap`
+#### #:pencil: Finding a `snap`
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -88,7 +88,7 @@ spt                  v0.4.0        popey           -        Spotify TUI
 `snap find <search keywords>` queries the store and list the results with their details. `✓` indecates that publisher has been verified.
 
 
-#### <i class="fas fa-pen-alt"></i> Learning about a `snap`
+#### #:pencil: Learning about a `snap`
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -117,7 +117,7 @@ channels:
 You will know details about a package by running this command.
 
 
-#### <i class="fas fa-pen-alt"></i> Install and execution
+#### #:pencil: Install and execution
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -144,7 +144,7 @@ Hello, world!
 ```
 
 
-#### <i class="fas fa-pen-alt"></i> Keep tracking installed `snaps`
+#### #:pencil: Keep tracking installed `snaps`
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -163,7 +163,7 @@ gnome-3-28-1804       3.28.0-16-g27c9498.27c9498  110   stable/…  canonical✓
 Installed snaps on your system will be listed by this command.
 
 
-#### <i class="fas fa-pen-alt"></i> Refreshing an installed `snap`
+#### #:pencil: Refreshing an installed `snap`
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -192,9 +192,9 @@ hello (beta) 2.10.1 from Canonical✓ refreshed
 You can change the channel from which your snap will be tracked and refreshed with this single command.
 
 <br/>
-<h3 id="more-features"><i class="fas fa-angle-double-right"></i> More Features </h3>
+<h3 id="more-features">#:speech_balloon: More Features </h3>
 
-#### <i class="fas fa-pen-alt"></i> Reverting an installed `snap`
+#### #:pencil: Reverting an installed `snap`
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -237,7 +237,7 @@ $ snap list --all
 This will list all `revisions` available for every installed snaps.
 
 
-#### <i class="fas fa-pen-alt"></i> Enabling and Disabling a `snap`
+#### #:pencil: Enabling and Disabling a `snap`
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -254,7 +254,7 @@ hello enabled
 ```
 
 
-#### <i class="fas fa-pen-alt"></i> Removing a `snap`
+#### #:pencil: Removing a `snap`
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
