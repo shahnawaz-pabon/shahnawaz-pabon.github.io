@@ -11,12 +11,12 @@ tags:
 ---
 
 ## Table of Contents
-&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-hand-paper"></i> &nbsp; [Getting Started](#getting-started) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-cog"></i> &nbsp; [Setting Up](#setting-up) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-box"></i> &nbsp; [Install and Run your first Snap](#install-and-run-your-first-snap) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-angle-double-right"></i> &nbsp; [More Features](#more-features)
+&nbsp;&nbsp;&nbsp;&nbsp; #:hand: &nbsp; **[Getting Started](#getting-started)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:hammer: &nbsp; **[Setting Up](#setting-up)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-box"></i> &nbsp; **[Install and Run your first Snap](#install-and-run-your-first-snap)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-angle-double-right"></i> &nbsp; **[More Features](#more-features)**
 
-<h3 id="getting-started"><i class="fas fa-hand-paper"></i> Getting Started</h3>
+<h3 id="getting-started">#:hand: Getting Started</h3>
 
 1. Snap (or `Snappy` package manager) is one of the best software deployment and package management system which is built by `Canonical`.
 2. A `snap` is a bundle of an app and works across many different Linux distributions as well.
@@ -32,7 +32,7 @@ The system is actually designed for **IoT, Cloud and Desktop Computing** that ar
 * Dependency-free
 
 <br/>
-<h3 id="setting-up"><i class="fas fa-cog"></i> Setting Up</h3>
+<h3 id="setting-up">#:hammer: Setting Up</h3>
 
 #### <i class="fas fa-pen-alt"></i> Installing `snapd` on Ubuntu
 
