@@ -9,9 +9,9 @@ tags:
     - react-native
 ---
 
-<h3><i class="fab fa-node"></i> Install node and npm</h3>
+<h3>#:flashlight: Install node and npm</h3>
 
-**Using Ubuntu**
+**#:boat: Using Ubuntu**
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -29,7 +29,7 @@ $ npm -v
 6.11.3
 ```
 
-**Using Debian, as root**
+**#:boat: Using Debian, as root**
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -43,7 +43,7 @@ $ sudo apt-get install -y nodejs
 ```
 
 <br/>
-<h3><i class="fas fa-angle-right"></i> Install react-native-cli</h3>
+<h3>#:flashlight: Install react-native-cli</h3>
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -58,7 +58,7 @@ react-native-cli: 2.0.1
 ```
 
 <br/>
-<h3><i class="fab fa-android"></i> Setup Android development environment</h3>
+<h3>#:flashlight: Setup Android development environment</h3>
 
 **[Download android studio](https://developer.android.com/studio/index.html)**. In my case downloaded file's name was `android-studio-ide-191.6010548-linux.tar.gz` and I kept it into my home directory. Then follow these steps
 
@@ -112,7 +112,7 @@ $ source .bashrc
 ```
 
 <br/>
-<h3><i class="fab fa-java"></i> Install java on your Ubuntu system</h3>
+<h3>#:flashlight: Install java on your Ubuntu system</h3>
 
 <div class=fakeMenu>
   <div class="fakeButtons fakeClose"></div>
@@ -133,7 +133,7 @@ OpenJDK 64-Bit Server VM (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3, mixed mod
 So you have successfully installed `java` on your `Ubuntu` system. My version was `Ubuntu 18.04.3 LTS`. At this point you are all set of working with react-native.
 
 <br/>
-<h3><i class="fas fa-spell-check"></i> Test your first react-native app</h3>
+<h3>#:flashlight: Test your first react-native app</h3>
 
 First connect your android phone with a usb. Then run these commands
 
@@ -155,4 +155,4 @@ $ react-native run-android
 After a while, you will see your running app into your android phone.
 
 <br/>
-<div align='center'><h3> ~ Good Luck and Have fun <i class="far fa-smile-wink"></i> ~ </h3></div>
+<div align='center'><h3> ~ Good Luck and Have fun #:snowman: ~ </h3></div>
