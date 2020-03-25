@@ -14,6 +14,7 @@ tags:
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Modes](#modes)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Basic Movements](#basic-movements)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Word Movements](#word-movements)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Insert Repeatedly](#insert-repeatedly)** <br/>
 
 <h3 id="introduction">#:beginner: Introduction</h3>
 
@@ -59,3 +60,14 @@ Movement between words is possible via these keys:
 - **`e` or `E` for moving to the end of the next word from current cursor and will continue**
 
 **Use `number` before these keys for moving fast e.g. `3w` or `3W` means cursor will move to the beginning of the `3rd next word`**.
+
+<h3 id="insert-repeatedly">#:beginner: Insert Repeatedly</h3>
+
+Suppose you want to insert **`yes`** 30 times consecutively. Steps will be as follows:
+
+- **Write 30 in normal mode**.
+- **Then press `i`, `vim` will be switched from `normal mode` to `insert mode`**.
+- **Write `yes` then press `Esc`**.
+
+You will see that **`yes`** has been written 30 times consecutively.
+
