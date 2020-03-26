@@ -19,6 +19,8 @@ tags:
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Search](#search)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Remove and Delete](#remove-delete)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Replace and Repetition](#replace-repetition)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Visual Mode](#visual-mode)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Practice](#practice)** <br/>
 
 <h3 id="introduction" style="color: #1abc9c">#:beginner: Introduction</h3>
 
@@ -40,11 +42,13 @@ $ sudo apt install vim
 
 <h3 id="modes" style="color: #1abc9c">#:beginner: Modes</h3>
 
-There are two modes in **`Vim`**.
+There are two basic modes in **`Vim`**.
 - **`insert` mode (`In this mode you can edit texts in your own way`**).
 - **`normal` mode (`In this mode you can manipulate and play with texts according to some instructions`**).
 
 **`To switch between these modes` you need to use `Esc` for `normal` mode and `i` for `insert` mode**.
+
+There is another mode in vim called **`visual mode`**. It is described **[here](#visual-mode)**.
 
 <h3 id="movements" style="color: #1abc9c">#:beginner: Movements</h3>
 
@@ -144,6 +148,28 @@ Repeat the previous command by pressing simply **`.`**
 - **`d2w` will delete next two words of current cursor**.
 - **After that if you press `.`, the previous command i.e. next two words will also be deleted and so on**.
 
+<h3 id="visual-mode" style="color: #1abc9c">#:beginner: Visual Mode</h3>
+
+To switch to **`visual mode`**, just press **`v`**. In this mode you can select a text via **[movement keys](#movements)**.
+
+**`E.g.`**
+
+- **Press `v` and then `e` to select a word**.
+- **After that press `d` to delete that word**.
+
+<h3 id="practice" style="color: #1abc9c">#:beginner: Practice</h3>
+
+When you change the file in vim you have to know these commands as well:
+
+- **`:w` (save)**
+- **`:wq` (save and quit)**
+- **`:q` (quit)**
+- **`:q!` (quit without saving)**
+- **`u` (For `undo`)**
+- **`ctrl+R` (For `Redo`)**
+- **`:help` (For `Help`)**
+
+**This article is written according to [this website](https://www.openvim.com/). You can `practice above commands` in realtime. #:tada:#:tada:#:tada:**
 
 
 
