@@ -13,11 +13,14 @@ tags:
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Introduction](#introduction)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Modes](#modes)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Movements](#movements)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Insert Repeatedly](#insert-repeatedly)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Insert](#insert)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Find](#find)** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Go to](#goto)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Search](#search)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Remove and Delete](#remove-delete)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; #:beginner: &nbsp; **[Replace and Repetition](#replace-repetition)** <br/>
 
-<h3 id="introduction">#:beginner: Introduction</h3>
+<h3 id="introduction" style="color: #1abc9c">#:beginner: Introduction</h3>
 
 **`Vim`** is one of the most powerful text editors I have ever used in CLI(Command Line Interface). There are so many files which need to be opened or edited. **`Vim`** can be the best choice because **`Vim`** is more than an editor. #:sunglasses:
 
@@ -35,7 +38,7 @@ $ sudo apt update
 $ sudo apt install vim
 ```
 
-<h3 id="modes">#:beginner: Modes</h3>
+<h3 id="modes" style="color: #1abc9c">#:beginner: Modes</h3>
 
 There are two modes in **`Vim`**.
 - **`insert` mode (`In this mode you can edit texts in your own way`**).
@@ -43,7 +46,7 @@ There are two modes in **`Vim`**.
 
 **`To switch between these modes` you need to use `Esc` for `normal` mode and `i` for `insert` mode**.
 
-<h3 id="movements">#:beginner: Movements</h3>
+<h3 id="movements" style="color: #1abc9c">#:beginner: Movements</h3>
 
 #### #:walking: Basic Movements
 
@@ -64,7 +67,9 @@ Movement between words is possible via these keys:
 
 **Use `number` before these keys for moving fast e.g. `3w` or `3W` means cursor will move to the beginning of the `3rd next word`**.
 
-<h3 id="insert-repeatedly">#:beginner: Insert Repeatedly</h3>
+<h3 id="insert" style="color: #1abc9c">#:beginner: Insert</h3>
+
+#### #:pencil: Insert Text Repeatedly
 
 Suppose you want to insert **`yes`** 30 times consecutively. Steps will be as follows:
 
@@ -74,7 +79,11 @@ Suppose you want to insert **`yes`** 30 times consecutively. Steps will be as fo
 
 You will see that **`yes`** has been written 30 times consecutively.
 
-<h3 id="find">#:beginner: Find</h3>
+#### #:pencil: Insert New Line
+
+**By pressing `o` or `O`, a new line will be inserted and `vim` will be switched to `insert` mode as well**.
+
+<h3 id="find" style="color: #1abc9c">#:beginner: Find</h3>
 
 #### #:eyeglasses: Find a Character.
 
@@ -88,7 +97,7 @@ You will see that **`yes`** has been written 30 times consecutively.
 - **Press `*` to find the next occurrence of the word under current cursor**.
 - **Press `#` to find the previous occurrence of the word under current cursor**.
 
-<h3 id="goto">#:beginner: Go to</h3>
+<h3 id="goto" style="color: #1abc9c">#:beginner: Go to</h3>
 
 - **Go to matching parentheses (`(), {}, []`) by simply pressing `%`**.
 - **Press `0` to go to the start of the line**.
@@ -96,6 +105,45 @@ You will see that **`yes`** has been written 30 times consecutively.
 - **Press `gg` to go to the beginning of the file**.
 - **Press `G` to go to the end of the file**.
 - **Press `G` with `number before` to go to the specific line `e.g.` press `3G` to go to the `3rd line`**.
+
+<h3 id="search" style="color: #1abc9c">#:beginner: Search</h3>
+
+You can search a specific text in a file i.e. for searching **`text`** in your file, steps will be as follows:
+
+- **Write `/text` and then hit `Enter` button**.
+- **After that press `n`, it will find the next `text` from the file and so on**.
+- **Press `N`, it will find the previous `text` from the file and so on**.
+
+<h3 id="remove-delete" style="color: #1abc9c">#:beginner: Remove and Delete</h3>
+
+#### #:scissors: Removing a Character
+
+- **By pressing `x`, the character under the cursor will be removed**.
+- **By pressing `X`, the character to the left of the cursor will be removed**.
+
+#### #:scissors: Deleting
+
+The delete key is **`d`**. You can use it with **`movements' keys`**.
+
+**`E.g.` `dw` will delete the first word on the right side of the cursor**. It also copies the deleted content so that you can paste it to another location by pressing **`p`**.
+
+<h3 id="replace-repetition" style="color: #1abc9c">#:beginner: Replace and Repetition</h3>
+
+#### #:tractor: Replace
+
+For replacing a letter under cursor:
+
+- **Press `r` and then write replaceable letter e.g. `a` to replace cursor's letter by `a`**.
+
+#### #:tractor: Repetition
+
+Repeat the previous command by pressing simply **`.`**
+
+**`E.g.`**
+
+- **`d2w` will delete next two words of current cursor**.
+- **After that if you press `.`, the previous command i.e. next two words will also be deleted and so on**.
+
 
 
 
