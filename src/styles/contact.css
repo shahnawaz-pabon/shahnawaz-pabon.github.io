@@ -6,7 +6,13 @@
 .img img{
 	max-width: 400px;
 	max-height: 400px;
-	margin-top: -200px;
+	margin-top: -155px;
+	margin-left: 20px;
+
+}
+
+#contact-header {
+	margin-top: -30px;
 }
 
 #contact-lottie{

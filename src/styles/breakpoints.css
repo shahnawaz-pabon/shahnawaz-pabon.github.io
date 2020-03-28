@@ -39,6 +39,23 @@
     }
     /* End of Postlisting */
 
+    /* Contact Page */
+    .img img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    #contact-lottie{
+        width: 100px;
+        height: 100px;
+    }
+    
+    #contact-header {
+        margin-top: -145px;
+        font-size: 0.9em;
+        margin-left: 10px;
+    }
+    /* End of Contact Page */
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -62,6 +79,22 @@
         font-size: 14px;
     }
     /* End of Postlisting */
+
+    /* Contact Page */
+    .img img{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    #contact-lottie{
+        width: 200px;
+        height: 200px;
+    }
+    #contact-header {
+        margin-top: -30px;
+        font-size: 1.17em;
+        margin-left: 0px;
+    }
+    /* End of Contact Page */
 }
 
 /* Large devices (desktops, 992px and up) */

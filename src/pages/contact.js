@@ -30,6 +30,7 @@ class Contact extends React.Component {
 
           <div className="img">
             <img src={contact} />
+            <h3 id="contact-header">If you have queries, feel free to <a href="mailto:s.pabon93@gmail.com">Mail Me.</a></h3>
           </div>
 
 
