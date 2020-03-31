@@ -65,6 +65,7 @@ export const query = graphql`
           }
         }
         date(formatString: "DD MMMM, YYYY")
+        author
         category
         tags
       }
