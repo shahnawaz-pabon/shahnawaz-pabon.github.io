@@ -3,6 +3,7 @@ template: post
 title:  'Add Custom Fonts in React Native Android'
 featuredImage: '../featuredImages/react-native.png'
 date: '2019-12-20'
+author: 'Pabon'
 category:
   - React-Native
 tags: 

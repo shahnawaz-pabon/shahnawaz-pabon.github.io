@@ -3,6 +3,7 @@ template: post
 title: 'Remove files/folders from remote repository'
 featuredImage: '../featuredImages/git.png'
 date: '2019-11-20'
+author: 'Pabon'
 category:
     - Git
 tags:

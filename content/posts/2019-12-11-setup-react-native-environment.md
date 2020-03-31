@@ -3,6 +3,7 @@ template: post
 title: 'Setup react-native environment on Ubuntu for Android'
 featuredImage: '../featuredImages/react-native.png'
 date: '2019-12-11'
+author: 'Pabon'
 category:
     - React-Native
 tags: 
