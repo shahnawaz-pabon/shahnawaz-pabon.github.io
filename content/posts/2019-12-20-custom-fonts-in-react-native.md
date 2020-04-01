@@ -6,7 +6,7 @@ date: '2019-12-20'
 author: 'Pabon'
 profileUrl: 'https://github.com/PabonSEC'
 category:
-  - React-Native
+  - ReactNative
 tags: 
   - react-native
   - android
