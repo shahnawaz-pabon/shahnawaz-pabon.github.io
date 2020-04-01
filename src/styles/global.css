@@ -30,3 +30,8 @@ a {
   color: #fff;
   transition: all 0.2s ease-out;
 }
+
+.all-posts a:hover {
+  color: #fff !important;
+  background: #2c3e50 !important;
+}

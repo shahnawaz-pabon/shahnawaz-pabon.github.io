@@ -36,12 +36,11 @@ class Index extends React.Component {
                 padding: '.4rem .6rem',
                 background: '#cecece',
                 borderRadius: 4,
-                margin: '0 .5rem .5rem 0',
                 textDecoration: 'none',
                 color: '#2c3e50',
                 fontWeight: 'bold'
               }}>
-                <FontAwesomeIcon icon={faClipboardList} color="#2c3e50" />
+                <FontAwesomeIcon icon={faClipboardList} />
                 <span style={{
                   paddingLeft: 3
                 }}>All Posts</span>
@@ -59,6 +58,7 @@ export default Index;
 export const pageQuery = graphql`
 query {
   allMarkdownRemark(
+      limit: 5,
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { template: { eq: "post" } } }
     ) {
