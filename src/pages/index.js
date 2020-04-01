@@ -5,6 +5,8 @@ import config from '../data/config';
 import Layout from '../layout';
 import PostListing from '../components/PostListing';
 import Slider from '../components/Slider';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClipboardList, faDiceD20 } from "@fortawesome/free-solid-svg-icons";
 
 class Index extends React.Component {
   render() {
@@ -16,17 +18,38 @@ class Index extends React.Component {
         <Slider />
         <div className="container">
           <section>
-            <h1 style={{ textAlign: "center"}}>Recent Posts</h1>
+            <h1 style={{ textAlign: "center" }}>
+              <FontAwesomeIcon icon={faDiceD20} />
+              <span style={{
+                paddingLeft: 10,
+                paddingRight: 10
+              }}>Recent Posts</span>
+              <FontAwesomeIcon icon={faDiceD20} />
+            </h1>
             <PostListing postEdges={postEdges} />
 
-            <h3 style={{
-              textAlign: "end"
+            <div className="all-posts" style={{
+              textAlign: 'center',
+              marginTop: 20
             }}>
-              <Link to="/posts">All Posts</Link>
-            </h3>
+              <Link to="/posts" style={{
+                padding: '.4rem .6rem',
+                background: '#cecece',
+                borderRadius: 4,
+                margin: '0 .5rem .5rem 0',
+                textDecoration: 'none',
+                color: '#2c3e50',
+                fontWeight: 'bold'
+              }}>
+                <FontAwesomeIcon icon={faClipboardList} color="#2c3e50" />
+                <span style={{
+                  paddingLeft: 3
+                }}>All Posts</span>
+              </Link>
+            </div>
           </section>
         </div>
-      </Layout>
+      </Layout >
     )
   }
 }
