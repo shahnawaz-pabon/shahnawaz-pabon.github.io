@@ -9,7 +9,6 @@ category:
     - Jekyll
 tags:
     - jekyll
-    - jekyll-start
 ---
 
 `Jekyll` is one of the popular static site generators. To work with `Jekyll`, you need to have all the required dependencies.

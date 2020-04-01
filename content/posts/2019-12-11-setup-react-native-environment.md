@@ -1,14 +1,16 @@
 ---
 template: post
-title: 'Setup react-native environment on Ubuntu for Android'
+title: 'Setup React Native environment on Ubuntu'
 featuredImage: '../featuredImages/react-native.png'
 date: '2019-12-11'
 author: 'Pabon'
 profileUrl: 'https://github.com/PabonSEC'
 category:
-    - React-Native
+    - ReactNative
 tags: 
     - react-native
+    - ubuntu
+    - android
 ---
 
 <h3>#:flashlight: Install node and npm</h3>
