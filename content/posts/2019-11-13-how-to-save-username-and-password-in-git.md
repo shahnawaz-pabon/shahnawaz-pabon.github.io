@@ -4,6 +4,7 @@ title: 'Save username and password in GIT'
 featuredImage: '../featuredImages/git.png'
 date: '2019-11-13'
 author: 'Pabon'
+profileUrl: 'https://github.com/PabonSEC'
 category: 
     - Git
 tags:
