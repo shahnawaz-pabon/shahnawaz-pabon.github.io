@@ -19,12 +19,12 @@ class Index extends React.Component {
         <div className="container">
           <section>
             <h1 style={{ textAlign: "center" }}>
-              <FontAwesomeIcon icon={faDiceD20} />
+              <FontAwesomeIcon icon={faDiceD20} className="icon-rotating" />
               <span style={{
                 paddingLeft: 10,
                 paddingRight: 10
               }}>Recent Posts</span>
-              <FontAwesomeIcon icon={faDiceD20} />
+              <FontAwesomeIcon icon={faDiceD20} className="icon-rotating" />
             </h1>
             <PostListing postEdges={postEdges} />
 

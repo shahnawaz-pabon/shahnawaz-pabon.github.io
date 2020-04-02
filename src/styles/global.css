@@ -35,3 +35,16 @@ a {
   color: #fff !important;
   background: #2c3e50 !important;
 }
+
+.icon-rotating{
+  animation: rotating 6s linear infinite;
+}
+
+@keyframes rotating {
+  0% { 
+    transform: rotate(0); 
+  }
+  100% { 
+    transform: rotate(360deg);
+  }
+ }
