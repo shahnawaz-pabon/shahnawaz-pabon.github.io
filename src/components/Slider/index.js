@@ -8,6 +8,7 @@ import '../../styles/breakpoints.css';
 import slide1 from "../../../static/assets/images/slide1.jpg";
 import slide2 from "../../../static/assets/images/slide2.jpg";
 import slide3 from "../../../static/assets/images/slide3.jpg";
+import scroll from "../../../static/assets/images/scroll.gif";
 
 import Typed from 'typed.js';
 
@@ -42,6 +43,10 @@ export default class Slider extends Component {
               <div className="slider-container">
                 <p className="slider-title">SHAHNAWAZ HOSSAN</p>
                 <p className="slider-typed"><span id="typed"></span></p>
+                <img src={scroll} style={{
+                  height: 65,
+                  width: 50
+                }}/>
               </div>
               <div style={{
                 width: '100%',
