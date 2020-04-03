@@ -56,6 +56,14 @@
     }
     /* End of Contact Page */
 
+    /* Scroll down mouse */
+    .scroll-down {
+        height: 45px !important;
+        width: 30px !important;
+        margin-bottom: 25px;
+    }
+    /* Scroll down mouse */
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -95,6 +103,14 @@
         margin-left: 0px;
     }
     /* End of Contact Page */
+
+    /* Scroll down mouse */
+    .scroll-down {
+        height: 65px !important;
+        width: 50px !important;
+        margin-bottom: 0px;
+    }
+    /* Scroll down mouse */
 }
 
 /* Large devices (desktops, 992px and up) */

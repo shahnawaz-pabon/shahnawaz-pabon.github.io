@@ -43,7 +43,7 @@ export default class Slider extends Component {
               <div className="slider-container">
                 <p className="slider-title">SHAHNAWAZ HOSSAN</p>
                 <p className="slider-typed"><span id="typed"></span></p>
-                <img src={scroll} style={{
+                <img className="scroll-down" src={scroll} style={{
                   height: 65,
                   width: 50
                 }}/>
