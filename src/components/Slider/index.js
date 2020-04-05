@@ -18,10 +18,12 @@ export default class Slider extends Component {
 
   componentDidMount(){
     var typed = new Typed('#typed', {
-      strings: ['Software Engineer,', 'Quick Learner,', 'Passionate about', 'solving problems,',
+      strings: ['Full Stack', 'Software Engineer,', 'Quick Learner,', 
+      'Able to work on', 'any kind of', 'new technologies,',
+      'Passionate about', 'solving problems,',
       'Love to play', 'with programming.'],
       typeSpeed: 60,
-      backSpeed: 60,
+      backSpeed: 0,
       loop: true,
       startDelay: 500,
       cursorChar: '_',
