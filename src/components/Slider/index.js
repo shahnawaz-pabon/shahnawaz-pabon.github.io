@@ -8,7 +8,6 @@ import '../../styles/breakpoints.css';
 import slide1 from "../../../static/assets/images/slide1.jpg";
 import slide2 from "../../../static/assets/images/slide2.jpg";
 import slide3 from "../../../static/assets/images/slide3.jpg";
-import scroll from "../../../static/assets/images/scroll.gif";
 
 import Typed from 'typed.js';
 
@@ -45,10 +44,53 @@ export default class Slider extends Component {
               <div className="slider-container">
                 <p className="slider-title">SHAHNAWAZ HOSSAN</p>
                 <p className="slider-typed"><span id="typed"></span></p>
-                <img alt="Mouse scroll down" className="scroll-down" src={scroll} style={{
+                <div style={{
+                  position: 'absolute',
+                  left: '50%',
+                  // bottom: 40,
+                  border: '2px solid #fff',
+                  borderRadius: 16,
+                  height: 40,
+                  width: 25,
+                  marginLeft: -17,
+                  display: 'block',
+                  zIndex: 10
+                  // position: absolute;
+                  // left: 50%;
+                  // bottom: 40px;
+                  // border: 2px solid #fff;
+                  // border-radius: 16px;
+                  // height: 50px;
+                  // width: 30px;
+                  // margin-left: -17px;
+                  // display: block;
+                  // z-index: 10;
+                }}>
+
+                  <div style={{
+                    position: 'relative',
+                    borderRadius: 10,
+                    background: '#fff',
+                    width: 4,
+                    height: 10,
+                    top: 4,
+                    marginLeft: 'auto',
+                    marginRight: 'auto'
+                        // position: relative;
+                        // border-radius: 10px;
+                        // background: #fff;
+                        // width: 4px;
+                        // height: 10px;
+                        // top: 4px;
+                        // margin-left: auto;
+                        // margin-right: auto;
+                  }}></div>
+
+                </div>
+                {/* <img alt="Mouse scroll down" className="scroll-down" src={scroll} style={{
                   height: 65,
                   width: 46
-                }}/>
+                }}/> */}
               </div>
               <div style={{
                 width: '100%',
