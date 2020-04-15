@@ -47,6 +47,8 @@ export default class Slider extends Component {
                 <div className="mouse-icon" style={{
                   position: 'absolute',
                   left: '50%',
+                  top: 150,
+                  marginBottom: 15,
                   border: '2px solid #fff',
                   borderRadius: 16,
                   height: 40,

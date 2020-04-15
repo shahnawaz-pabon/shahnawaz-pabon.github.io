@@ -169,5 +169,11 @@
         font-size: 12px;
     }
     /* End of Postlisting */
+
+    /* Scroll down mouse icon */
+    .mouse-icon {
+        top: 175px !important;
+    }
+    /* Scroll down mouse icon */
 }
 /* End of Media Queries */
