@@ -44,10 +44,9 @@ export default class Slider extends Component {
               <div className="slider-container">
                 <p className="slider-title">SHAHNAWAZ HOSSAN</p>
                 <p className="slider-typed"><span id="typed"></span></p>
-                <div style={{
+                <div className="mouse-icon" style={{
                   position: 'absolute',
                   left: '50%',
-                  // bottom: 40,
                   border: '2px solid #fff',
                   borderRadius: 16,
                   height: 40,
@@ -55,16 +54,6 @@ export default class Slider extends Component {
                   marginLeft: -17,
                   display: 'block',
                   zIndex: 10
-                  // position: absolute;
-                  // left: 50%;
-                  // bottom: 40px;
-                  // border: 2px solid #fff;
-                  // border-radius: 16px;
-                  // height: 50px;
-                  // width: 30px;
-                  // margin-left: -17px;
-                  // display: block;
-                  // z-index: 10;
                 }}>
 
                   <div className='wheel' style={{
@@ -81,10 +70,6 @@ export default class Slider extends Component {
                   }}></div>
 
               </div>
-              {/* <img alt="Mouse scroll down" className="scroll-down" src={scroll} style={{
-                  height: 65,
-                  width: 46
-                }}/> */}
             </div>
             <div style={{
               width: '100%',
