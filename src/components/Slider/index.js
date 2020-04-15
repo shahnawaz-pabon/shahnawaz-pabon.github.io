@@ -15,12 +15,12 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 export default class Slider extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     var typed = new Typed('#typed', {
-      strings: ['Full Stack', 'Software Engineer,', 'Quick Learner,', 
-      'Able to work on', 'any kind of', 'new technologies,',
-      'Passionate about', 'solving problems,',
-      'Love to play', 'with programming.'],
+      strings: ['Full Stack', 'Software Engineer,', 'Quick Learner,',
+        'Able to work on', 'any kind of', 'new technologies,',
+        'Passionate about', 'solving problems,',
+        'Love to play', 'with programming.'],
       typeSpeed: 60,
       backSpeed: 0,
       loop: true,
@@ -67,7 +67,7 @@ export default class Slider extends Component {
                   // z-index: 10;
                 }}>
 
-                  <div style={{
+                  <div className='wheel' style={{
                     position: 'relative',
                     borderRadius: 10,
                     background: '#fff',
@@ -75,39 +75,33 @@ export default class Slider extends Component {
                     height: 10,
                     top: 4,
                     marginLeft: 'auto',
-                    marginRight: 'auto'
-                        // position: relative;
-                        // border-radius: 10px;
-                        // background: #fff;
-                        // width: 4px;
-                        // height: 10px;
-                        // top: 4px;
-                        // margin-left: auto;
-                        // margin-right: auto;
+                    marginRight: 'auto',
+                    animation: 'drop 1s linear 0s infinite normal none running'
+                    // name, duration, timing-function delay, iteration-count, direction, fill-mode, play-state
                   }}></div>
 
-                </div>
-                {/* <img alt="Mouse scroll down" className="scroll-down" src={scroll} style={{
+              </div>
+              {/* <img alt="Mouse scroll down" className="scroll-down" src={scroll} style={{
                   height: 65,
                   width: 46
                 }}/> */}
-              </div>
-              <div style={{
-                width: '100%',
-                height: '100%',
-                position: 'absolute',
-                zIndex: 3,
-                backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                top: 0
-              }}></div>
+            </div>
+            <div style={{
+              width: '100%',
+              height: '100%',
+              position: 'absolute',
+              zIndex: 3,
+              backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              top: 0
+            }}></div>
             </>
-            
+
           }
         >
-          <div className="slide-img" data-src={slide1} alt="First Slide"/>
-          <div className="slide-img" data-src={slide2} alt="Second Slide" />
-          <div className="slide-img" data-src={slide3} alt="Third Slide" />
-        </AutoplaySlider>
+        <div className="slide-img" data-src={slide1} alt="First Slide" />
+        <div className="slide-img" data-src={slide2} alt="Second Slide" />
+        <div className="slide-img" data-src={slide3} alt="Third Slide" />
+      </AutoplaySlider>
       </>
     )
   }
