@@ -31,6 +31,7 @@ export default class Layout extends Component {
           }}
         >
           <meta name="description" content={config.siteDescription} />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <html lang="en" />
         </Helmet>
 

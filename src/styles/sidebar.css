@@ -47,7 +47,7 @@
 }
 
 .sidebar-circle {
-    position: fixed;
+    position: absolute;
     display: none;
     z-index: 5;
     height: 48px;
