@@ -67,10 +67,11 @@
   
   .fakeMenu {
     box-sizing: border-box;
-    height: 32px;
-    background-color: #bbb;
+    height: 28px;
+    background-color: #282a36;
     margin: 0 auto -8px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    padding: 5px;
   }
 /* Fake Terminal */

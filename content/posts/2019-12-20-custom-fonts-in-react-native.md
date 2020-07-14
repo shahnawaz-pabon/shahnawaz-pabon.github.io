@@ -16,8 +16,6 @@ tags:
 
 Firstly download your fonts from **[Google Fonts](https://fonts.google.com/)**. Suppose you have downloaded `Lato` font. Then create an `assets` folder, `react-native.config.js` file into your react-native's root directory and copy all the `.ttf` files extracted from  downloaded `zip` file. Add following codes into `react-native.config.js` file.
 
-<div class=fakeMenu>
-</div>
 
 ```javascript
 module.exports = {
