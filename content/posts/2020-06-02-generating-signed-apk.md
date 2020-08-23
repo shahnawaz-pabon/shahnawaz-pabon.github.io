@@ -21,3 +21,5 @@ By using **`keytool`**, we can generate a private signing key in this way:
 ```bash
 $ keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
 ```
+
+So it will prompt you for passwords for the keystore and key. After that it will generate **`my-release-key.keystore`** file in your current directory.
