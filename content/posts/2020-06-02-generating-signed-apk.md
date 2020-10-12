@@ -23,3 +23,6 @@ $ keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keya
 ```
 
 So it will prompt you for passwords for the keystore and key. After that it will generate **`my-release-key.keystore`** file in your current directory.
+
+<h3 style="color: #1abc9c">#:aerial_tramway: Setting up Gradle Variables</h3>
+
