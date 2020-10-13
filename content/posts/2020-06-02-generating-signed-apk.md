@@ -26,3 +26,13 @@ So it will prompt you for passwords for the keystore and key. After that it will
 
 <h3 style="color: #1abc9c">#:aerial_tramway: Setting up Gradle Variables</h3>
 
+Fistly, we need to place **`my-release-key.keystore`** file in **`android/app`** directory.
+Secondly, we need to edit the **`android/gradle.properties`** and add the following which are going to be global gradle variables.
+
+```bash
+MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+MYAPP_RELEASE_STORE_PASSWORD=*****
+MYAPP_RELEASE_KEY_PASSWORD=*****
+```
+
