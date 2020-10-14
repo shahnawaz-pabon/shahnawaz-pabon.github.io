@@ -36,3 +36,30 @@ MYAPP_RELEASE_STORE_PASSWORD=*****
 MYAPP_RELEASE_KEY_PASSWORD=*****
 ```
 
+
+<h3 style="color: #1abc9c">#:aerial_tramway: Adding signing config to the app's gradle config</h3>
+
+We need to edit **`android/app/build.gradle`** this file and add the following
+
+```groovy
+...
+android {
+    ...
+    defaultConfig { ... }
+    signingConfigs {
+        release {
+            storeFile file(MYAPP_RELEASE_STORE_FILE)
+            storePassword MYAPP_RELEASE_STORE_PASSWORD
+            keyAlias MYAPP_RELEASE_KEY_ALIAS
+            keyPassword MYAPP_RELEASE_KEY_PASSWORD
+        }
+    }
+    buildTypes {
+        release {
+            ...
+            signingConfig signingConfigs.release
+        }
+    }
+}
+...
+```
