@@ -63,3 +63,7 @@ android {
 }
 ...
 ```
+
+<h3 style="color: #1abc9c">#:aerial_tramway: Generating the release APK</h3>
+
+
