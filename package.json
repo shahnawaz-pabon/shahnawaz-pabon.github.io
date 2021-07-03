@@ -1,5 +1,5 @@
 {
-  "name": "pabonsec.github.io",
+  "name": "shahnawaz-pabon.github.io",
   "description": "A complete blogging and portfolio site with Gatsby",
   "version": "0.1.0",
   "author": "Shahnawaz Hossan <s.pabon93@gmail.com>",
@@ -57,6 +57,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PabonSEC/pabonsec.github.io"
+    "url": "https://github.com/shahnawaz-pabon/shahnawaz-pabon.github.io"
   }
 }

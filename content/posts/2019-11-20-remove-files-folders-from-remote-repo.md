@@ -4,7 +4,7 @@ title: 'Remove files/folders from remote repository'
 featuredImage: '../featuredImages/git.png'
 date: '2019-11-20'
 author: 'Pabon'
-profileUrl: 'https://github.com/PabonSEC'
+profileUrl: 'https://github.com/shahnawaz-pabon'
 category:
     - Git
 tags:

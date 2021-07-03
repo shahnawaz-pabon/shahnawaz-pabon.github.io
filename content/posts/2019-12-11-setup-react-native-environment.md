@@ -4,7 +4,7 @@ title: 'Setup React Native environment on Ubuntu'
 featuredImage: '../featuredImages/react-native.png'
 date: '2019-12-11'
 author: 'Pabon'
-profileUrl: 'https://github.com/PabonSEC'
+profileUrl: 'https://github.com/shahnawaz-pabon'
 category:
     - ReactNative
 tags: 

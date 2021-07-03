@@ -4,7 +4,7 @@ title: 'Install Jekyll on Ubuntu'
 featuredImage: '../featuredImages/default.png'
 date: '2019-11-13'
 author: 'Pabon'
-profileUrl: 'https://github.com/PabonSEC'
+profileUrl: 'https://github.com/shahnawaz-pabon'
 category:
     - Jekyll
 tags:

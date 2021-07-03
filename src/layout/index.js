@@ -129,7 +129,7 @@ export default class Layout extends Component {
             <Action
               text="Me on GitHub"
               onClick={() => {
-                window.open('https://github.com/PabonSEC', '_blank');
+                window.open('https://github.com/shahnawaz-pabon', '_blank');
               }}
               style={{
                 backgroundColor: '#fff',

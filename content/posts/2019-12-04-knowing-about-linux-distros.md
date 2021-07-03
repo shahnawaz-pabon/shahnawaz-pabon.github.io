@@ -4,7 +4,7 @@ title: 'Perceiving about Linux Distros'
 featuredImage: '../featuredImages/linux.png'
 date: '2019-12-04'
 author: 'Pabon'
-profileUrl: 'https://github.com/PabonSEC'
+profileUrl: 'https://github.com/shahnawaz-pabon'
 category:
     - Linux
 tags: 

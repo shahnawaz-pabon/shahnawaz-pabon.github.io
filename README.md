@@ -1,12 +1,12 @@
 <div align="center">
-  <a href="https://pabonsec.github.io/">
+  <a href="https://shahnawaz-pabon.github.io/">
     <img alt="Shahnawaz Hossan" src="./static/logos/book-reader.png" />
   </a>
   <h1>Shahnawaz Hossan's Site</h1>
 </div>
 
 <div align="center" style="margin-bottom:30px">
-    <a href='https://github.com/PabonSEC/pabonsec.github.io/blob/development/LICENSE'>
+    <a href='https://github.com/shahnawaz-pabon/shahnawaz-pabon.github.io/blob/development/LICENSE'>
       <img src="https://img.shields.io/badge/License-MIT-green" alt="Logo" />
     </a>
 </div>
@@ -108,9 +108,9 @@ $ npm run deploy
 [prayash]: https://github.com/prayash/awesome-gatsby
 [rafael]: https://github.com/rcaferati/react-awesome-slider
 [gatsby-tutorial]: https://www.gatsbyjs.org/tutorial/
-[jekyll-site]: https://pabonsec.github.io/jekyll-site/
-[gatsby-hello]: https://pabonsec.github.io/gatsby-hello-world/
-[author]: https://pabonsec.github.io
+[jekyll-site]: https://shahnawaz-pabon.github.io/jekyll-site/
+[gatsby-hello]: https://shahnawaz-pabon.github.io/gatsby-hello-world/
+[author]: https://shahnawaz-pabon.github.io
 [license]: LICENSE
 [license-badge]: https://img.shields.io/badge/License-MIT-green
 [gatsby-tutorial]: https://www.gatsbyjs.org/tutorial/

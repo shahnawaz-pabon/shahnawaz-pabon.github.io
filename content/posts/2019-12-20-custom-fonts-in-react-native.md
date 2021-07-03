@@ -4,7 +4,7 @@ title:  'Custom Fonts in React Native Android'
 featuredImage: '../featuredImages/react-native.png'
 date: '2019-12-20'
 author: 'Pabon'
-profileUrl: 'https://github.com/PabonSEC'
+profileUrl: 'https://github.com/shahnawaz-pabon'
 category:
   - ReactNative
 tags: 

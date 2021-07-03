@@ -6,7 +6,7 @@ title: 'About Me'
 
 My name is **`Shahnawaz Hossan`**. I am a passionate **`Software Engineer(Full Stack)`**. Currently I am working as a **`Full-Stack Software Engineer`** for a **`Software Company`**. I believe that sheer determination, dedication and hard working capacity will help me to reach the pinnacle in the development, computing and research field.
 
-I used to write on different programming topics in my native language during my competitive programming. **[This](http://pabonsec.blogspot.com/)** is my site. I've written about various types of programming topics like number theory, bit manipulation, data structures, sorting etc. After starting my career, I have faced many types of problems during my development and research. That's why I started this website so that I can share those solutions of problems I faced with everyone.
+I used to write on different programming topics in my native language during my competitive programming. **[This](http://shahnawaz-pabon.blogspot.com/)** is my site. I've written about various types of programming topics like number theory, bit manipulation, data structures, sorting etc. After starting my career, I have faced many types of problems during my development and research. That's why I started this website so that I can share those solutions of problems I faced with everyone.
 
 
 <br/>

@@ -1,7 +1,7 @@
 const config = {
   siteTitle: "Shahnawaz Hossan",
   siteDescription: 'A programming knowledge sharing platform',
-  siteUrl: "https://pabonsec.github.io", // Domain of my site
+  siteUrl: "https://shahnawaz-pabon.github.io", // Domain of my site
   pathPrefix: "/", // Prefixes all links.
   author: 'Shahnawaz Hossan',
   menuLinks: [
