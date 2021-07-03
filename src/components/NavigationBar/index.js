@@ -26,7 +26,7 @@ export default class Navigation extends Component {
           <div className="nav-links">
             {
               menuLinks.map(link => (
-                <Link key={link.name} to={link.link} >
+                <Link key={link.name} to={link.link} activeClassName="tab-active" >
                   {link.name}
                 </Link>
               ))
