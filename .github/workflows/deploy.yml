@@ -1,0 +1,12 @@
+name: "Deploy my site (https://shahnawaz-pabon.github.io/)"
+description: "Build and deploy my Gatsby site to GitHub Pages."
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}" 
