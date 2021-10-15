@@ -19,15 +19,22 @@ jobs:
         uses: actions/checkout@v2
 
       # Install packages
-      - name: Install packages 🔧
+      - name: Install packages 🔨 
         run: npm install
 
-      # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-      - name: Build 🔧
-        run: npm run build
+      # Clean caches
+      - name: Clean caches 🎡 
+        run: npm run clean
 
+      # This example project is built using npm and outputs the result to the 'public' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Build 🔧
+        run: npm run build:pp
+
+      # Deploy to master
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          branch: master # The branch the action should deploy to.
-          folder: public # The folder the action should deploy.
+          # The branch the action should deploy to
+          branch: master
+          # The folder the action should deploy
+          folder: public
