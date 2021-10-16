@@ -9,4 +9,4 @@ export const themes = {
     foreground: "#fff",
     background: "#1f2029",
   },
-}
+};
