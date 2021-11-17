@@ -5,6 +5,7 @@ import lottie from 'lottie-web';
 import animationAbout from '../../static/assets/lottie/about.json';
 import Helmet from 'react-helmet';
 import config from '../data/config';
+import { graphql } from 'gatsby';
 
 class About extends React.Component {
 

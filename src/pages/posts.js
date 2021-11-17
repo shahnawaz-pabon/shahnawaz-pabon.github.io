@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointRight, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import '../styles/sidebar.css';
 import '../styles/breakpoints.css';
+import { graphql } from 'gatsby';
 
 import { ThemeContext } from '../components/ThemeContext';
 
