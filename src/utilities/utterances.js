@@ -1,12 +1,13 @@
 export function addComments(commentBox) {
   const utteranceScript = document.createElement("script");
-  const utteranceTheme =
-    localStorage.getItem("isDark") === true ? "icy-dark" : "boxy-light";
+  const utteranceTheme = localStorage.getItem("isDark")
+    ? "icy-dark"
+    : "boxy-light";
 
   utteranceScript.async = true;
   utteranceScript.src = "https://utteranc.es/client.js";
   utteranceScript.setAttribute("repo", "shahnawaz-pabon/my-site-comments");
-  utteranceScript.setAttribute("issue-term", "title");
+  utteranceScript.setAttribute("issue-term", "pathname");
   utteranceScript.setAttribute("id", "utterances");
   utteranceScript.setAttribute("theme", utteranceTheme);
   utteranceScript.setAttribute("crossorigin", "anonymous");
