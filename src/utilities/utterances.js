@@ -7,7 +7,7 @@ export function addComments(commentBox) {
   utteranceScript.async = true;
   utteranceScript.src = "https://utteranc.es/client.js";
   utteranceScript.setAttribute("repo", "shahnawaz-pabon/my-site-comments");
-  utteranceScript.setAttribute("issue-term", "pathname");
+  utteranceScript.setAttribute("issue-term", "title");
   utteranceScript.setAttribute("label", "✨💬✨");
   utteranceScript.setAttribute("id", "utterances");
   utteranceScript.setAttribute("theme", utteranceTheme);

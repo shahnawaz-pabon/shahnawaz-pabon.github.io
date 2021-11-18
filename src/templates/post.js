@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import config from '../data/config';
 import Layout from "../layout";
 import { Link } from "gatsby";
 import "../styles/post.css";
@@ -8,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 import { Comments } from "../components/Comments";
 import { addComments } from "../utilities/utterances";
+import { Helmet } from 'react-helmet';
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -29,6 +31,8 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <Helmet title={`${post.frontmatter.title} | ${config.siteTitle}`} />
+      
       <div className="container">
         <div className="post-header">
           {featuredImage ? <Img fixed={featuredImage} /> : <div />}
