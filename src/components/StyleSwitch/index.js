@@ -1,16 +1,31 @@
-import React from 'react';
-import './StyleSwitch.css';
+import React from "react";
+import "./StyleSwitch.css";
 
 const StyleSwitch = ({ isDark, setIsDark }) => {
-
   function handleClick() {
-    localStorage.setItem('isDark', !isDark);
+    localStorage.setItem("isDark", !isDark);
     setIsDark(!isDark);
+
+    /**
+     * Change utterances theme on switching themes
+     */
+
+    const theme = !isDark ? "dark-blue" : "boxy-light";
+    const message = {
+      type: "set-theme",
+      theme: theme,
+    };
+    const iframe = document.querySelector(".utterances-frame");
+    iframe.contentWindow.postMessage(message, "https://utteranc.es");
+
+    /**
+     * Change utterances theme on switching themes
+     */
   }
 
   return (
     <div
-      className={isDark ? 'bulb' : 'bulb off'}
+      className={isDark ? "bulb" : "bulb off"}
       onClick={handleClick}
       role="button"
       aria-label="Switch Theme"
@@ -24,7 +39,6 @@ const StyleSwitch = ({ isDark, setIsDark }) => {
         <path className="light" d="M24,7.5 L26.5,5" />
         <path className="light" d="M28,15 L31,15" />
       </svg>
-
     </div>
   );
 };
