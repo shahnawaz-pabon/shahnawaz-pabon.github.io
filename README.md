@@ -40,6 +40,7 @@ First I started making my own site using [Jekyll][jekyll]. [This is my site][jek
 - [React Awesome Slider][rafael]
 - [Typed.js][typed]
 - [React Tiny FAB][tiny-fab]
+- [utterances][utterances]
 
 ## Useful Resources
 - [React Context](https://reactjs.org/docs/context.html)
@@ -103,6 +104,7 @@ $ npm run deploy
 [lottie-web]: https://github.com/airbnb/lottie-web
 [typed]: https://github.com/mattboldt/typed.js/
 [tiny-fab]: https://github.com/dericgw/react-tiny-fab
+[utterances]: https://utteranc.es/
 [tania-rascia]: https://www.taniarascia.com/
 [ruben]: https://github.com/vagr9k/gatsby-advanced-starter/
 [prayash]: https://github.com/prayash/awesome-gatsby
