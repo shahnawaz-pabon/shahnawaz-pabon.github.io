@@ -12,9 +12,9 @@ I used to write on different programming topics in my native language during my 
 <br/>
 <h2>#:snowboarder: Programming Career</h2>
 
-I was a **`competitive programmer`** during my university time. I have **`solved 850+ programming problems`** on different **`online judges`**. These are my profiles:
+I was a **`competitive programmer`** during my university time. I have **`solved 1000+ programming problems`** on different **`online judges`**. These are my profiles:
 
-&nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[UVa](http://uhunt.felix-halim.net/id/370372)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[UVa](https://uhunt.onlinejudge.org/id/370372)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[Codeforces](http://codeforces.com/profile/Back_To_School)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[HackerRank](https://www.hackerrank.com/shahnawaz_pabon)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[LightOJ](http://www.lightoj.com/volume_userstat.php?user_id=14103)**<br/>
