@@ -16,9 +16,8 @@ I was a **`competitive programmer`** during my university time. I have **`solved
 
 &nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[UVa](http://uhunt.felix-halim.net/id/370372)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[Codeforces](http://codeforces.com/profile/Back_To_School)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[HackerRank](https://www.hackerrank.com/Pabon_SEC)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[HackerRank](https://www.hackerrank.com/shahnawaz_pabon)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[LightOJ](http://www.lightoj.com/volume_userstat.php?user_id=14103)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[DevSkill](https://www.devskill.com/Home/PublicProfile/Pabon_SEC)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;#:point_right:&nbsp; **[CSAcademy](https://csacademy.com/user/TechTurtle)**<br/>
 
 **`Alongside problem solving, I participated in various programming contests below:`**
