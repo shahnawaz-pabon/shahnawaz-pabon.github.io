@@ -7,35 +7,40 @@
 
 <div align="center" style="margin-bottom:30px">
     <a href='https://github.com/shahnawaz-pabon/shahnawaz-pabon.github.io/blob/development/LICENSE'>
-      <img src="https://img.shields.io/badge/License-MIT-green" alt="Logo" />
+      <img src="https://img.shields.io/badge/License-MIT-informational?style=for-the-badge&labelColor=17202A&color=1abc9c" alt="Logo" />
     </a>
 </div>
 
 ## Table of Contents
-* [Description](#description)
-* [How I started](#how-i-started)
-* [Used Technologies](#used-technologies)
-* [Used Awesome Things](#used-awesome-things)
-* [Useful Resources](#useful-resources)
-* [Acknowledgements](#acknowledgements)
-* [Run your first Gatsby Site](#run-your-first-gatsby-site)
-* [Deploy your site with GitHub Pages](#deploy-your-site-with-gitHub-pages)
-* [Author](#author)
-* [License](#license)
+
+- [Description](#description)
+- [How I started](#how-i-started)
+- [Used Technologies](#used-technologies)
+- [Used Awesome Things](#used-awesome-things)
+- [Useful Resources](#useful-resources)
+- [Acknowledgements](#acknowledgements)
+- [Run your first Gatsby Site](#run-your-first-gatsby-site)
+- [Deploy your site with GitHub Pages](#deploy-your-site-with-gitHub-pages)
+- [Author](#author)
+- [License](#license)
 
 ## Description
+
 This is my personal site. I would like to make it useful as a resource of various type of problems I face during my programming time and share those solutions with everyone. The site is a portfolio of mine as well.
 
 ## How I started
+
 First I started making my own site using [Jekyll][jekyll]. [This is my site][jekyll-site] built with Jekyll. When I saw [Tania Rascia's site][tania-rascia] first time, I found it so fast and performance is extremely well. Then I decided to get started with Gatsby. After that [I made a site][gatsby-hello] following [this tutorial][gatsby-tutorial] before getting started.
 
 ## Used Technologies
+
 - [GatsbyJS][gatsbyjs]
 - [ReactJS][reactjs]
 - [NodeJS][nodejs]
 - [GraphQL][graphql]
 
 ## Used Awesome Things
+
 - [LottieWeb][lottie-web]
 - [React Awesome Slider][rafael]
 - [Typed.js][typed]
@@ -43,13 +48,15 @@ First I started making my own site using [Jekyll][jekyll]. [This is my site][jek
 - [utterances][utterances]
 
 ## Useful Resources
+
 - [React Context](https://reactjs.org/docs/context.html)
 - **Toggle Dark Mode**
-    - [1](https://medium.com/better-programming/react-context-api-part-1-dark-theme-3f00666cbacb)
-    - [2](https://ecstatic-elion-0c620b.netlify.com/dark-theme/)
+  - [1](https://medium.com/better-programming/react-context-api-part-1-dark-theme-3f00666cbacb)
+  - [2](https://ecstatic-elion-0c620b.netlify.com/dark-theme/)
 - [Gatsby Remark Emojis](https://github.com/matchilling/gatsby-remark-emojis)
 
 ## Acknowledgements
+
 - [Tania Rascia][tania-rascia]
 - [Ruben Harutyunyan][ruben]
 - [Prayash Thapa][prayash]
@@ -83,19 +90,22 @@ Add the following script to your `package.json` file
 
 ```
 
-The run 
+The run
 
 ```bash
 $ npm run deploy
 ```
 
 ## Author
-* [Shahnawaz Hossan][author]
+
+- [Shahnawaz Hossan][author]
 
 ## License
+
 [MIT][license] © [Shahnawaz Hossan][author]
 
 <!-- Definitions -->
+
 [gatsbyjs]: https://www.gatsbyjs.org/
 [reactjs]: https://reactjs.org/
 [nodejs]: https://nodejs.org/en/
