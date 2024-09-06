@@ -19,6 +19,7 @@
 - [Used Awesome Things](#used-awesome-things)
 - [Useful Resources](#useful-resources)
 - [Acknowledgements](#acknowledgements)
+- [Up and Run](#up-and-run)
 - [Run your first Gatsby Site](#run-your-first-gatsby-site)
 - [Deploy your site with GitHub Pages](#deploy-your-site-with-gitHub-pages)
 - [Author](#author)
@@ -61,13 +62,28 @@ First I started making my own site using [Jekyll][jekyll]. [This is my site][jek
 - [Ruben Harutyunyan][ruben]
 - [Prayash Thapa][prayash]
 
+## Up and Run
+
+Make sure you have the Gatsby CLI installed on your machine. You can install it using npm
+
+```
+npm install -g gatsby-cli
+git clone https://github.com/shahnawaz-pabon/shahnawaz-pabon.github.io.git
+cd shahnawaz-pabon.github.io
+npm install
+gatsby develop
+```
+
+Once the server is up and running, your site will be available at this address: [http://localhost:8000](http://localhost:8000) and [http://localhost:8000/___graphql](http://localhost:8000/___graphql), this will open the GraphiQL interface, where you can explore and query your site’s data.
+
+
 ## Run your first Gatsby Site
 
 ```bash
-$ npm install -g gatsby-cli
-$ gatsby new my-site
-$ cd my-site
-$ gatsby develop
+npm install -g gatsby-cli
+gatsby new my-site
+cd my-site
+gatsby develop
 ```
 
 Your site will be running on [localhost:8000][running-url]
@@ -75,7 +91,7 @@ Your site will be running on [localhost:8000][running-url]
 ## Deploy your site with GitHub Pages
 
 ```bash
-$ npm install gh-pages --save-dev
+npm install gh-pages --save-dev
 ```
 
 Add the following script to your `package.json` file
@@ -93,7 +109,7 @@ Add the following script to your `package.json` file
 The run
 
 ```bash
-$ npm run deploy
+npm run deploy
 ```
 
 ## Author
