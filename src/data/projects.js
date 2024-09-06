@@ -22,6 +22,24 @@ const projects = [
         description: "A 2d grid game",
         repo: "shahnawaz-pabon/minesweeper",
         demo: "https://shahnawaz-pabon.github.io/minesweeper",
+    },
+    {
+        title: "FastAPI with MongoDB",
+        description: "Exemplary backend integration of MongoDB and JWT in FastAPI, following industry best practices",
+        repo: "shahnawaz-pabon/fastapi-mongodb-with-jwt",
+        // demo: "https://shahnawaz-pabon.github.io/minesweeper",
+    },
+    {
+        title: "FastAPI with Celery",
+        description: "An example project to get started celery with fastapi",
+        repo: "shahnawaz-pabon/celery-with-fastapi",
+        // demo: "https://shahnawaz-pabon.github.io/minesweeper",
+    },
+    {
+        title: "File Upload in Multer",
+        description: "Client and Server for uploading a file with multer & express",
+        repo: "shahnawaz-pabon/file-upload-with-multer",
+        // demo: "https://shahnawaz-pabon.github.io/minesweeper",
     }
 ];
 

@@ -1,0 +1,163 @@
+/* Container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cards per row */
+    grid-gap: 15px;
+    /* This will ensure equal spacing between rows and columns */
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        /* 1 card per row on small screens */
+    }
+}
+
+/* Project Card */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    /* Fixed card height of 200px */
+    position: relative;
+    /* To position stars, forks, and buttons */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Title and Description */
+.project-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.project-description {
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+/* Stars and Forks in the Upper Right */
+.project-meta {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.project-stars,
+.project-forks {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #1f6feb;
+}
+
+.project-stars svg,
+.project-forks svg {
+    margin-right: 5px;
+}
+
+/* Buttons fixed at the bottom */
+.project-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    /* Optional: adds a subtle border between content and buttons */
+}
+
+.project-link {
+    text-decoration: none;
+    background-color: #1f6feb;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.project-link.demo {
+    background-color: #28a745;
+}
+
+.project-link svg {
+    margin-right: 8px;
+}
+
+.project-link:hover {
+    background-color: #174ea6;
+}
+
+.project-link.demo:hover {
+    background-color: #218838;
+}
+
+/* Dark Mode */
+.dark-mode .project-card {
+    background-color: rgb(31, 32, 41);
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .project-title,
+.dark-mode .project-description {
+    color: #fff;
+}
+
+.dark-mode .project-meta {
+    color: #ffcc00;
+}
+
+.dark-mode .project-stars,
+.dark-mode .project-forks {
+    background-color: #3a3a3c;
+    color: #ffcc00;
+}
+
+.dark-mode .project-link {
+    background-color: #ff8c00;
+}
+
+.dark-mode .project-link.demo {
+    background-color: #32cd32;
+}
+
+.dark-mode .project-link:hover {
+    background-color: #ff7300;
+}
+
+.dark-mode .project-link.demo:hover {
+    background-color: #2ea732;
+}
