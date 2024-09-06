@@ -1,9 +1,9 @@
 const projects = [
     {
         title: "shahnawaz-pabon.github.io",
-        description: "My site",
+        description: "This site",
         repo: "shahnawaz-pabon/shahnawaz-pabon.github.io",
-        demo: "https://projectone-demo.com",
+        // demo: "https://projectone-demo.com",
     },
 
     {

@@ -110,7 +110,7 @@
 }
 
 .project-link.demo {
-    background-color: #28a745;
+    background-color: #1abc9c;
 }
 
 .project-link svg {
@@ -118,11 +118,11 @@
 }
 
 .project-link:hover {
-    background-color: #174ea6;
+    background-color: #2980b9;
 }
 
 .project-link.demo:hover {
-    background-color: #218838;
+    background-color: #20d1ae;;
 }
 
 /* Dark Mode */
@@ -144,20 +144,4 @@
 .dark-mode .project-forks {
     background-color: #3a3a3c;
     color: #ffcc00;
-}
-
-.dark-mode .project-link {
-    background-color: #ff8c00;
-}
-
-.dark-mode .project-link.demo {
-    background-color: #32cd32;
-}
-
-.dark-mode .project-link:hover {
-    background-color: #ff7300;
-}
-
-.dark-mode .project-link.demo:hover {
-    background-color: #2ea732;
 }
