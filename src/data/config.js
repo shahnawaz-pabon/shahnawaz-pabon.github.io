@@ -10,6 +10,10 @@ const config = {
       link: '/posts/',
     },
     {
+      name: 'Projects',
+      link: '/projects/',
+    },
+    {
       name: 'About',
       link: '/about/',
     },
