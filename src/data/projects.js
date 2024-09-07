@@ -33,6 +33,7 @@ const projects = [
         title: "FastAPI with Celery",
         description: "A Beginner's Guide to Task Scheduling with Celery and FastAPI",
         repo: "shahnawaz-pabon/celery-with-fastapi",
+        guide: "https://dev.to/shahnawaz-pabon/trigger-a-task-with-fastapi-celery-docker-and-docker-compose-a-step-by-step-guide-35do"
         // demo: "https://shahnawaz-pabon.github.io/minesweeper",
     },
     {
@@ -45,7 +46,7 @@ const projects = [
         title: "Todo App",
         description: "A Robust To Do App with React Redux Best Practices Included",
         repo: "shahnawaz-pabon/to-do",
-        demo: "https://shahnawaz-pabon.github.io/to-do",
+        demo: "https://shahnawaz-pabon.github.io/to-do"
     }
 ];
 

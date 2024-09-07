@@ -6,7 +6,7 @@ import projects from "../data/projects";
 import "../styles/project.css";
 import { ThemeContext } from "../components/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faExternalLinkAlt, faStar, faUtensils } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faExternalLinkAlt, faBook } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
     const [githubData, setGithubData] = useState({});
@@ -67,6 +67,13 @@ const Projects = () => {
                                     {project?.demo ?
                                         <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link demo">
                                             <FontAwesomeIcon icon={faExternalLinkAlt} /> Demo
+                                        </a>
+                                        : <></>
+                                    }
+
+                                    {project?.guide ?
+                                        <a href={project.guide} target="_blank" rel="noopener noreferrer" className="project-link guide">
+                                            <FontAwesomeIcon icon={faBook} /> Guide
                                         </a>
                                         : <></>
                                     }
