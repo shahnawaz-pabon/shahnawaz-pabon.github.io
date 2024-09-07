@@ -16,7 +16,7 @@
 
 /* Project Card */
 .project-card {
-    background-color: #ffffff;
+    background-color: #f6f6f6;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
@@ -28,6 +28,7 @@
     /* Fixed card height of 200px */
     position: relative;
     /* To position stars, forks, and buttons */
+    border: #eee 1px solid;
 }
 
 .project-card:hover {
@@ -63,7 +64,7 @@
     top: 5px;
     right: 5px;
     display: flex;
-    gap: 10px;
+    /* gap: 10px; */
     font-size: 0.9rem;
 }
 
@@ -71,8 +72,8 @@
 .project-forks {
     display: flex;
     align-items: center;
-    background-color: #f1f1f1;
-    padding: 5px 8px;
+    /* background-color: #f1f1f1; */
+    padding-left: 5px;
     border-radius: 8px;
     font-weight: bold;
     color: #1f6feb;
@@ -92,9 +93,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
-    /* Optional: adds a subtle border between content and buttons */
+    /* background-color: #f9f9f9; */
+    /* border-top: 1px solid #ddd; */
 }
 
 .project-link {
@@ -122,26 +122,18 @@
 }
 
 .project-link.demo:hover {
-    background-color: #20d1ae;;
+    background-color: #20d1ae;
+    ;
 }
 
 /* Dark Mode */
 .dark-mode .project-card {
     background-color: rgb(31, 32, 41);
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+    border: none;
 }
 
 .dark-mode .project-title,
 .dark-mode .project-description {
     color: #fff;
-}
-
-.dark-mode .project-meta {
-    color: #ffcc00;
-}
-
-.dark-mode .project-stars,
-.dark-mode .project-forks {
-    background-color: #3a3a3c;
-    color: #ffcc00;
 }

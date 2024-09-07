@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Layout from "../layout";
+import Helmet from 'react-helmet';
+import config from '../data/config';
 import projects from "../data/projects";
 import "../styles/project.css";
 import { ThemeContext } from "../components/ThemeContext";
@@ -32,6 +34,7 @@ const Projects = () => {
 
     return (
         <Layout>
+            <Helmet title={`Projects | ${config.siteTitle} – Software Engineer`} />
             <div className={`container projects-container ${isDark ? "dark-mode" : ""}`}>
                 {projects.map((project) => {
                     const githubInfo = githubData[project.repo] || {};
@@ -39,10 +42,19 @@ const Projects = () => {
                         <div className="project-card" key={project.repo}>
                             <div className="project-meta">
                                 <span className="project-stars">
-                                    <FontAwesomeIcon icon={faStar} /> {githubInfo.stars || 0}
+                                    {/* <FontAwesomeIcon icon={faStar} /> {githubInfo.stars || 0} */}
+                                    <img
+                                        src={`https://img.shields.io/github/stars/${project.repo}`}
+                                        alt="GitHub Forks"
+                                    />
                                 </span>
                                 <span className="project-forks">
-                                    <FontAwesomeIcon icon={faUtensils} /> {githubInfo.forks || 0}
+                                    {/* <FontAwesomeIcon icon={faUtensils} /> {githubInfo.forks || 0} */}
+                                    <img
+                                        src={`https://img.shields.io/github/forks/${project.repo}`}
+                                        alt="GitHub Forks"
+                                    />
+
                                 </span>
                             </div>
                             <div className="project-content">
