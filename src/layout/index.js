@@ -76,7 +76,7 @@ export default class Layout extends Component {
             key={-1}
             alwaysShowTitle={false}
           >
-            <Action
+            {/* <Action
               text="My Facebook"
               onClick={() => {
                 window.open(
@@ -89,7 +89,7 @@ export default class Layout extends Component {
               }}
             >
               <FontAwesomeIcon icon={faFacebookF} size="lg" />
-            </Action>
+            </Action> */}
 
             <Action
               text="My Programming Blog in Bengali"

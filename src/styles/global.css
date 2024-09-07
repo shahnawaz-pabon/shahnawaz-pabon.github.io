@@ -23,7 +23,8 @@ a {
 .container {
   margin: 150px auto;
   max-width: 800px;
-  min-height: calc(100vh - 60px);
+  flex-direction: column;
+  min-height: 70vh;
 }
 
 .dark {
