@@ -43,18 +43,25 @@ const Projects = () => {
                             <div className="project-meta">
                                 <span className="project-stars">
                                     {/* <FontAwesomeIcon icon={faStar} /> {githubInfo.stars || 0} */}
-                                    <img
-                                        src={`https://img.shields.io/github/stars/${project.repo}`}
-                                        alt="GitHub Forks"
-                                    />
+                                    <a href={`https://github.com/${project.repo}/stargazers`} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            // src={`https://img.shields.io/github/stars/${project.repo}`}
+                                            src={`https://custom-icon-badges.demolab.com/github/stars/${project.repo}?logo=star&style=social&logoColor=black&label=Star`}
+                                            alt="GitHub Stars"
+                                        />
+                                    </a>
+
                                 </span>
                                 <span className="project-forks">
                                     {/* <FontAwesomeIcon icon={faUtensils} /> {githubInfo.forks || 0} */}
-                                    <img
-                                        src={`https://img.shields.io/github/forks/${project.repo}`}
-                                        alt="GitHub Forks"
-                                    />
 
+                                    <a href={`https://github.com/${project.repo}/network/members`} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            // src={`https://img.shields.io/github/forks/${project.repo}`}
+                                            src={`https://custom-icon-badges.demolab.com/github/forks/${project.repo}?logo=fork&style=social&logoColor=black&label=Fork`}
+                                            alt="GitHub Forks"
+                                        />
+                                    </a>
                                 </span>
                             </div>
                             <div className="project-content">
