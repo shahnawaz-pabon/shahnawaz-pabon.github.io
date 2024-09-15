@@ -81,3 +81,29 @@
   padding-bottom: 2rem;
 }
 /* Comments style */
+
+/* Container for code block and button */
+.gatsby-highlight {
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+/* Styling for the copy button */
+.copy-button {
+  position: absolute;
+  top: -23px;
+  right: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Ubuntu', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
