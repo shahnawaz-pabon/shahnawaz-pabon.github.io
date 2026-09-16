@@ -1,0 +1,34 @@
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    color var(--speed) var(--ease),
+    border-color var(--speed) var(--ease),
+    transform var(--speed) var(--ease);
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: rotate(-12deg);
+}
+
+.theme-toggle__icon {
+  display: none;
+  line-height: 0;
+}
+
+/* The active icon is chosen by the document theme, not by React state. */
+[data-theme="light"] .theme-toggle__icon--sun,
+[data-theme="dark"] .theme-toggle__icon--moon {
+  display: block;
+}

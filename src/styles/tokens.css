@@ -1,0 +1,126 @@
+/**
+ * Design tokens — the single source of truth for colour, type, spacing and
+ * motion. Every other stylesheet consumes these variables, so re-theming the
+ * site means editing this file and nothing else.
+ *
+ * Theme is applied as `data-theme="light|dark"` on <html>, set before first
+ * paint by the bootstrap script in gatsby-ssr.js.
+ */
+
+:root {
+  /* Brand ----------------------------------------------------------------
+     The teal stays the identity colour. On light backgrounds it is darkened
+     from the original #1abc9c (2.2:1 on white, below the 4.5:1 WCAG AA floor
+     for text) to #0f766e, which clears AA while reading as the same brand. */
+  --accent: #0f766e;
+  --accent-hover: #115e59;
+  --accent-soft: rgba(15, 118, 110, 0.1);
+  --accent-contrast: #ffffff;
+
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg-subtle: #f6f8f8;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  /* Translucent navbar backdrop; kept as an explicit rgba rather than a
+     color-mix() so older browsers still get a readable bar. */
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.18);
+
+  /* Text */
+  --text: #16181d;
+  --text-muted: #5b6472;
+  --text-faint: #8a93a1;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+  --shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.12);
+  --glow:
+    0 0 0 1px rgba(15, 118, 110, 0.2), 0 8px 32px rgba(15, 118, 110, 0.16);
+
+  /* Hero -----------------------------------------------------------------
+     The hero is a dark panel in both themes, so these deliberately do not
+     change with the theme. */
+  --hero-bg: #0b1220;
+  --hero-text: #f8fafc;
+  --hero-muted: rgba(248, 250, 252, 0.72);
+  --hero-border: rgba(255, 255, 255, 0.12);
+  --hero-aurora-1: rgba(45, 212, 191, 0.45);
+  --hero-aurora-2: rgba(56, 189, 248, 0.32);
+  --hero-aurora-3: rgba(147, 112, 219, 0.34);
+
+  /* Specialised surfaces */
+  --code-bg: #f3f5f7;
+  --card-hover-lift: -4px;
+
+  /* Typography */
+  --font-sans: "Ubuntu", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Ubuntu Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: 1.125rem;
+  --step-2: 1.375rem;
+  --step-3: 1.75rem;
+  --step-4: 2.25rem;
+  --step-5: clamp(2.5rem, 6vw, 4rem);
+
+  /* Layout */
+  --measure: 68ch;
+  --article-width: 850px;
+  --container-width: 1080px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --nav-height: 64px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --speed: 220ms;
+}
+
+[data-theme="dark"] {
+  /* On dark, the original bright teal has plenty of contrast, so keep it. */
+  --accent: #2dd4bf;
+  --accent-hover: #5eead4;
+  --accent-soft: rgba(45, 212, 191, 0.14);
+  --accent-contrast: #06231f;
+
+  --bg: #0d1117;
+  --bg-subtle: #11161d;
+  --surface: #161b22;
+  --surface-raised: #1c222b;
+  --nav-bg: rgba(13, 17, 23, 0.85);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --text: #e6edf3;
+  --text-muted: #9aa4b2;
+  --text-faint: #6e7781;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --glow:
+    0 0 0 1px rgba(45, 212, 191, 0.25), 0 8px 32px rgba(45, 212, 191, 0.18);
+
+  --code-bg: #0b0f14;
+  --card-hover-lift: -4px;
+}
+
+/*
+ * Honor the OS "reduce motion" setting: reveals and the aurora are decorative,
+ * so they collapse to their finished state rather than animating.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
