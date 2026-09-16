@@ -1,11 +1,57 @@
-footer {
-    /* position: absolute; */
-    letter-spacing: 3px;
-    text-align: center;
-    font-family: 'Ubuntu';
-    font-weight: bold;
-    width: 100%;
-    height: 35px;
-    margin: 0px auto;
-    font-size: 1rem;
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2.5rem var(--gutter);
+  text-align: center;
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.footer__name {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.footer__role,
+.footer__note {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
+
+.footer__note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer__heart {
+  color: var(--accent);
+}
+
+@media (min-width: 720px) {
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer__brand {
+    align-items: flex-start;
+  }
 }

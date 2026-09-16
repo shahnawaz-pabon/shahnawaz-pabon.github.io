@@ -1,112 +1,208 @@
 .navbar {
-    position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	opacity: 1;
-	transform: translateY(0);
-	padding: 10px 0;
-	box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
-	-webkit-transition : all 0.3s ease-out;
-    transition : all 0.3s ease-out;
-    /* background: #fff; */
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  background: var(--nav-bg);
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color var(--speed) var(--ease),
+    background-color var(--speed) var(--ease);
 }
 
-.navbar-brand img{
-	height: 52px;
-	width: auto;
-	display: block;
-	-webkit-transition : all 0.3s ease-out;
-	transition : all 0.3s ease-out;
+/* The border only appears once the page has moved, so the bar reads as
+   transparent at the top of the hero. */
+.navbar.is-scrolled {
+  border-bottom-color: var(--border);
 }
 
-.nav-scroll {
-	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
-	padding: 5px 0;
-	-webkit-transition : all 0.3s ease-out;
-	transition : all 0.3s ease-out;
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
-/* Navbar links styles */
-.nav-links {
-	position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    flex: 1;
-    margin: 0;
-    color: #212121 !important;
-	font-weight: bold;
-    transition: all 200ms linear;
+.navbar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -0.01em;
 }
 
-.nav-links a {
-	display: inline-block;
-	align-items: center;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: .6rem;
-    margin: 0;
-    color: #828d90;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
+.navbar__brand img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-soft);
 }
 
-.nav-links a:hover {
-    color: #1abc9c;
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
 }
 
-.nav-links a:after {
-    content: '';
-	display: block;
-    width: 0;
-    height: 2px;
-    background: #1abc9c;
-	transition: all .3s linear;
+.navbar__link {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    color var(--speed) var(--ease),
+    background-color var(--speed) var(--ease);
 }
 
-.nav-links a:hover:after {
-    width: 100%;
+.navbar__link:hover {
+  color: var(--text);
+  background: var(--accent-soft);
 }
 
-.nav-links a.tab-active {
-    content: '';
-    color: #fff !important;
-    background-color: #2c3e50 !important;
+/* Underline marks the current page. */
+.navbar__link.is-active {
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
-/*
-.nav-links a:active{
-    color: #777 !important;
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
 }
 
-.nav-links a:active:hover:after{
-	opacity: 0;
-} */
-
-/* End of Navbar links styles */
-
-.nav-container {
-    padding: 0 1.5rem;
-    height: 55px;
-    max-width: 700px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar__links + .navbar__actions {
+  margin-left: 0;
 }
 
-/* Dark Mode */
-.bg-dark {
-    background: #1f2029;
-    color: #fff;
+.navbar__burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.bg-dark .nav-links a {
-    color: #fff;
+/* ---------------------------------------------------------------------------
+   Drawer
+   --------------------------------------------------------------------------- */
+
+.navbar__scrim {
+  position: fixed;
+  inset: var(--nav-height) 0 0 0;
+  background: rgba(2, 6, 12, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--speed) var(--ease),
+    visibility var(--speed);
 }
 
-/* Dark Mode Ends*/
+.navbar__scrim.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar__drawer {
+  position: fixed;
+  top: var(--nav-height);
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: min(320px, 82vw);
+  padding: 1.5rem var(--gutter) 2rem;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(100%);
+  /* `visibility` keeps the closed drawer out of the tab order and the
+     accessibility tree while still allowing the slide transition. */
+  visibility: hidden;
+  transition:
+    transform 320ms var(--ease),
+    visibility 320ms;
+}
+
+.navbar__drawer.is-open {
+  transform: none;
+  visibility: visible;
+}
+
+.navbar__drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navbar__drawer-link {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: var(--step-1);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar__drawer-link:hover {
+  background: var(--accent-soft);
+}
+
+.navbar__drawer-link.is-active {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.navbar__drawer-footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ---------------------------------------------------------------------------
+   Breakpoints
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__burger {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 861px) {
+  .navbar__drawer,
+  .navbar__scrim {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar__name {
+    /* Frees room for the theme toggle and burger. */
+    display: none;
+  }
+}

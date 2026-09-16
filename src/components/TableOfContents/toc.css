@@ -1,0 +1,53 @@
+.toc {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-subtle);
+}
+
+.toc__heading {
+  margin: 0 0 0.75rem;
+  color: var(--text-faint);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.toc__body ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  list-style: none;
+}
+
+.toc__body li {
+  position: relative;
+  margin: 0.3rem 0;
+}
+
+/* Custom marker so nested levels stay readable. */
+.toc__body li::before {
+  content: "";
+  position: absolute;
+  left: -0.85rem;
+  top: 0.7em;
+  width: 5px;
+  height: 1px;
+  background: var(--border-strong);
+}
+
+.toc__body ul ul {
+  margin-top: 0.3rem;
+  padding-left: 1rem;
+}
+
+.toc__body a {
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  text-decoration: none;
+}
+
+.toc__body a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}

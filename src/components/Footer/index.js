@@ -1,19 +1,35 @@
-import React, { Component } from "react";
-import "./Footer.css";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faCopyright } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-export default class Footer extends Component {
-  render() {
-    const currentYear = new Date().getFullYear();
-    const startYear = 2019;
+import config from "../../data/config";
+import SocialLinks from "../SocialLinks";
+import "./Footer.css";
 
-    return (
-      <footer className="footer">
-        <FontAwesomeIcon icon={faCopyright} color="rgb(26, 188, 156)" />{" "}
-        Shahnawaz Hossan {startYear}-{currentYear} | Crafted with{" "}
-        <FontAwesomeIcon icon={faHeart} color="rgb(26, 188, 156)" />
-      </footer>
-    );
-  }
+const START_YEAR = 2019;
+
+export default function Footer() {
+  // Computed per render rather than at module scope so a long-lived static
+  // build does not freeze the copyright year.
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="footer">
+      <div className="footer__inner">
+        <div className="footer__brand">
+          <p className="footer__name">{config.siteTitle}</p>
+          <p className="footer__role">{config.authorRole}</p>
+        </div>
+
+        <SocialLinks socials={config.socials} />
+
+        <p className="footer__note">
+          <FontAwesomeIcon icon={faHeart} className="footer__heart" />{" "}
+          <span>
+            {START_YEAR}–{currentYear} {config.author}. Built with Gatsby.
+          </span>
+        </p>
+      </div>
+    </footer>
+  );
 }

@@ -1,0 +1,109 @@
+.explorer__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.explorer__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.explorer__search-icon {
+  position: absolute;
+  left: 0.9rem;
+  color: var(--text-faint);
+  pointer-events: none;
+}
+
+.explorer__input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: var(--step--1);
+  transition:
+    border-color var(--speed) var(--ease),
+    box-shadow var(--speed) var(--ease);
+}
+
+.explorer__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.explorer__facet-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.explorer__facet-label {
+  color: var(--text-faint);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.explorer__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.explorer__chips .chip {
+  font: inherit;
+  font-size: var(--step--1);
+  cursor: pointer;
+}
+
+.explorer__count {
+  color: var(--text-faint);
+  font-size: 0.8em;
+}
+
+.explorer__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}
+
+.explorer__clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: var(--step--1);
+  cursor: pointer;
+}
+
+.explorer__clear:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.explorer__browse {
+  margin-top: 1.5rem;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}

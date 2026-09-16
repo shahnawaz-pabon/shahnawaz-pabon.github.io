@@ -1,0 +1,21 @@
+.reading-progress {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 2px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.reading-progress__bar {
+  height: 100%;
+  width: 100%;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  /* Scale rather than width: a transform stays on the compositor instead of
+     forcing a layout on every scroll frame. */
+  transform: scaleX(0);
+  will-change: transform;
+}
