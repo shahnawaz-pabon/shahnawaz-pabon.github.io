@@ -1,0 +1,15 @@
+# Build output and caches
+public/
+.cache/
+node_modules/
+
+# Post prose belongs to the author: `npm run format` should never reflow
+# published posts, drafts, or the About page.
+content/
+
+# Lottie animation data is minified machine output. Prettier expands it, which
+# turned these four files from ~1 MB into ~3.9 MB on disk.
+static/assets/lottie/
+
+# Generated artwork source; formatting it would not change the PNG anyway.
+static/logos/social-card.svg

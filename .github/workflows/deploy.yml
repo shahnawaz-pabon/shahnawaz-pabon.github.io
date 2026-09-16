@@ -1,40 +1,54 @@
-# Workflow to build and deploy my site to GitHub Pages
+# Builds the site and publishes the result to GitHub Pages.
 name: Deploy my site to shahnawaz-pabon.github.io
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
+  # Deploy on every push to the development branch.
+  push:
+    branches:
+      - development
+  # Allows running this workflow manually from the Actions tab.
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# Never let two deploys race: the later push wins.
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: true
+
 jobs:
-  # This workflow contains a single job called "deploy"
   deploy:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as the part of the job
     steps:
-      # Checks-out the repository under $GITHUB_WORKSPACE so that the job can access it
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      # Install packages
-      - name: Install packages 🔨 
-        run: npm install
+      # Pinned to the version this project is developed against (see the
+      # `engines` field in package.json).
+      - name: Set up Node 🧰
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
 
-      # Clean caches
-      - name: Clean caches 🎡 
-        run: npm run clean
+      # `npm ci` installs exactly the committed lockfile, so a build here
+      # cannot drift from a local one.
+      - name: Install packages 🔨
+        run: npm ci
 
-      # This example project is built using npm and outputs the result to the 'public' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
       - name: Build 🔧
         run: npm run build:pp
+        env:
+          # Used by gatsby-node.js to fetch project star/fork counts during the
+          # build. The default GITHUB_TOKEN raises the API limit from 60 to
+          # 5,000 requests per hour; the build succeeds without it, it just
+          # omits the badges if the anonymous limit is exhausted.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Deploy to master
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # The branch the action should deploy to
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
-          # The folder the action should deploy
           folder: public
+          # Keeps the deployed branch tidy: only files from `public/` remain.
+          clean: true
