@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-remark-emoji-shortcodes",
+  "version": "1.0.0",
+  "description": "Renders #:name: emoji shortcodes as unicode emoji in markdown",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "remark",
+    "emoji"
+  ],
+  "peerDependencies": {
+    "gatsby": "^5.0.0"
+  }
+}
