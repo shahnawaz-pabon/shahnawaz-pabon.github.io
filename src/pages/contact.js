@@ -1,43 +1,46 @@
 import React from "react";
-import Layout from '../layout';
-import '../styles/contact.css';
-import Helmet from 'react-helmet';
-import config from '../data/config';
-import contact from '../../static/assets/images/contact.svg';
-import lottie from 'lottie-web';
-import animationTelegram from '../../static/assets/lottie/telegram.json';
 
-class Contact extends React.Component {
-  componentDidMount() {
+import LottieAnimation from "../components/LottieAnimation";
+import Seo from "../components/Seo";
+import SocialLinks from "../components/SocialLinks";
+import config from "../data/config";
+import telegramAnimation from "../../static/assets/lottie/telegram.json";
+import "../styles/contact.css";
 
-    lottie.loadAnimation({
-      container: document.getElementById('contact-lottie'), // the dom element that will contain the animation
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: animationTelegram
-    })
+export default function Contact() {
+  return (
+    <div className="container container--narrow">
+      <header className="contact__header">
+        <LottieAnimation
+          animationData={telegramAnimation}
+          className="contact__animation"
+          label="An animated paper plane"
+        />
 
-  }
+        <h1>Get in touch</h1>
+        <p className="contact__lede">
+          Whether it is a question about something I wrote, a bug you spotted,
+          or an opportunity you want to talk about — my inbox is open.
+        </p>
+      </header>
 
-  render() {
-    return (
-      <Layout>
-        <Helmet title={`Contact | ${config.siteTitle} – Software Engineer`} />
-        <div className="container">
+      <a className="contact__email" href={`mailto:${config.email}`}>
+        <span className="contact__email-label">Email</span>
+        <span className="contact__email-value">{config.email}</span>
+      </a>
 
-          <div id='contact-lottie'></div>
-
-          <div className="img">
-            <img src={contact} />
-            <h3 id="contact-header">If you have queries, feel free to <a href="mailto:s.pabon93@gmail.com">Mail Me.</a></h3>
-          </div>
-
-
-        </div>
-      </Layout>
-    )
-  }
+      <section className="contact__socials" aria-labelledby="elsewhere-heading">
+        <h2 id="elsewhere-heading">Elsewhere</h2>
+        <SocialLinks socials={config.socials} withLabels />
+      </section>
+    </div>
+  );
 }
 
-export default Contact;
+export const Head = () => (
+  <Seo
+    title="Contact"
+    pathname="/contact/"
+    description={`Contact ${config.author}, ${config.authorRole}.`}
+  />
+);

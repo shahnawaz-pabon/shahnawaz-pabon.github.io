@@ -1,34 +1,41 @@
 import React from "react";
-import Layout from '../layout';
-import lottie from 'lottie-web';
-import animationData from '../../static/assets/lottie/404.json';
-import '../styles/404.css';
-import Helmet from 'react-helmet';
-import config from '../data/config';
+import { Link } from "gatsby";
 
-class NotFound extends React.Component {
+import LottieAnimation from "../components/LottieAnimation";
+import Seo from "../components/Seo";
+import animationData from "../../static/assets/lottie/404.json";
+import "../styles/404.css";
 
-  componentDidMount(){
+export default function NotFound() {
+  return (
+    <div className="container not-found">
+      <LottieAnimation
+        animationData={animationData}
+        className="not-found__animation"
+        label="An animated illustration of a lost explorer"
+      />
 
-    lottie.loadAnimation({
-      container: document.getElementById('not-found'), // the dom element that will contain the animation
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData
-    })
-  }
+      <h1 className="not-found__title">Page not found</h1>
+      <p className="not-found__lede">
+        That URL does not exist — it may have been moved, or the link that
+        brought you here was wrong.
+      </p>
 
-  render(){
-    return (
-        <Layout>
-          <Helmet title={`404 | ${config.siteTitle} – Software Engineer`} />
-          <div className="container">
-            <div id="not-found"></div>
-          </div>
-        </Layout>
-    )
-  }
+      <div className="not-found__actions">
+        <Link className="button button--primary" to="/">
+          Go home
+        </Link>
+        <Link className="button button--ghost" to="/posts/">
+          Browse posts
+        </Link>
+      </div>
+    </div>
+  );
 }
 
-export default NotFound;
+export const Head = () => (
+  <>
+    <Seo title="Page not found" pathname="/404/" />
+    <meta name="robots" content="noindex" />
+  </>
+);
