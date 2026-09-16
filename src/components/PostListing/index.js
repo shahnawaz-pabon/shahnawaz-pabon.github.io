@@ -28,7 +28,8 @@ export const postCardFields = graphql`
             width: 144
             height: 144
             layout: CONSTRAINED
-            placeholder: BLURRED
+            quality: 90
+            placeholder: NONE
           )
         }
       }

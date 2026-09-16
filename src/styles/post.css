@@ -8,12 +8,12 @@
   border-bottom: 1px solid var(--border);
 }
 
+/* Plain artwork on the page background: the source PNGs are transparent, so a
+   tint or a blur placeholder behind them would read as a shadow. */
 .post__image {
   width: 72px;
   height: 72px;
   margin-bottom: 1.25rem;
-  border-radius: var(--radius-sm);
-  background: var(--accent-soft);
 }
 
 .post__img {

@@ -38,12 +38,12 @@
   letter-spacing: -0.01em;
 }
 
+/* The logo is a transparent PNG shown at its own shape — no background disc or
+   rounding, which would show through as a halo around it. */
 .navbar__brand img {
   display: block;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  background: var(--accent-soft);
 }
 
 .navbar__links {
