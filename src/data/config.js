@@ -10,8 +10,12 @@
  */
 const config = {
   siteTitle: "Shahnawaz Hossan",
+  /**
+   * Used as the hero's lede and as the default meta description, so it has to
+   * read well in a search result too — keep it under about 150 characters.
+   */
   siteDescription:
-    "Full-Stack Software Engineer writing about the programming problems I run into and how I solved them.",
+    "I write up the problems I hit while building software — what went wrong, and what actually fixed it.",
   siteUrl: "https://shahnawaz-pabon.github.io",
   siteLanguage: "en",
 
@@ -54,12 +58,18 @@ const config = {
     },
   ],
 
-  /** Cycled by the hero typewriter. */
+  /**
+   * Cycled by the hero typewriter.
+   *
+   * Deliberately about approach rather than naming technologies: a stack list
+   * dates quickly, says nothing a visitor cannot read off the projects page,
+   * and repeats the job title already in `siteDescription`.
+   */
   roles: [
-    "Full-Stack Software Engineer",
-    "React & Node.js Developer",
-    "Competitive Programmer",
-    "Problem Solver",
+    "Turning hard problems into simple solutions",
+    "Building software that gets out of the way",
+    "Sweating the details most people never notice",
+    "Always curious, always building",
   ],
 
   /**
