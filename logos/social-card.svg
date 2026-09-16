@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!--
+    Source for static/logos/social-card.png, the Open Graph / Twitter card
+    image. Edit this file, then regenerate the PNG (the command is in CLAUDE.md):
+    rasterisers and social platforms do not accept SVG for og:image.
+  -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <radialGradient id="auroraTeal">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auroraBlue">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auroraViolet">
+      <stop offset="0" stop-color="#9370db" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#9370db" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <ellipse cx="150" cy="110" rx="430" ry="360" fill="url(#auroraTeal)"/>
+  <ellipse cx="1060" cy="170" rx="370" ry="300" fill="url(#auroraBlue)"/>
+  <ellipse cx="620" cy="640" rx="430" ry="300" fill="url(#auroraViolet)"/>
+
+  <text x="96" y="296" font-family="Ubuntu, DejaVu Sans, sans-serif" font-size="78"
+        font-weight="700" fill="#f8fafc" letter-spacing="-2">Shahnawaz Hossan</text>
+
+  <text x="96" y="362" font-family="Ubuntu, DejaVu Sans, sans-serif" font-size="34"
+        fill="#2dd4bf">Full-Stack Software Engineer</text>
+
+  <rect x="96" y="416" width="112" height="4" rx="2" fill="#2dd4bf"/>
+
+  <text x="96" y="486" font-family="Ubuntu, DejaVu Sans, sans-serif" font-size="25"
+        fill="#9aa4b2">shahnawaz-pabon.github.io</text>
+</svg>

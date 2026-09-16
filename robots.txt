@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://shahnawaz-pabon.github.io/sitemap-index.xml
+Host: https://shahnawaz-pabon.github.io

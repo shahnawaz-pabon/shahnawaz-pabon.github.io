@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shahnawaz Hossan — Posts]]></title><description><![CDATA[I write up the problems I hit while building software — what went wrong, and what actually fixed it.]]></description><link>https://shahnawaz-pabon.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Sep 2026 17:29:19 GMT</lastBuildDate><item><title><![CDATA[Getting Started with Vim]]></title><description><![CDATA[Table of Contents      🔰   Introduction 
+     🔰   Modes 
+     🔰   Movements 
+     🔰   Insert 
+     🔰   Find 
+     🔰   Go to…]]></description><link>https://shahnawaz-pabon.github.io/posts/2020-03-22-getting-started-with-vim/</link><guid isPermaLink="false">https://shahnawaz-pabon.github.io/posts/2020-03-22-getting-started-with-vim/</guid><category><![CDATA[vim]]></category><pubDate>Sun, 22 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+&lt;p&gt;     🔰   &lt;strong&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#modes&quot;&gt;Modes&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#movements&quot;&gt;Movements&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#insert&quot;&gt;Insert&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#find&quot;&gt;Find&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#goto&quot;&gt;Go to&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#search&quot;&gt;Search&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#remove-delete&quot;&gt;Remove and Delete&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#replace-repetition&quot;&gt;Replace and Repetition&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#visual-mode&quot;&gt;Visual Mode&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔰   &lt;strong&gt;&lt;a href=&quot;#practice&quot;&gt;Practice&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;&lt;/p&gt;
+&lt;h3 id=&quot;introduction&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Introduction&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Vim&lt;/code&gt;&lt;/strong&gt; is one of the most powerful text editors I have ever used in CLI(Command Line Interface). There are so many files which need to be opened or edited. &lt;strong&gt;&lt;code&gt;Vim&lt;/code&gt;&lt;/strong&gt; can be the best choice because &lt;strong&gt;&lt;code&gt;Vim&lt;/code&gt;&lt;/strong&gt; is more than an editor. 😎&lt;/p&gt;
+&lt;p&gt;Installation commands on &lt;strong&gt;&lt;code&gt;Ubuntu&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; update
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;modes&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Modes&lt;/h3&gt;
+&lt;p&gt;There are two basic modes in &lt;strong&gt;&lt;code&gt;Vim&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;insert&lt;/code&gt; mode (&lt;code&gt;In this mode you can edit texts in your own way&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;normal&lt;/code&gt; mode (&lt;code&gt;In this mode you can manipulate and play with texts according to some instructions&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;To switch between these modes&lt;/code&gt; you need to use &lt;code&gt;Esc&lt;/code&gt; for &lt;code&gt;normal&lt;/code&gt; mode and &lt;code&gt;i&lt;/code&gt; for &lt;code&gt;insert&lt;/code&gt; mode&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;There is another mode in vim called &lt;strong&gt;&lt;code&gt;visual mode&lt;/code&gt;&lt;/strong&gt;. It is described &lt;strong&gt;&lt;a href=&quot;#visual-mode&quot;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;movements&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Movements&lt;/h3&gt;
+&lt;h4 id=&quot;-basic-movements&quot;&gt;🚶 Basic Movements&lt;/h4&gt;
+&lt;p&gt;You can move the cursor using following keys instead of uding arrow keys:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;h&lt;/code&gt; for moving towards &lt;code&gt;left&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;l&lt;/code&gt; for moving towards &lt;code&gt;right&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;k&lt;/code&gt; for moving towards &lt;code&gt;up&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;j&lt;/code&gt; for moving towards &lt;code&gt;down&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;-word-movements&quot;&gt;🚶 Word Movements&lt;/h4&gt;
+&lt;p&gt;Movement between words is possible via these keys:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;w&lt;/code&gt; or &lt;code&gt;W&lt;/code&gt; for moving to the beginning of the next word from current cursor and will continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;b&lt;/code&gt; or &lt;code&gt;B&lt;/code&gt; for moving to the beginning of the previous word from current cursor and will continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;e&lt;/code&gt; or &lt;code&gt;E&lt;/code&gt; for moving to the end of the next word from current cursor and will continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Use &lt;code&gt;number&lt;/code&gt; before these keys for moving fast e.g. &lt;code&gt;3w&lt;/code&gt; or &lt;code&gt;3W&lt;/code&gt; means cursor will move to the beginning of the &lt;code&gt;3rd next word&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;insert&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Insert&lt;/h3&gt;
+&lt;h4 id=&quot;-insert-text-repeatedly&quot;&gt;📝 Insert Text Repeatedly&lt;/h4&gt;
+&lt;p&gt;Suppose you want to insert &lt;strong&gt;&lt;code&gt;yes&lt;/code&gt;&lt;/strong&gt; 30 times consecutively. Steps will be as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Write 30 in normal mode&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Then press &lt;code&gt;i&lt;/code&gt;, &lt;code&gt;vim&lt;/code&gt; will be switched from &lt;code&gt;normal mode&lt;/code&gt; to &lt;code&gt;insert mode&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write &lt;code&gt;yes&lt;/code&gt; then press &lt;code&gt;Esc&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You will see that &lt;strong&gt;&lt;code&gt;yes&lt;/code&gt;&lt;/strong&gt; has been written 30 times consecutively.&lt;/p&gt;
+&lt;h4 id=&quot;-insert-new-line&quot;&gt;📝 Insert New Line&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;By pressing &lt;code&gt;o&lt;/code&gt; or &lt;code&gt;O&lt;/code&gt;, a new line will be inserted and &lt;code&gt;vim&lt;/code&gt; will be switched to &lt;code&gt;insert&lt;/code&gt; mode as well&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;find&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Find&lt;/h3&gt;
+&lt;h4 id=&quot;-find-a-character&quot;&gt;👓 Find a Character.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;fq&lt;/code&gt; to find next &lt;code&gt;q&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;Fq&lt;/code&gt; to find previous &lt;code&gt;q&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;3fq&lt;/code&gt; to find &lt;code&gt;3rd next&lt;/code&gt; occurrence of &lt;code&gt;q&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;3Fq&lt;/code&gt; to find &lt;code&gt;3rd previous&lt;/code&gt; occurrence of &lt;code&gt;q&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;-find-word-under-cursor&quot;&gt;👓 Find word under cursor&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;*&lt;/code&gt; to find the next occurrence of the word under current cursor&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;#&lt;/code&gt; to find the previous occurrence of the word under current cursor&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;goto&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Go to&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Go to matching parentheses (&lt;code&gt;(), {}, []&lt;/code&gt;) by simply pressing &lt;code&gt;%&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;0&lt;/code&gt; to go to the start of the line&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;$&lt;/code&gt; to go to the end of the line&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;gg&lt;/code&gt; to go to the beginning of the file&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;G&lt;/code&gt; to go to the end of the file&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;G&lt;/code&gt; with &lt;code&gt;number before&lt;/code&gt; to go to the specific line &lt;code&gt;e.g.&lt;/code&gt; press &lt;code&gt;3G&lt;/code&gt; to go to the &lt;code&gt;3rd line&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;search&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Search&lt;/h3&gt;
+&lt;p&gt;You can search a specific text in a file i.e. for searching &lt;strong&gt;&lt;code&gt;text&lt;/code&gt;&lt;/strong&gt; in your file, steps will be as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Write &lt;code&gt;/text&lt;/code&gt; and then hit &lt;code&gt;Enter&lt;/code&gt; button&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;After that press &lt;code&gt;n&lt;/code&gt;, it will find the next &lt;code&gt;text&lt;/code&gt; from the file and so on&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;N&lt;/code&gt;, it will find the previous &lt;code&gt;text&lt;/code&gt; from the file and so on&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;remove-delete&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Remove and Delete&lt;/h3&gt;
+&lt;h4 id=&quot;️-removing-a-character&quot;&gt;✂️ Removing a Character&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;By pressing &lt;code&gt;x&lt;/code&gt;, the character under the cursor will be removed&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;By pressing &lt;code&gt;X&lt;/code&gt;, the character to the left of the cursor will be removed&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;️-deleting&quot;&gt;✂️ Deleting&lt;/h4&gt;
+&lt;p&gt;The delete key is &lt;strong&gt;&lt;code&gt;d&lt;/code&gt;&lt;/strong&gt;. You can use it with &lt;strong&gt;&lt;code&gt;movements&apos; keys&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;E.g.&lt;/code&gt; &lt;code&gt;dw&lt;/code&gt; will delete the first word on the right side of the cursor&lt;/strong&gt;. It also copies the deleted content so that you can paste it to another location by pressing &lt;strong&gt;&lt;code&gt;p&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;replace-repetition&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Replace and Repetition&lt;/h3&gt;
+&lt;h4 id=&quot;-replace&quot;&gt;🚜 Replace&lt;/h4&gt;
+&lt;p&gt;For replacing a letter under cursor:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;r&lt;/code&gt; and then write replaceable letter e.g. &lt;code&gt;a&lt;/code&gt; to replace cursor’s letter by &lt;code&gt;a&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;-repetition&quot;&gt;🚜 Repetition&lt;/h4&gt;
+&lt;p&gt;Repeat the previous command by pressing simply &lt;strong&gt;&lt;code&gt;.&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;E.g.&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;d2w&lt;/code&gt; will delete next two words of current cursor&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;After that if you press &lt;code&gt;.&lt;/code&gt;, the previous command i.e. next two words will also be deleted and so on&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;visual-mode&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Visual Mode&lt;/h3&gt;
+&lt;p&gt;To switch to &lt;strong&gt;&lt;code&gt;visual mode&lt;/code&gt;&lt;/strong&gt;, just press &lt;strong&gt;&lt;code&gt;v&lt;/code&gt;&lt;/strong&gt;. In this mode you can select a text via &lt;strong&gt;&lt;a href=&quot;#movements&quot;&gt;movement keys&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;E.g.&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Press &lt;code&gt;v&lt;/code&gt; and then &lt;code&gt;e&lt;/code&gt; to select a word&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;After that press &lt;code&gt;d&lt;/code&gt; to delete that word&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;practice&quot; style=&quot;color: #1abc9c&quot;&gt;🔰 Practice&lt;/h3&gt;
+&lt;p&gt;When you change the file in vim you have to know these commands as well:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;:w&lt;/code&gt; (save)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;:wq&lt;/code&gt; (save and quit)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;:q&lt;/code&gt; (quit)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;:q!&lt;/code&gt; (quit without saving)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;u&lt;/code&gt; (For &lt;code&gt;undo&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;ctrl+R&lt;/code&gt; (For &lt;code&gt;Redo&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;:help&lt;/code&gt; (For &lt;code&gt;Help&lt;/code&gt;)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;This article is written according to &lt;a href=&quot;https://www.openvim.com/&quot;&gt;this website&lt;/a&gt;. You can &lt;code&gt;practice above commands&lt;/code&gt; in realtime. 🎉🎉🎉&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Custom Fonts in React Native Android]]></title><description><![CDATA[Version of react-native > 0.60 Firstly download your fonts from Google Fonts. Suppose you have downloaded Lato font. Then create an assets…]]></description><link>https://shahnawaz-pabon.github.io/posts/2019-12-20-custom-fonts-in-react-native/</link><guid isPermaLink="false">https://shahnawaz-pabon.github.io/posts/2019-12-20-custom-fonts-in-react-native/</guid><category><![CDATA[react-native]]></category><category><![CDATA[android]]></category><pubDate>Fri, 20 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;version-of-react-native--060&quot;&gt;Version of react-native &gt; 0.60&lt;/h3&gt;
+&lt;p&gt;Firstly download your fonts from &lt;strong&gt;&lt;a href=&quot;https://fonts.google.com/&quot;&gt;Google Fonts&lt;/a&gt;&lt;/strong&gt;. Suppose you have downloaded &lt;code&gt;Lato&lt;/code&gt; font. Then create an &lt;code&gt;assets&lt;/code&gt; folder, &lt;code&gt;react-native.config.js&lt;/code&gt; file into your react-native’s root directory and copy all the &lt;code&gt;.ttf&lt;/code&gt; files extracted from  downloaded &lt;code&gt;zip&lt;/code&gt; file. Add following codes into &lt;code&gt;react-native.config.js&lt;/code&gt; file.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;ios&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;assets&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./assets/fonts/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then run this command in your project’s directory.&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ react-native &lt;span class=&quot;token function&quot;&gt;link&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add &lt;strong&gt;&lt;code&gt;fontFamily: &apos;Lato-Bold&apos;&lt;/code&gt;&lt;/strong&gt; in your &lt;code&gt;StyleSheet&lt;/code&gt; and run&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ react-native run-android&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Hopefully you can see your added font.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Setup React Native environment on Ubuntu]]></title><description><![CDATA[⛵ Using Ubuntu ⛵ Using Debian, as root Download android studio. In my case downloaded file’s name was android-studio-ide-191.6010548-linux…]]></description><link>https://shahnawaz-pabon.github.io/posts/2019-12-11-setup-react-native-environment/</link><guid isPermaLink="false">https://shahnawaz-pabon.github.io/posts/2019-12-11-setup-react-native-environment/</guid><category><![CDATA[react-native]]></category><category><![CDATA[ubuntu]]></category><category><![CDATA[android]]></category><pubDate>Wed, 11 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;🔦 Install node and npm&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;⛵ Using Ubuntu&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sL&lt;/span&gt; https://deb.nodesource.com/setup_10.x &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-E&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt; -
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-y&lt;/span&gt; nodejs
+$ &lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;
+v10.17.0
+$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;
+&lt;span class=&quot;token number&quot;&gt;6.11&lt;/span&gt;.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;⛵ Using Debian, as root&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sL&lt;/span&gt; https://deb.nodesource.com/setup_10.x &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt; -
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-y&lt;/span&gt; nodejs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;h3&gt;🔦 Install react-native-cli&lt;/h3&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-g&lt;/span&gt; react-native-cli
+$ react-native &lt;span class=&quot;token parameter variable&quot;&gt;--version&lt;/span&gt;
+react-native-cli: &lt;span class=&quot;token number&quot;&gt;2.0&lt;/span&gt;.1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;h3&gt;🔦 Setup Android development environment&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://developer.android.com/studio/index.html&quot;&gt;Download android studio&lt;/a&gt;&lt;/strong&gt;. In my case downloaded file’s name was &lt;code&gt;android-studio-ide-191.6010548-linux.tar.gz&lt;/code&gt; and I kept it into my home directory. Then follow these steps&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ~
+$ &lt;span class=&quot;token function&quot;&gt;tar&lt;/span&gt; xvzf android-studio-ide-191.6010548-linux.tar.gz
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; android-studio/bin/
+$ ./studio.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After completing the installation of android studio, you need to install these from android studio.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Android SDK&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Android SDK Platform&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Android Virtual Device&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To do that just go to &lt;code&gt;Appearance &amp;#x26; Behavior → System Settings → Android SDK&lt;/code&gt; from android studio and select your SDK platform and install.&lt;/p&gt;
+&lt;p&gt;Then you need to set up &lt;code&gt;ANDROID_HOME&lt;/code&gt; environment variables in order to build react native apps with native code. Now edit your &lt;code&gt;.bashrc&lt;/code&gt; file and add these lines into it.&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;ANDROID_HOME&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token environment constant&quot;&gt;$HOME&lt;/span&gt;/Android/Sdk
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$ANDROID_HOME&lt;/span&gt;/emulator
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$ANDROID_HOME&lt;/span&gt;/tools
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$ANDROID_HOME&lt;/span&gt;/tools/bin
+&lt;span class=&quot;token builtin class-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;&lt;span class=&quot;token environment constant&quot;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token environment constant&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$ANDROID_HOME&lt;/span&gt;/platform-tools&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After adding those lines save it and run &lt;code&gt;source .bashrc&lt;/code&gt; via terminal to keep running source to get the aliases working in any new login terminal instances.&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;source&lt;/span&gt; .bashrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;h3&gt;🔦 Install java on your Ubuntu system&lt;/h3&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; update
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; default-jdk
+$ &lt;span class=&quot;token function&quot;&gt;java&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-version&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Output&lt;/span&gt;
+openjdk version &lt;span class=&quot;token string&quot;&gt;&quot;11.0.4&quot;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2019&lt;/span&gt;-07-16
+OpenJDK Runtime Environment &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;build &lt;span class=&quot;token number&quot;&gt;11.0&lt;/span&gt;.4+11-post-Ubuntu-1ubuntu218.04.3&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+OpenJDK &lt;span class=&quot;token number&quot;&gt;64&lt;/span&gt;-Bit Server VM &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;build &lt;span class=&quot;token number&quot;&gt;11.0&lt;/span&gt;.4+11-post-Ubuntu-1ubuntu218.04.3, mixed mode, sharing&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So you have successfully installed &lt;code&gt;java&lt;/code&gt; on your &lt;code&gt;Ubuntu&lt;/code&gt; system. My version was &lt;code&gt;Ubuntu 18.04.3 LTS&lt;/code&gt;. At this point you are all set of working with react-native.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3&gt;🔦 Test your first react-native app&lt;/h3&gt;
+&lt;p&gt;First connect your android phone with a usb. Then run these commands&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ react-native init testReactApp
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; testReactApp/
+$ react-native start
+
+&lt;span class=&quot;token comment&quot;&gt;# Open another terminal, go to testReactApp&apos;s directory and run this command&lt;/span&gt;
+$ react-native run-android&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After a while, you will see your running app into your android phone.&lt;/p&gt;
+&lt;br/&gt;
+&lt;div align=&apos;center&apos;&gt;&lt;h3&gt; ~ Good Luck and Have fun ⛄ ~ &lt;/h3&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Perceiving about Linux Distros]]></title><description><![CDATA[Table of Contents      ❓   What is Linux? 
+     ✊   How it differs from UNIX? 
+     🎬   Linux Distributions  One of the most-used and best…]]></description><link>https://shahnawaz-pabon.github.io/posts/2019-12-04-knowing-about-linux-distros/</link><guid isPermaLink="false">https://shahnawaz-pabon.github.io/posts/2019-12-04-knowing-about-linux-distros/</guid><category><![CDATA[linux]]></category><category><![CDATA[linux-distros]]></category><pubDate>Wed, 04 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+&lt;p&gt;     ❓   &lt;strong&gt;&lt;a href=&quot;#what-is-linux&quot;&gt;What is Linux?&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     ✊   &lt;strong&gt;&lt;a href=&quot;#how-it-differs&quot;&gt;How it differs from UNIX?&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🎬   &lt;strong&gt;&lt;a href=&quot;#linux-distributions&quot;&gt;Linux Distributions&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;what-is-linux&quot;&gt;❓ What is Linux?&lt;/h3&gt;
+&lt;p&gt;One of the most-used and best-known operating systems is &lt;strong&gt;&lt;code&gt;Linux&lt;/code&gt;&lt;/strong&gt; that distributed under an open source license. Technically it refers only to the &lt;code&gt;kernel&lt;/code&gt; of the operating system. &lt;code&gt;Kernel&lt;/code&gt; is the heart of any operating system which takes care of elementary stuffs. &lt;code&gt;Linux&lt;/code&gt; is largely compatible with the &lt;code&gt;UNIX&lt;/code&gt;.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;how-it-differs&quot;&gt;✊ How it differs from UNIX?&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;UNIX&lt;/code&gt; is the mother of all operating systems. &lt;code&gt;Linux&lt;/code&gt; was basically created to be similar to &lt;code&gt;UNIX&lt;/code&gt;. So commands using on both operating systems are usually the same. Programming tools, other key components are similar as well. And main part is, you have to pay for a &lt;code&gt;UNIX&lt;/code&gt; kernel but &lt;code&gt;Linux&lt;/code&gt; is totally free and open source.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;linux-distributions&quot;&gt;🎬 Linux Distributions&lt;/h3&gt;
+&lt;p&gt;After initial realeses of &lt;code&gt;Linux&lt;/code&gt; in the early &lt;code&gt;1990s&lt;/code&gt;, many bundles of software came to complement the &lt;code&gt;Linux kernel&lt;/code&gt; which were brought by many organizations. These bundles are called &lt;code&gt;distributions&lt;/code&gt;. These are about which version of what software. &lt;code&gt;Packages&lt;/code&gt; are softwares and applications that are bundled. So &lt;code&gt;Linux Distributions&lt;/code&gt; are classified by these package types. There are &lt;code&gt;three&lt;/code&gt; basic types of packages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Debian Based Linux Distros&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RedHat Package Manager(RPM)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Other Distributions&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;-debian-based-linux-distros&quot;&gt;🍴 Debian Based Linux Distros&lt;/h4&gt;
+&lt;p&gt;The package extension of &lt;code&gt;Debian&lt;/code&gt; is &lt;code&gt;.deb&lt;/code&gt;. New distributions are based on &lt;code&gt;Debian&lt;/code&gt;. It’s one of the oldest and very popular choice of &lt;code&gt;Linux Distributions&lt;/code&gt;. Some distributions that use &lt;code&gt;.deb&lt;/code&gt; packages are as follows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.debian.org/distrib/&quot;&gt;Debian&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://ubuntu.com/download/desktop&quot;&gt;Ubuntu&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://linuxmint.com/download.php&quot;&gt;Linux Mint&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://antixlinux.com/download/&quot;&gt;antiX&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot;&gt;Raspbian&lt;/a&gt;&lt;/strong&gt; etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;-redhat-package-manager&quot;&gt;🍴 RedHat Package Manager&lt;/h4&gt;
+&lt;p&gt;Package extension of this types of distros is &lt;code&gt;.rpm&lt;/code&gt;. Distributions of this type are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.centos.org/download/&quot;&gt;CentOS&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://developers.redhat.com/products/rhel/download&quot;&gt;Red Hat Enterprise Linux&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.clearos.com/download-clearos&quot;&gt;ClearOS&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.opensuse.org/&quot;&gt;openSUSE&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://stella-emu.github.io/downloads.html&quot;&gt;Stella&lt;/a&gt;&lt;/strong&gt; etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;-other-distributions&quot;&gt;🍴 Other Distributions&lt;/h4&gt;
+&lt;p&gt;Some other distributions are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.archlinux.org/download/&quot;&gt;Arch Linux&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://www.slackware.com/getslack/&quot;&gt;Slackware Linux&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.gentoo.org/downloads/&quot;&gt;Gentoo Linux&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://lxde.org/get/&quot;&gt;LXDE (Desktop Manager)&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;(e.g. Lubuntu)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.xfce.org/download&quot;&gt;XFCE (Desktop Manager)&lt;/a&gt;&lt;/strong&gt; &lt;code&gt;(e.g. Xubuntu)&lt;/code&gt; etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;p&gt;You can see various types of &lt;code&gt;Linux Distributions&lt;/code&gt; &lt;strong&gt;&lt;a href=&quot;https://distrowatch.com/dwres.php?resource=popularity&quot;&gt;here&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Getting Started with Snap]]></title><description><![CDATA[Table of Contents      ✋   Getting Started 
+     🔧   Setting Up 
+     🏃   Install and Run your first Snap 
+     💬   More Features Snap…]]></description><link>https://shahnawaz-pabon.github.io/posts/2019-11-27-getting-started-with-snap/</link><guid isPermaLink="false">https://shahnawaz-pabon.github.io/posts/2019-11-27-getting-started-with-snap/</guid><category><![CDATA[snap]]></category><category><![CDATA[ubuntu]]></category><pubDate>Wed, 27 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+&lt;p&gt;     ✋   &lt;strong&gt;&lt;a href=&quot;#getting-started&quot;&gt;Getting Started&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🔧   &lt;strong&gt;&lt;a href=&quot;#setting-up&quot;&gt;Setting Up&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     🏃   &lt;strong&gt;&lt;a href=&quot;#install-and-run-your-first-snap&quot;&gt;Install and Run your first Snap&lt;/a&gt;&lt;/strong&gt; &lt;br/&gt;
+     💬   &lt;strong&gt;&lt;a href=&quot;#more-features&quot;&gt;More Features&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;getting-started&quot;&gt;✋ Getting Started&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Snap (or &lt;code&gt;Snappy&lt;/code&gt; package manager) is one of the best software deployment and package management system which is built by &lt;code&gt;Canonical&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;snap&lt;/code&gt; is a bundle of an app and works across many different Linux distributions as well.&lt;/li&gt;
+&lt;li&gt;App packages that are installed through &lt;code&gt;snap&lt;/code&gt;, called &lt;code&gt;Snaps&lt;/code&gt;. So &lt;code&gt;Snaps&lt;/code&gt; are containerized software packages.&lt;/li&gt;
+&lt;li&gt;These are disclosable and installable from the &lt;code&gt;Snap Store&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;snapd&lt;/code&gt; is the tool for using &lt;code&gt;snaps&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The system is actually designed for &lt;strong&gt;IoT, Cloud and Desktop Computing&lt;/strong&gt; that are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy to install&lt;/li&gt;
+&lt;li&gt;Secured&lt;/li&gt;
+&lt;li&gt;Cross-Platform&lt;/li&gt;
+&lt;li&gt;Dependency-free&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;setting-up&quot;&gt;🔧 Setting Up&lt;/h3&gt;
+&lt;h4 id=&quot;-installing-snapd-on-ubuntu&quot;&gt;📝 Installing &lt;code&gt;snapd&lt;/code&gt; on Ubuntu&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; snapd&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It manages the snap environment on local the system and will include the snap tool for interacting with snaps as well. You can check whether snap is installed or not by running &lt;code&gt;snap version&lt;/code&gt; on the command line:&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ snap version
+snap    &lt;span class=&quot;token number&quot;&gt;2.42&lt;/span&gt;.1
+snapd   &lt;span class=&quot;token number&quot;&gt;2.42&lt;/span&gt;.1
+series  &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;
+ubuntu  &lt;span class=&quot;token number&quot;&gt;18.04&lt;/span&gt;
+kernel  &lt;span class=&quot;token number&quot;&gt;5.0&lt;/span&gt;.0-36-generic&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;install-and-run-your-first-snap&quot;&gt;🏃 Install and Run your first Snap&lt;/h3&gt;
+&lt;h4 id=&quot;-finding-a-snap&quot;&gt;📝 Finding a &lt;code&gt;snap&lt;/code&gt;&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ snap &lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt; something
+Name                 Version       Publisher       Notes    Summary
+paintsupreme-3d      &lt;span class=&quot;token number&quot;&gt;1.0&lt;/span&gt;.41        braindistrict   -        PaintSupreme 3D
+syncthing            &lt;span class=&quot;token number&quot;&gt;1.3&lt;/span&gt;.1         syncthing✓      -        Open Source Continuous File Synchronization
+openscad-nightly     &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;+git.eedfcc4 torsten-paul    -        The Programmers Solid 3D CAD Modeller
+step                 &lt;span class=&quot;token number&quot;&gt;19.08&lt;/span&gt;.0       kde✓            -        Simulate physics experiments
+draftman             &lt;span class=&quot;token number&quot;&gt;1.0&lt;/span&gt;.12        jsseidel        classic  A plain-text draft management tool &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; novelists.
+spt                  v0.4.0        popey           -        Spotify TUI&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;snap find &amp;#x3C;search keywords&gt;&lt;/code&gt; queries the store and list the results with their details. &lt;code&gt;✓&lt;/code&gt; indecates that publisher has been verified.&lt;/p&gt;
+&lt;h4 id=&quot;-learning-about-a-snap&quot;&gt;📝 Learning about a &lt;code&gt;snap&lt;/code&gt;&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ snap info hello
+name:      hello
+summary:   GNU Hello, the &lt;span class=&quot;token string&quot;&gt;&quot;hello world&quot;&lt;/span&gt; snap
+publisher: Canonical✓
+contact:   snaps@canonical.com
+license:   GPL-3.0
+description: &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+  GNU hello prints a friendly greeting. This is part of the snapcraft tour at https://snapcraft.io/
+snap-id: mVyGrEwiqSi5PugCwyH7WgpoQLemtTd6
+channels:
+  stable:    &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;2019&lt;/span&gt;-04-17 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; 98kB -
+  candidate: &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;2017&lt;/span&gt;-05-17 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; 65kB -
+  beta:      &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt;.1  &lt;span class=&quot;token number&quot;&gt;2017&lt;/span&gt;-05-17 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; 65kB -
+  edge:      &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt;.42 &lt;span class=&quot;token number&quot;&gt;2017&lt;/span&gt;-05-17 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; 65kB -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You will know details about a package by running this command.&lt;/p&gt;
+&lt;h4 id=&quot;-install-and-execution&quot;&gt;📝 Install and execution&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; snap &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; hello
+hello &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt; from Canonical✓ installed&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For running the command simply write &lt;code&gt;hello&lt;/code&gt; in the command line.&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ hello
+Hello, world&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;-keep-tracking-installed-snaps&quot;&gt;📝 Keep tracking installed &lt;code&gt;snaps&lt;/code&gt;&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ snap list
+Name                  Version                     Rev   Tracking  Publisher   Notes
+core                  &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;-2.42.1                   &lt;span class=&quot;token number&quot;&gt;8039&lt;/span&gt;  stable    canonical✓  core
+core18                &lt;span class=&quot;token number&quot;&gt;20191030&lt;/span&gt;                    &lt;span class=&quot;token number&quot;&gt;1265&lt;/span&gt;  stable    canonical✓  base
+gnome-3-28-1804       &lt;span class=&quot;token number&quot;&gt;3.28&lt;/span&gt;.0-16-g27c9498.27c9498  &lt;span class=&quot;token number&quot;&gt;110&lt;/span&gt;   stable/…  canonical✓  -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Installed snaps on your system will be listed by this command.&lt;/p&gt;
+&lt;h4 id=&quot;-refreshing-an-installed-snap&quot;&gt;📝 Refreshing an installed &lt;code&gt;snap&lt;/code&gt;&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; snap refresh hello
+snap &lt;span class=&quot;token string&quot;&gt;&quot;hello&quot;&lt;/span&gt; has no updates available&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Above command will check whether a newer version is available or not and it will be downloaded and installed automatically.&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; snap refresh &lt;span class=&quot;token parameter variable&quot;&gt;--channel&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;beta hello
+hello &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;beta&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt;.1 from Canonical✓ refreshed&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can change the channel from which your snap will be tracked and refreshed with this single command.&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&quot;more-features&quot;&gt;💬 More Features &lt;/h3&gt;
+&lt;h4 id=&quot;-reverting-an-installed-snap&quot;&gt;📝 Reverting an installed &lt;code&gt;snap&lt;/code&gt;&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; snap revert hello
+hello reverted to &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ snap list &lt;span class=&quot;token parameter variable&quot;&gt;--all&lt;/span&gt; hello
+Name   Version  Rev  Tracking  Publisher   Notes
+hello  &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt;     &lt;span class=&quot;token number&quot;&gt;38&lt;/span&gt;   beta      canonical✓  -
+hello  &lt;span class=&quot;token number&quot;&gt;2.10&lt;/span&gt;.1   &lt;span class=&quot;token number&quot;&gt;29&lt;/span&gt;   beta      canonical✓  disabled&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Above command will list all &lt;code&gt;revisions&lt;/code&gt; of hello.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;code&gt;Revision&lt;/code&gt; is the sequence number which is assigned by the store when it was uploaded&lt;/em&gt;&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ snap list &lt;span class=&quot;token parameter variable&quot;&gt;--all&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will list all &lt;code&gt;revisions&lt;/code&gt; available for every installed snaps.&lt;/p&gt;
+&lt;h4 id=&quot;-enabling-and-disabling-a-snap&quot;&gt;📝 Enabling and Disabling a &lt;code&gt;snap&lt;/code&gt;&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; snap disable hello
+hello disabled
+
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; snap &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; hello
+hello enabled&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;-removing-a-snap&quot;&gt;📝 Removing a &lt;code&gt;snap&lt;/code&gt;&lt;/h4&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; snap remove hello
+hello removed&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After running this command, all snap’s revisions will be removed. To remove specific revision add &lt;code&gt;--revision=&amp;#x3C;revision-number&gt;&lt;/code&gt; to the remove command.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Remove files/folders from remote repository]]></title><description><![CDATA[If you want to remove a folder from your git repository then simply run these commands into your terminal.
+ Run These commands will remove…]]></description><link>https://shahnawaz-pabon.github.io/posts/2019-11-20-remove-files-folders-from-remote-repo/</link><guid isPermaLink="false">https://shahnawaz-pabon.github.io/posts/2019-11-20-remove-files-folders-from-remote-repo/</guid><category><![CDATA[git]]></category><pubDate>Wed, 20 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;If you want to remove a folder from your &lt;code&gt;git&lt;/code&gt; repository then simply run these commands into your terminal.
+&lt;br&gt;&lt;/p&gt;
+&lt;h3 id=&quot;run&quot;&gt;Run&lt;/h3&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-rf&lt;/span&gt; folder_name
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--all&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit &lt;span class=&quot;token parameter variable&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Your commit message&quot;&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin &lt;span class=&quot;token string&quot;&gt;&quot;branch_name&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;These commands will remove that folder from your &lt;code&gt;git&lt;/code&gt; repository of that branch.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Save username and password in GIT]]></title><description><![CDATA[Run After running this command, when you push to your repository or pull from your repository, you’ll get asked username and password for…]]></description><link>https://shahnawaz-pabon.github.io/posts/2019-11-13-how-to-save-username-and-password-in-git/</link><guid isPermaLink="false">https://shahnawaz-pabon.github.io/posts/2019-11-13-how-to-save-username-and-password-in-git/</guid><category><![CDATA[git]]></category><category><![CDATA[git-config]]></category><pubDate>Wed, 13 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;run&quot;&gt;Run&lt;/h3&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config &lt;span class=&quot;token parameter variable&quot;&gt;--global&lt;/span&gt; credential.helper store&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After running this command, when you &lt;strong&gt;push&lt;/strong&gt; to your repository or &lt;strong&gt;pull&lt;/strong&gt; from your repository, you’ll get asked &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt; for first time.
+Then credentials will be stored into your home directory named &lt;code&gt;.git-credentials&lt;/code&gt; file in plaintext.
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;You can use this command to store your credentials into cache memory for specific time(in seconds).&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config &lt;span class=&quot;token parameter variable&quot;&gt;--global&lt;/span&gt; credential.helper &lt;span class=&quot;token string&quot;&gt;&apos;cache --timeout=14400&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This command will remember your credentials for 4 hours. Your &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt; will be asked for the first time during &lt;strong&gt;push&lt;/strong&gt; or &lt;strong&gt;pull&lt;/strong&gt; as well.
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;These commands will store your &lt;code&gt;username, password and email&lt;/code&gt; in &lt;code&gt;.gitconfig&lt;/code&gt; file into your home directory.&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config &lt;span class=&quot;token parameter variable&quot;&gt;--global&lt;/span&gt; user.name &lt;span class=&quot;token string&quot;&gt;&quot;your username&quot;&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config &lt;span class=&quot;token parameter variable&quot;&gt;--global&lt;/span&gt; user.password &lt;span class=&quot;token string&quot;&gt;&quot;your password&quot;&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config &lt;span class=&quot;token parameter variable&quot;&gt;--global&lt;/span&gt; user.email &lt;span class=&quot;token string&quot;&gt;&quot;your email&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Storing global email would help you to &lt;a href=&quot;https://help.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile#contributions-that-are-counted&quot;&gt;count&lt;/a&gt; your github contribution during commits.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Install Jekyll on Ubuntu]]></title><description><![CDATA[Jekyll is one of the popular static site generators. To work with Jekyll, you need to have all the required dependencies. Setup gems…]]></description><link>https://shahnawaz-pabon.github.io/posts/2019-11-13-welcome-to-jekyll/</link><guid isPermaLink="false">https://shahnawaz-pabon.github.io/posts/2019-11-13-welcome-to-jekyll/</guid><category><![CDATA[jekyll]]></category><pubDate>Wed, 13 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code&gt;Jekyll&lt;/code&gt; is one of the popular static site generators. To work with &lt;code&gt;Jekyll&lt;/code&gt;, you need to have all the required dependencies.&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; update
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; ruby-full build-essential zlib1g-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Setup gems installation directory for your user account to avoid installing Ruby Gems as the root user. You will found this informed on &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll’s website&lt;/a&gt;. So add environment variables to &lt;code&gt;~/.bashrc&lt;/code&gt; file to configure installation path.&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;# Install Ruby Gems to ~/gems&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; ~/.bashrc
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;export GEM_HOME=&quot;$HOME/gems&quot;&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; ~/.bashrc
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;export PATH=&quot;$HOME/gems/bin:$PATH&quot;&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; ~/.bashrc
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;source&lt;/span&gt; ~/.bashrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now install Jekyll by running this&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ gem &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; jekyll bundler&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To create your own blog and test it, run the following&lt;/p&gt;
+&lt;div class=fakeMenu&gt;
+  &lt;div class=&quot;fakeButtons fakeClose&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeMinimize&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;fakeButtons fakeZoom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ jekyll new myblog
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; myblog
+$ bundle &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Your site will be running on &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Congratulations&lt;/code&gt; you’ve successfully run your own site. &lt;i class=&quot;far fa-grin&quot;&gt;&lt;/i&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
