@@ -1,70 +1,307 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700,700i&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/**
+ * Base layer: reset, document defaults, shared primitives.
+ *
+ * Only tokens from tokens.css are used here so both themes work unchanged.
+ * Component-specific rules live next to their component.
+ */
 
-body{
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Anchor links from heading permalinks must not hide under the fixed navbar. */
+  scroll-padding-top: calc(var(--nav-height) + 1rem);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.65;
   font-weight: 400;
-  color: #212112;
-  background-image: url('../../static/assets/images/background.svg');
-  background-position: center;
-  background-repeat: repeat;
-  background-size: 7%;
-  background-color: #fff;
-  overflow-x: hidden;
-  transition: all 200ms linear;
+  color: var(--text);
+  background-color: var(--bg);
+  transition:
+    background-color var(--speed) var(--ease),
+    color var(--speed) var(--ease);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+h1 {
+  font-size: var(--step-4);
+}
+h2 {
+  font-size: var(--step-3);
+}
+h3 {
+  font-size: var(--step-2);
+}
+
+p {
+  margin: 0 0 1.25em;
 }
 
 a {
-  color: #1abc9c;
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* A visible, consistent focus ring — the old stylesheet removed outlines. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* The footer sits after the content rather than floating over it. */
+  padding-top: var(--nav-height);
+}
+
+.site__main {
+  flex: 1 0 auto;
+  width: 100%;
 }
 
 .container {
-  margin: 150px auto;
-  max-width: 800px;
-  flex-direction: column;
-  min-height: 70vh;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4rem) var(--gutter);
 }
 
-.dark {
-  background-color: #1f2029;
-  color: #fff;
-  transition: all 0.2s ease-out;
+.container--narrow {
+  max-width: var(--article-width);
 }
 
-.all-posts a:hover {
-  color: #fff !important;
-  background: #2c3e50 !important;
+/* Skips the navbar for keyboard users. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-radius: 0 0 var(--radius-sm) 0;
+  font-weight: 700;
 }
 
-.icon-rotating{
-  animation: rotating 6s linear infinite;
+.skip-link:focus {
+  left: 0;
 }
 
-@keyframes rotating {
-  0% { 
-    transform: rotate(0); 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons
+   --------------------------------------------------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: var(--step--1);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--speed) var(--ease),
+    background-color var(--speed) var(--ease),
+    border-color var(--speed) var(--ease),
+    box-shadow var(--speed) var(--ease);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  box-shadow: var(--shadow-md);
+}
+
+.button--primary:hover {
+  background: var(--accent-hover);
+  color: var(--accent-contrast);
+  box-shadow: var(--glow);
+}
+
+.button--ghost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.button--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---------------------------------------------------------------------------
+   Section headings and chips
+   --------------------------------------------------------------------------- */
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.section-heading h1,
+.section-heading h2 {
+  margin: 0;
+  font-size: var(--step-3);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  text-decoration: none;
+  transition:
+    border-color var(--speed) var(--ease),
+    color var(--speed) var(--ease),
+    background-color var(--speed) var(--ease);
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.chip--active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------------------------------
+   Scroll reveal
+   --------------------------------------------------------------------------- */
+
+/*
+ * Elements opt in with the `reveal` class. The animation is driven by the
+ * scroll position in CSS, with no JavaScript at all.
+ *
+ * An earlier version used an IntersectionObserver that added an `is-visible`
+ * class to the DOM. Gatsby hydrates lazily, so the observer could tag a node
+ * before React had hydrated it; React then compared `className`, found an extra
+ * class it had not rendered, and reported a hydration mismatch (React error
+ * #418). Because that depended on which finished first, it only showed up under
+ * timing pressure — for example while a service worker was installing.
+ *
+ * `animation-timeline: view()` has no such race, runs on the compositor rather
+ * than the main thread, and is ignored by browsers that do not support it, so
+ * those readers simply see the content without the entrance animation.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 28%;
+    }
   }
-  100% { 
-    transform: rotate(360deg);
-  }
- }
+}
 
-/* Custom scrollbar styles for light theme */
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Scrollbar
+   --------------------------------------------------------------------------- */
+
 ::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0; /* Background color of the track */
+  background: var(--bg-subtle);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Scrollbar color */
-  border: 3px solid #f0f0f0; /* Creates padding around the scrollbar */
+  background: var(--border-strong);
+  border: 2px solid var(--bg-subtle);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Scrollbar color on hover */
+  background: var(--text-faint);
+}
+
+/* ---------------------------------------------------------------------------
+   Print
+   --------------------------------------------------------------------------- */
+
+@media print {
+  .navbar,
+  .footer,
+  .back-to-top,
+  .reading-progress,
+  .comments,
+  .back-to-top {
+    display: none;
+  }
 }

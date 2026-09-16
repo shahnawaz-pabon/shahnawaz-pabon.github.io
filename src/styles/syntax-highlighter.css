@@ -1,100 +1,102 @@
+/**
+ * Prism syntax highlighting, expressed with theme tokens.
+ *
+ * The previous theme hard-coded a single dark palette, so code blocks stayed
+ * dark on the light theme and passed the wrong colours through the rest of the
+ * page. These variables flip with `data-theme` instead, so one stylesheet
+ * covers both.
+ */
+
+:root {
+  --code-fg: #24292f;
+  --code-comment: #6e7781;
+  --code-keyword: #cf222e;
+  --code-string: #0a3069;
+  --code-number: #0550ae;
+  --code-function: #8250df;
+  --code-variable: #953800;
+  --code-punctuation: #57606a;
+}
+
+[data-theme="dark"] {
+  --code-fg: #c9d1d9;
+  --code-comment: #8b949e;
+  --code-keyword: #ff7b72;
+  --code-string: #a5d6ff;
+  --code-number: #79c0ff;
+  --code-function: #d2a8ff;
+  --code-variable: #ffa657;
+  --code-punctuation: #8b949e;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #ABB2BF;
+  color: var(--code-fg);
   background: none;
-  font-family: 'Ubuntu Mono';
+  font-family: var(--font-mono);
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
+  line-height: 1.6;
   tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
   hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: #383e49;
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  background: var(--accent-soft);
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-  text-shadow: none;
-  background: #9aa2b1;
-}
-
-@media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none;
-  }
-}
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #282a36;
-  border-radius: 0px 0px 7px 7px;
-}
-
-/* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: .2em .5em;
-  border-radius: .4em;
+  padding: 0.15em 0.4em;
+  border-radius: 5px;
   white-space: normal;
-  color: #e8912d;
-  font-weight: bold;
-  background-color: rgb(138 155 165 / 15%);
 }
+
+/* ---------------------------------------------------------------------------
+   Tokens
+   --------------------------------------------------------------------------- */
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #6272a4;
-  font-weight: bold;
+  color: var(--code-comment);
+  font-style: italic;
 }
 
 .token.punctuation {
-  color: #abb2bf;
+  color: var(--code-punctuation);
 }
 
-.token.selector,
-.token.tag {
-  color: #efef8f;
-  font-weight: bold;
+.token.namespace {
+  opacity: 0.7;
 }
 
 .token.property,
-.token.boolean,
-.token.number,
+.token.tag,
 .token.constant,
 .token.symbol,
-.token.attr-name,
 .token.deleted {
-  color: #d19a66;
-  font-weight: bold;
+  color: var(--code-keyword);
 }
 
+.token.boolean,
+.token.number {
+  color: var(--code-number);
+}
+
+.token.selector,
+.token.attr-name,
 .token.string,
 .token.char,
-.token.attr-value,
 .token.builtin,
 .token.inserted {
-  color: #98c379;
-  font-weight: bold;
+  color: var(--code-string);
 }
 
 .token.operator,
@@ -102,76 +104,59 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #56b6c2;
+  color: var(--code-punctuation);
 }
 
 .token.atrule,
+.token.attr-value,
 .token.keyword {
-  color: #8be9fd;
-  font-weight: bold;
+  color: var(--code-keyword);
 }
 
-.token.function {
-  color: #f1fa8c;
-  font-weight: bold;
+.token.function,
+.token.class-name {
+  color: var(--code-function);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: #8be9fd;
+  color: var(--code-variable);
 }
 
 .token.important,
 .token.bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .token.italic {
   font-style: italic;
 }
 
-.token.entity {
-  cursor: help;
+/* Line highlighting, available if a post annotates a fence with {1,3-5}. */
+.gatsby-highlight-code-line {
+  display: block;
+  margin: 0 -1.25rem;
+  padding: 0 1.25rem;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
 }
 
-pre.line-numbers {
+/* Shown on the language label for fenced blocks with a language. */
+.gatsby-highlight {
   position: relative;
-  padding-left: 3.8em;
-  counter-reset: linenumber;
 }
 
-pre.line-numbers > code {
-  position: relative;
-}
-
-.line-numbers .line-numbers-rows {
+.gatsby-highlight pre[class*="language-"]::before {
+  content: attr(data-language);
   position: absolute;
-  pointer-events: none;
   top: 0;
-  font-size: 100%;
-  left: -3.8em;
-  width: 3em; /* works for line-numbers below 1000 lines */
-  letter-spacing: -1px;
-  border-right: 0;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-}
-
-.line-numbers-rows > span {
-  pointer-events: none;
-  display: block;
-  counter-increment: linenumber;
-}
-
-.line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #5C6370;
-  display: block;
-  padding-right: 0.8em;
-  text-align: right;
+  right: 0;
+  padding: 0.15rem 0.6rem;
+  border-bottom-left-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }

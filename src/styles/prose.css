@@ -1,0 +1,209 @@
+/**
+ * Styles the HTML generated from markdown by gatsby-transformer-remark.
+ *
+ * Applied via the `.prose` class on the article wrapper, so any page rendering
+ * markdown (posts, the about page) gets the same treatment.
+ */
+
+.prose {
+  color: var(--text);
+}
+
+.prose > * + * {
+  margin-top: 1.25em;
+}
+
+/* ---------------------------------------------------------------------------
+   Headings
+   --------------------------------------------------------------------------- */
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: 2.25em;
+  margin-bottom: 0.6em;
+  scroll-margin-top: calc(var(--nav-height) + 1.5rem);
+}
+
+.prose h2 {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose h3 {
+  font-size: var(--step-2);
+}
+
+.prose h4 {
+  font-size: var(--step-1);
+}
+
+/* gatsby-remark-autolink-headers wraps each heading's text in an anchor. */
+.prose .heading-anchor {
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose .heading-anchor:hover {
+  color: var(--accent);
+}
+
+/* ---------------------------------------------------------------------------
+   Text
+   --------------------------------------------------------------------------- */
+
+.prose ul,
+.prose ol {
+  padding-left: 1.4rem;
+}
+
+.prose li + li {
+  margin-top: 0.35em;
+}
+
+.prose li > p {
+  margin: 0.35em 0;
+}
+
+.prose blockquote {
+  margin-left: 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.prose hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.prose img {
+  border-radius: var(--radius-sm);
+}
+
+/* Standalone emoji shortcodes, rendered as unicode characters. */
+.prose p img[data-icon^="emoji-"] {
+  display: inline;
+  margin: 0;
+  vertical-align: -0.15em;
+  border-radius: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Tables
+   --------------------------------------------------------------------------- */
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--step--1);
+}
+
+.prose th,
+.prose td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.prose th {
+  background: var(--bg-subtle);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------------------
+   Inline code
+   --------------------------------------------------------------------------- */
+
+.prose :not(pre) > code {
+  padding: 0.15em 0.4em;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--code-bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  word-break: break-word;
+}
+
+/* ---------------------------------------------------------------------------
+   Code blocks
+   --------------------------------------------------------------------------- */
+
+.prose pre {
+  position: relative;
+  overflow-x: auto;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--code-bg);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  line-height: 1.6;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose pre code {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre;
+}
+
+/* Injected by useCodeCopy; sits inside <pre> so it scrolls with the code. */
+.code-copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity var(--speed) var(--ease),
+    color var(--speed) var(--ease),
+    border-color var(--speed) var(--ease);
+}
+
+.prose pre:hover .code-copy,
+.code-copy:focus-visible {
+  opacity: 1;
+}
+
+.code-copy:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* On touch devices there is no hover, so keep the button visible. */
+@media (hover: none) {
+  .code-copy {
+    opacity: 1;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   gatsby-remark-images output
+   --------------------------------------------------------------------------- */
+
+.prose .gatsby-resp-image-wrapper,
+.prose .gatsby-resp-image-figure {
+  margin: 1.75rem 0;
+}
+
+.prose figcaption {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  text-align: center;
+}

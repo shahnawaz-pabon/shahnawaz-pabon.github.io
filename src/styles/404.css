@@ -1,4 +1,29 @@
-#not-found {
-    text-align: center;
-    height: 290px;
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.not-found__animation {
+  width: min(320px, 70vw);
+  height: 240px;
+}
+
+.not-found__title {
+  margin: 1rem 0 0;
+}
+
+.not-found__lede {
+  max-width: 44ch;
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+}
+
+.not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
 }

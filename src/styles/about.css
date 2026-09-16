@@ -1,9 +1,11 @@
-.about-header {
-    text-align: center;
+.about__title {
+  margin-bottom: 2rem;
 }
 
-#about-lottie{
-    margin-top: -130px;
-    margin-bottom: -50px;
-    height: 450px;
+/*
+ * content/about.md is written as a series of <h2> sections, so tighten the
+ * spacing a little relative to the default prose rhythm.
+ */
+.prose--about h2:first-of-type {
+  margin-top: 0;
 }

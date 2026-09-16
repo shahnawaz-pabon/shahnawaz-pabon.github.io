@@ -1,0 +1,22 @@
+.archive__header {
+  margin-bottom: 2rem;
+}
+
+.archive__eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.archive__title {
+  margin: 0.25rem 0 0;
+}
+
+.archive__count {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+}

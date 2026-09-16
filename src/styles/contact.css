@@ -1,21 +1,94 @@
-.img{
-	display: flex;
-	justify-content: flex-start;
+.contact__header {
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
-.img img{
-	max-width: 400px;
-	max-height: 400px;
-	margin-top: -155px;
-	margin-left: 20px;
-
+.contact__animation {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 0.5rem;
 }
 
-#contact-header {
-	margin-top: -30px;
+.contact__header h1 {
+  margin: 0;
 }
 
-#contact-lottie{
-	width: 200px;
-	height: 200px;
+.contact__lede {
+  max-width: 46ch;
+  margin: 0.75rem auto 0;
+  color: var(--text-muted);
+}
+
+/* ---------------------------------------------------------------------------
+   Email
+   --------------------------------------------------------------------------- */
+
+.contact__email {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform var(--speed) var(--ease),
+    border-color var(--speed) var(--ease),
+    box-shadow var(--speed) var(--ease);
+}
+
+.contact__email:hover {
+  transform: translateY(var(--card-hover-lift));
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.contact__email-label {
+  color: var(--text-faint);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact__email-value {
+  color: var(--text);
+  font-size: var(--step-2);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.contact__email:hover .contact__email-value {
+  color: var(--accent);
+}
+
+/* ---------------------------------------------------------------------------
+   Social profiles
+   --------------------------------------------------------------------------- */
+
+.contact__socials {
+  margin-top: 3rem;
+}
+
+.contact__socials h2 {
+  margin-top: 0;
+  font-size: var(--step-1);
+}
+
+.contact__socials .social-links {
+  gap: 0.6rem;
+}
+
+/* Stack the labelled pills on narrow screens so none is clipped. */
+@media (max-width: 520px) {
+  .contact__socials .social-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact__socials .social-links a {
+    justify-content: center;
+  }
 }
